@@ -318,15 +318,21 @@ Nav {
 
 footer .app-icon{
     width: 40vw;
+    min-width: 300px;
+    max-width: 400px;
     padding: 20px;
 }
 
 footer .playstore-icon{
     width: 40vw;
+    min-width: 300px;
+    max-width: 400px;
     padding: 20px;
 }
 footer .appstore-icon{
     width: 40vw;
+    min-width: 300px;
+    max-width: 400px;
     padding: 20px;
 }
 
