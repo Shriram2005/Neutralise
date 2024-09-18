@@ -4,7 +4,7 @@
     Font-family: “Josefin Sans”, sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* user-select: none; */
+    user-select: none;
 }
 
 html,
@@ -225,7 +225,7 @@ Nav {
     display: flex;
     overflow: auto;
     /* background-color: red; */
-    
+
     -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer and Edge */
     scrollbar-width: none; 
 }
@@ -251,6 +251,47 @@ Nav {
     background-position: center;
     object-fit: cover;
     object-position: center;
+}
+
+/* features section starts here ----------------------------------------------------- */ 
+
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #FFF4C4;
+}
+
+.feature-box {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ABBE47;
+    box-shadow: 1px 2px 2px #ABBE47;
+    transition-duration: .2s;
+    /* flex-basis: calc(22% - 10px); */
+}
+
+.feature-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-family: "Jacques Francois", serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: black;
 }
 
 
