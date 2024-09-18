@@ -182,8 +182,7 @@ Nav {
 }
 
 .top-text-area .explore-btn:hover {
-    background-color: black;
-    color: white;
+    background-color: #ABBE47;
 }
 
 .top-text-area .explore-btn p{
@@ -193,6 +192,13 @@ Nav {
     text-align: center;
     padding-right: 10px;
 }
+
+.top-text-area .explore-btn i{
+    font-size: 20px;
+    color: black;
+}
+
+
 
 /* products section starts here ----------------------------------------------------- */
 
@@ -223,35 +229,32 @@ Nav {
 /* products rows start here -------------------------------------- */ 
 
 .products-row{
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
+    overflow: auto;
+
+
     /* background-color: red; */
 }
 
 .product-box{
+    min-width: 200px;
+    height: 300px;
     margin: 10px;
     /* padding: 10px; */
     border: 10px solid #ABBE47;
-    /* background-color: white; */
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
     transition-duration: .2s;
     cursor: pointer;
 }
 
 .product-img{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     object-fit: cover;
     object-position: center;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 
@@ -315,12 +318,8 @@ footer {
     padding-left: 26px;
 }
 
-.who-we-are:hover {
-    background-color: #ff3700;
-}
-
 .connect i:hover {
-    color: purple !important;
+    color: #ABBE47 !important;
     cursor: pointer;
 }
 
@@ -335,18 +334,6 @@ footer {
 
     .logo {
         font-size: 14px;
-    }
-
-    .container h1 {
-        font-size: 60px;
-    }
-
-    .container h3 {
-        font-size: 40px;
-    }
-
-    .container p {
-        font-size: 30px;
     }
 
     .menu {
