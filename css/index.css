@@ -61,9 +61,6 @@ Nav {
     transition-duration: .2s;
 }
 
-.menu a:first-child{
-    font-weight: bold;
-}
 
 .sidebar-btn {
     font-size: 25px;
@@ -74,7 +71,8 @@ Nav {
     position: fixed;
     right: 0px;
 }
-  /* navbar responsiveness  */
+
+  /* navbar responsiveness ----------------------------------- */
 @media (min-width: 700px) {
     .sidebar-btn {
         display: none;

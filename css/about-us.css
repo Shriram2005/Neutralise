@@ -98,10 +98,6 @@ Nav {
     transition-duration: .2s;
 }
 
-.menu a:first-child {
-    font-weight: bold;
-}
-
 .sidebar-btn {
     font-size: 25px;
     margin-right: 30px;
