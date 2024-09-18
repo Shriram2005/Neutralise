@@ -72,22 +72,6 @@ Nav {
     right: 0px;
 }
 
-  /* navbar responsiveness ----------------------------------- */
-@media (min-width: 700px) {
-    .sidebar-btn {
-        display: none;
-    }
-    .logo {
-        font-size: 14px;
-    }
-    .menu {
-        display: flex;
-    }
-    .side-menu {
-        display: none;
-    }
-}
-
 /* side menu area starts here ----------------------------- */
 
 .side-menu {
@@ -123,6 +107,23 @@ Nav {
     transition-duration: .2s;
 }
 
+  /* navbar responsiveness ----------------------------------- */
+  @media (min-width: 700px) {
+    .sidebar-btn {
+        display: none;
+    }
+    .logo {
+        font-size: 14px;
+    }
+    .menu {
+        display: flex;
+    }
+    .side-menu {
+        display: none;
+    }
+}
+
+
 /* top image starts here ----------------------------- */
 
 .top-image{
@@ -143,7 +144,7 @@ Nav {
     font-family: "Jacques Francois", serif;
     color: white;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* top text area starts here ----------------------------- */ */
