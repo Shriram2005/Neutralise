@@ -220,6 +220,40 @@ Nav {
     font-family: "Jacques Francois", serif;
 }
 
+/* products rows start here -------------------------------------- */ 
+
+.products-row{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* background-color: red; */
+}
+
+.product-box{
+    margin: 10px;
+    /* padding: 10px; */
+    border: 10px solid #ABBE47;
+    /* background-color: white; */
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.product-img{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    object-position: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
 
 
 /* footer ----------------------------------------------------- */
