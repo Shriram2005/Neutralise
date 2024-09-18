@@ -330,6 +330,10 @@ Nav {
     text-align: center;
 }
 
+.foot-innerBox{
+    max-width: 750px;
+}
+
 footer .app-icon{
     width: 40vw;
     min-width: 300px;
@@ -399,13 +403,11 @@ footer .connect{
 /* hover effects ------------------------------------- */
 
 .menu a:hover {
-    /* color: rgb(185, 185, 185); */
-    /* text-shadow: #000000 0px 0px 10px; */
-    border-bottom: 4px solid rgb(255, 174, 34);
+    border-bottom: 4px solid #ABBE47;
 }
 
 .side-menu a:hover {
-    border-bottom: 3px solid rgb(255, 174, 34);
+    border-bottom: 3px solid #ABBE47;
     padding-left: 26px;
 }
 

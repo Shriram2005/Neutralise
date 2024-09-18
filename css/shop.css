@@ -177,7 +177,24 @@ Nav {
     transform: translateY(-5px);
 }
 
-/* Responsive Design */
+/* hover effects ------------------------------------- */
+
+.menu a:hover {
+    border-bottom: 4px solid #ABBE47;
+}
+
+.side-menu a:hover {
+    border-bottom: 3px solid #ABBE47;
+    padding-left: 26px;
+}
+
+.connect i:hover {
+    color: #ABBE47 !important;
+    cursor: pointer;
+}
+
+
+/* Responsive Design ------------------------------------*/
 @media (max-width: 768px) {
     .products-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
