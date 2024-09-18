@@ -4,6 +4,7 @@
     Font-family: “Josefin Sans”, sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    /* user-select: none; */
 }
 
 html,
@@ -18,15 +19,6 @@ Header {
     background-size: cover;
     background-position: center;
 }
-
-/* header::before {
-    position: absolute;
-    bottom: 0px;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.613), transparent, transparent, rgba(0, 0, 0, 0.695));
-} */
 
 Nav {
     Width: 100%;
@@ -232,11 +224,15 @@ Nav {
     width: 100%;
     display: flex;
     overflow: auto;
-
-
     /* background-color: red; */
+    
+    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer and Edge */
+    scrollbar-width: none; 
 }
 
+.products-row::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar in Chrome, Safari, and newer versions of Edge */
+}
 .product-box{
     min-width: 200px;
     height: 300px;
