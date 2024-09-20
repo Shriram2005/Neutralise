@@ -102,6 +102,8 @@ nav {
   .side-menu {
     display: none;
   }
+
+
 }
 .top-image {
   width: 100%;
@@ -222,19 +224,21 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
   flex-wrap: wrap;
   padding: 20px;
   background-color: #fff4c4;
 }
 .feature-box {
   width: 200px;
+  height: 320px;
   margin: 20px;
   text-align: center;
   padding: 20px;
   border: 2px solid #abbe47;
   box-shadow: 1px 2px 2px #abbe47;
   transition-duration: 0.2s;
-  flex-basis: calc(22% - 10px);
+  /* flex-basis: calc(22% - 10px); */
 }
 .feature-img {
   width: 100px;
@@ -334,4 +338,10 @@ footer .connect {
 .connect i:hover {
   color: #abbe47 !important;
   cursor: pointer;
+}
+
+@media (width<500px) {
+  .feature-box{
+    width: 250px;
+  }
 }
