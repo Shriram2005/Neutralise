@@ -201,6 +201,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.navbar-row::-webkit-scrollbar {
+  display: none;
 }
 
 /* First row: Green background */
