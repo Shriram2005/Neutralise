@@ -18,7 +18,3 @@ function removeBlack() {
     btn.style.right = "-300px";
     blackEffect.style.display = "none";
 }
-
-
-
-

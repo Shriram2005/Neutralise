@@ -303,11 +303,11 @@ nav {
   color: var(--text-color);
   cursor: pointer;
   font-family: "Jacques Francois", serif;
-}
-.products-row {
-  width: 100%;
+}.products-row {
+  max-width: 90%; /* Set a maximum width */
+  margin: 0 auto; /* Center the row within the container */
   display: flex;
-  overflow: auto;
+  overflow: hidden; /* Prevent overflow */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -317,11 +317,12 @@ nav {
 .product-box {
   min-width: 200px;
   height: 300px;
-  margin: 10px;
+  margin: 20px;
   border: 10px solid var(--border-color);
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
   transition-duration: 0.2s;
   cursor: pointer;
+  gap: 20px;
 }
 .product-img {
   width: 100%;
@@ -331,6 +332,8 @@ nav {
   object-fit: cover;
   object-position: center;
 }
+
+
 .features-section {
   display: flex;
   justify-content: space-around;
@@ -454,5 +457,127 @@ footer .connect {
 @media (width<500px) {
   .feature-box{
     width: 250px;
+  }
+}
+/* Autoimmune disorder */
+.autoimmune-disorders-title-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.autoimmune-disorders{
+  flex: 1;
+  padding-left: 50px;
+  text-align: center;
+  font-family: "Jacques Francois", serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+
+
+.autoimmune-disorders-top-image {
+  width: 30%; /* Adjusted width */
+  height: 645px; /* Adjusted height */
+  background-image: url(../contents/AD.jpg);
+
+  background-size: contain; /* Ensure the whole image fits inside the div */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center;
+  object-fit: contain;
+  border: 2px solid var(--border-color);
+  box-shadow: 1px 2px 2px #abbe47;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto; /* Center the div horizontally */
+}
+
+/* Youtube video and paragrphs */
+
+/* General Layout for Psoriasis Section */
+.psoriasis-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+  background-color: var(--main-bg-color); /* Use CSS variables for better consistency */
+}
+
+.psoriasis-left {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.psoriasis-right {
+  flex: 1;
+}
+
+.psoriasis-title,
+.psoriasis-right-title {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  color: #7b904b; /* Unified color for both titles */
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.psoriasis-video {
+  max-width: 100%;
+  border: 3px solid var(--border-color);
+  box-shadow: 1px 2px 2px #abbe47;
+  height: 350px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.psoriasis-paragraph {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 20px;
+  min-height: 20px;
+  
+}
+.psoriasis-paragraph strong {
+  font-weight: bold; /* Make text bold */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .psoriasis-container {
+    flex-direction: column;
+    padding: 30px 40px;
+  }
+
+  .psoriasis-left, .psoriasis-right {
+    margin-right: 0;
+  }
+
+  .psoriasis-title,
+  .psoriasis-right-title {
+    font-size: 22px;
+  }
+
+  .psoriasis-paragraph {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .psoriasis-container {
+    padding: 20px;
+  }
+
+  .psoriasis-title,
+  .psoriasis-right-title {
+    font-size: 20px;
+  }
+
+  .psoriasis-paragraph {
+    font-size: 12px;
   }
 }
