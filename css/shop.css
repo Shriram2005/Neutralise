@@ -75,6 +75,8 @@
   }
 
   .side-menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     right: -200px;
     background-color: var(--main-bg-color);
@@ -91,19 +93,31 @@
   }
   #side-menu-img {
     margin: 20px auto;
-  }
-  .side-menu a {
+  }.side-menu a, .dropdown-btn {
     font-family: "Jacques Francois", serif;
     text-decoration: none;
     color: #000;
     font-weight: 700;
     font-size: 20px;
     border-bottom: 3px solid var(--link-color);
-    margin-inline: 30px;
-    margin-top: 10px;
+    margin: 10px 0; /* Remove inline margin for consistency */
     padding: 20px;
+    margin-left: 5px;
+    width: 250px; /* Fixed width for all buttons */
+    box-sizing: border-box; /* Include padding and border in width */
+    display: block; /* Make the link a block element */
     transition-duration: 0.2s;
   }
+  .login-link {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .login-link i {
+    font-size: 24px; /* Increase the icon size */
+    margin-right: 10px; /* Add space between the icon and text */
+  }
+  
   .dropdown {
     position: relative;
   }
@@ -111,19 +125,19 @@
     display: none;
     position: absolute;
     background-color: var(--main-bg-color);
-    min-width: 200px;
+    min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 5;
   }
   .dropdown-content a {
+    width: 200px;
+    margin-left: 10px;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
-  .dropdown-content a:hover {
-    background-color: var(--main-bg-color);
-  }
+  
   .dropdown:hover .dropdown-content {
     display: block;
   }
