@@ -78,6 +78,9 @@
 .side-menu {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   position: fixed;
   right: -200px;
   background-color: var(--main-bg-color);
