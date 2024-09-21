@@ -147,10 +147,11 @@ li {
   margin-bottom: 20px;
 }
 
-img {
-  vertical-align: middle;
-  margin-right: 10px;
+.f-icon{
+  color: rgb(0, 0, 0);
+  margin: 15px;
 }
+
 
 /* Contact form */
 .contact-form {
