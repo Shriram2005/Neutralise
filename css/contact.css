@@ -1,7 +1,7 @@
 * {
     Margin: 0;
     Padding: 0;
-    Font-family: “Josefin Sans”,sans-serif;
+    font-family:  Inter, sans-serif ;
     box-sizing: border-box;
     scroll-behavior: smooth
   }
@@ -112,3 +112,156 @@
     color: #abbe47!important;
     cursor: pointer
   }
+  
+
+  /* section area starts here  */
+
+section {
+  padding: 40px;
+  background-color: #fff4c4;
+}
+
+h2 {
+  color: red;
+  text-align: center;
+  font-size: 1.3em;
+  animation: slideIn 0.5s ease-in-out;
+  font-family:  "Jacques Francois", serif;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0px 50px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+ul {
+  padding: 30px 50px;
+  list-style-type: none;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+button {
+  display: inline-block;
+  margin: 10px auto 0;
+  padding: 12px 40px;
+  background-color: #070707;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2em;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  section {
+      padding: 20px;
+      font-size: 1.2em;
+  }
+
+  p {
+      font-size: 1.2em;
+      padding: 0px 20px;
+  }
+
+  ul {
+      padding: 20px;
+      font-size: 1em;
+  }
+
+  .contact-form {
+      width: 90%;
+      padding: 10px;
+  }
+
+  button {
+      padding: 10px 30px;
+      font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+      font-size: 1.5em;
+  }
+
+  p, ul, li {
+      font-size: 1em;
+      padding: 0;
+  }
+
+  ul {
+      padding: 10px;
+  }
+
+  .contact-form {
+      width: 100%;
+  }
+
+  button {
+      padding: 8px 20px;
+      font-size: 0.9em;
+  }
+}
