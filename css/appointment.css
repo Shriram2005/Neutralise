@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 :root {
     --main-bg-color: #fff4c4;
     --header-bg-color: #fff4c4;
@@ -145,7 +145,7 @@ button:hover {
     font-size: 0.875rem;
     margin-top: 0.25rem;
 }
-=======
+
 .Book-appointment {
     display: flex;
     align-items: center;
@@ -158,4 +158,4 @@ button:hover {
     }
 
 }
->>>>>>> 93a0021fc76a790eb0d471622828c373d5b6ae6d
+
