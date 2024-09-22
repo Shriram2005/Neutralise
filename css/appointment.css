@@ -1,0 +1,146 @@
+:root {
+    --main-bg-color: #fff4c4;
+    --header-bg-color: #fff4c4;
+    --text-color: #000000;
+    --link-color: #000;
+    --hover-color: #abbe47;
+    --green-bg-color: #a2b139;
+    --white-bg-color: #f7f7f7;
+    --border-color: #abbe47;
+    --footer-bg-color: #000;
+    --footer-text-color: #bdbdbd;
+    --error-color: red;
+  }
+  
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: “Josefin Sans”, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body,
+  html {
+    height: 100%;
+    background-color: var(--main-bg-color);
+  }
+
+/* General Styling */
+
+.appointment-form {
+    background-color: var(--main-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(131, 131, 131);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+button {
+    display: block;
+    width: 200px;
+    margin: 10px auto; /* Changed from margin-top to margin and added auto */
+    padding: 0.75rem;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--green-bg-color);
+}
+
+@media (max-width: 600px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+}
+
+/* Error styles */
+.error {
+    border-color: #e74c3c !important;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}

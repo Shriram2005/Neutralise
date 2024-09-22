@@ -24,3 +24,4 @@ function toggleDropdown(event) {
     dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
 }
 
+
