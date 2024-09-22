@@ -10,6 +10,10 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/appointment.css">
+    <!-- tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/85a51766c8.js" crossorigin="anonymous"></script>
     <!-- google fonts -->
@@ -102,6 +106,172 @@
     </header>
 
     <section class="Book-appointment">
+
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-2xl">
+            <h1 class="text-2xl font-bold text-center mb-4">Book an Appointment</h1>
+            <p class="text-center mb-6">Fill the form below and we will get back soon to you for more updates and plan your appointment.</p>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" placeholder="First Name" class="w-full border border-gray-300 p-2 rounded-md">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">&nbsp;</label>
+                        <input type="text" placeholder="Last Name" class="w-full border border-gray-300 p-2 rounded-md">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Date of Birth</label>
+                    <div class="grid grid-cols-3 gap-4">
+                        <select class="border border-gray-300 p-2 rounded-md">
+                            <option>Please select a day</option>
+                        </select>
+                        <select class="border border-gray-300 p-2 rounded-md">
+                            <option>Please select a month</option>
+                        </select>
+                        <select class="border border-gray-300 p-2 rounded-md">
+                            <option>Please select a year</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Gender</label>
+                        <select class="w-full border border-gray-300 p-2 rounded-md">
+                            <option>Please Select</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Phone Number</label>
+                        <input type="text" placeholder="(000) 000-0000" class="w-full border border-gray-300 p-2 rounded-md">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Address</label>
+                    <input type="text" placeholder="Street Address" class="w-full border border-gray-300 p-2 rounded-md mb-2">
+                    <input type="text" placeholder="Street Address Line 2" class="w-full border border-gray-300 p-2 rounded-md mb-2">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <input type="text" placeholder="City" class="w-full border border-gray-300 p-2 rounded-md">
+                        <input type="text" placeholder="State / Province" class="w-full border border-gray-300 p-2 rounded-md">
+                        <input type="text" placeholder="Postal / Zip Code" class="w-full border border-gray-300 p-2 rounded-md">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Email</label>
+                    <input type="email" placeholder="ex: myname@example.com" class="w-full border border-gray-300 p-2 rounded-md">
+                    <p class="text-sm text-gray-500 mt-1">example@example.com</p>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Have you ever applied to our facility before?</label>
+                    <div class="flex items-center space-x-4">
+                        <label class="flex items-center">
+                            <input type="radio" name="applied_before" class="mr-2"> Yes
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="applied_before" class="mr-2"> No
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Which department would you like to get an appointment from?</label>
+                    <input type="text" class="w-full border border-gray-300 p-2 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Which procedure do you want to make an appointment for?</label>
+                    <select class="w-full border border-gray-300 p-2 rounded-md">
+                        <option>Please Select</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Preferred Appointment Date</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <input type="text" placeholder="09/23/2024" class="w-full border border-gray-300 p-2 rounded-md mb-2">
+                            <div class="grid grid-cols-3 gap-2">
+                                <select class="border border-gray-300 p-2 rounded-md">
+                                    <option>September</option>
+                                </select>
+                                <select class="border border-gray-300 p-2 rounded-md">
+                                    <option>2024</option>
+                                </select>
+                            </div>
+                            <div class="mt-2">
+                                <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                                    <div>MON</div>
+                                    <div>TUE</div>
+                                    <div>WED</div>
+                                    <div>THU</div>
+                                    <div>FRI</div>
+                                    <div>SAT</div>
+                                    <div>SUN</div>
+                                </div>
+                                <div class="grid grid-cols-7 gap-1 text-center text-sm mt-1">
+                                    <div class="text-gray-400">28</div>
+                                    <div class="text-gray-400">29</div>
+                                    <div class="text-gray-400">30</div>
+                                    <div class="text-gray-400">31</div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div>6</div>
+                                    <div>7</div>
+                                    <div>8</div>
+                                    <div>9</div>
+                                    <div>10</div>
+                                    <div>11</div>
+                                    <div>12</div>
+                                    <div>13</div>
+                                    <div>14</div>
+                                    <div>15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div>18</div>
+                                    <div>19</div>
+                                    <div>20</div>
+                                    <div>21</div>
+                                    <div>22</div>
+                                    <div class="bg-blue-500 text-white rounded-full">23</div>
+                                    <div>24</div>
+                                    <div>25</div>
+                                    <div>26</div>
+                                    <div>27</div>
+                                    <div>28</div>
+                                    <div>29</div>
+                                    <div>30</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span>Monday, September 23</span>
+                                <div class="flex space-x-2">
+                                    <button type="button" class="p-1 border border-gray-300 rounded-md"><i class="fas fa-chevron-left"></i></button>
+                                    <button type="button" class="p-1 border border-gray-300 rounded-md"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button type="button" class="p-2 border border-gray-300 rounded-md">18:30</button>
+                                <button type="button" class="p-2 border border-gray-300 rounded-md">19:00</button>
+                                <button type="button" class="p-2 border border-gray-300 rounded-md">19:30</button>
+                                <button type="button" class="p-2 border border-gray-300 rounded-md">20:00</button>
+                                <button type="button" class="p-2 border border-gray-300 rounded-md">20:30</button>
+                                <button type="button" class="p-2 border border-gray-300 rounded-md">21:00</button>
+                                <button type="button" class="p-2 border border-gray-300 rounded-md">23:30</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <input type="checkbox" class="mr-2"> <span>Auto</span> <span class="ml-1">(15:57)</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md">Submit</button>
+                </div>
+            </form>
+        </div>
         
     </section>
     <!-- Footer --------------------------------------->

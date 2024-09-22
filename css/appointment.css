@@ -1,0 +1,12 @@
+.Book-appointment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (width>500px) {
+    .Book-appointment {
+        margin: 50px;
+    }
+
+}
