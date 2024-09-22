@@ -453,7 +453,7 @@ nav {
   max-width: 90%; /* Set a maximum width */
   margin: 0 auto; /* Center the row within the container */
   display: flex;
-  overflow: hidden; /* Prevent overflow */
+  overflow: scroll; /* Prevent overflow */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
