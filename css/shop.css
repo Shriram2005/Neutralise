@@ -40,14 +40,115 @@
     position: absolute
   }
   .logo {
-    height: 100%;
+    width: 110px;
+    height: auto;
     margin-left: 20px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px
+    padding-top: 10px;
+    padding-right: 0;
   }
+  
+.divider {
+  height: 40px; /* Adjust based on your logo height */
+  width: 1px;
+  background-color: #333; /* Adjust color to match your design */
+  margin: 0 10px 0 0; /* Add a small right margin */
+}
+
+.Text-next-logo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif; /* Matching the font from your Google Fonts import */
+   margin-right: 300px;
+}
+
+.Text-next-logo .brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjust color to match your design */
+}
+
+.Text-next-logo .tagline {
+    font-size: 14px;
+    color: #666; /* Adjust color to match your design */
+}
+@media (width<500px) {
+  .Text-next-logo {
+    display: none;
+  }
+  .divider{
+    display: none;
+  }
+}
+
+/* Styling for the About Us dropdown (unique classes) */
+.about-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.about-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--main-bg-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.about-dropdown-icon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.about-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.about-dropdown-content a:hover {
+  background-color: var(--main-bg-color);
+}
+
+.about-dropdown:hover .about-dropdown-content {
+  display: block;
+}
+
+/* Styling for the Login/Register dropdown on hover (unique classes) */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--main-bg-color);
+  min-width: 160px;
+  right: 0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.user-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.user-dropdown-content a:hover {
+  background-color: var(--main-bg-color);
+}
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block;
+}
+
+  
   .menu {
     float: right;
     justify-content: space-evenly;

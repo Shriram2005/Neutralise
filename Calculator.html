@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="max-age=86400">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neutralise Naturals</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/85a51766c8.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jacques+Francois&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <!-------- Navbar --------->
+    <header>
+        <nav>
+            <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" class="logo">
+            <div class="divider"></div>
+            <div class="Text-next-logo">
+                <span class="brand-name">Neutralise Naturals</span>
+                <span class="tagline">Natural Remedy Provider for Skin Problems</span>
+            </div>
+            <div class="menu">
+                <a href="./index.html" >Home</a>
+                <a href="./Appointment.html">Book an Appointment</a>
+                <a href="./shop.html">Shop</a>
+        
+                <!-- About Us Dropdown Menu -->
+                <div class="about-dropdown">
+                    <a href="./about-us.html">About Us
+                        <i class="fa-solid fa-caret-down about-dropdown-icon"></i>
+
+                    </a>
+                    <div class="about-dropdown-content">
+                        <a href="./blog.html">Blog</a>
+                        <a href="./testimonials.html">Testimonials</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                </div>
+        
+                <a href="./Calculator.html" style="font-weight: bold;">Psoriasis Calculator</a>
+        
+                <!-- Login/Register Dropdown on Hover -->
+                <div class="user-dropdown">
+                    <a href="./Login-Register.html" class="user-link">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="user-dropdown-content">
+                        <a href="./Login-Register.html">Login</a>
+                        <a href="./Login-Register.html">Register</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="sidebar-btn" onclick="sideSwipe()">
+                <i class="fa-solid fa-bars" style="color: #000000;"></i>
+            </div>
+        </nav>
+        
+        
+        <!-- side menu / side navbar -->
+
+        <div class="side-menu">
+            
+            <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" width='170px' id="side-menu-img">
+           
+            <a href="./index.html">Home</a>
+            <a href="./Appointment.html">Book an Appointment</a>
+           
+
+            <div class="dropdown">
+                <a href="./about-us.html" class="dropdown-btn" onclick="toggleDropdown(event)">About Us   
+                    <i class="fa-solid fa-caret-down about-dropdown-icon"></i>  
+                </a>
+                <div class="dropdown-content">
+                    <a href="./blog.html">Blog</a>
+                    <a href="./testimonials.html">Testimonials</a>
+                    <a href="./contact.html">Contact Us</a>
+                </div>
+            </div>
+            <a href="./shop.html">Shop</a>
+            <a href="./Calculator.html">Psoriasis Calculator</a>
+            <a href="./Login-Register.html" class="login-link">
+                <i class="fa-solid fa-user"></i>
+                Login / Sign-up
+            </a> 
+        </div>
+        
+
+        <div class="black-effect" onclick="removeBlack()"></div>
+    </header>
+
+    <section class="psoriasis-calculator">
+
+    </section>
+    <!-- Footer --------------------------------------->
+    <footer>
+        <div class="foot-div">
+            <div class="foot-innerBox">Download Ayushkin App for Your Personalized Neutralise Skin Kit and Complete
+                AI-Based Assistance for Skin Problem Recovery.</div>
+            <br><br>
+            <a href="#"><img src="./contents/app-icon.webp" alt="" loading="lazy" class="app-icon"></a>
+            <a href="#"><img src="./contents/play-store.webp" alt="" loading="lazy" class="playstore-icon"></a>
+            OR
+            <a href="#"><img src="./contents/app-store.webp" alt="" loading="lazy" class="appstore-icon"></a>
+
+            <div class="connect">
+                <h2>Connect With Us!</h2>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-instagram fa-lg"
+                            style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f fa-lg"
+                            style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fa-lg"
+                            style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js" defer></script>
+</body>
+
+</html>

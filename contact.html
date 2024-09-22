@@ -23,17 +23,47 @@
     <!-------- Navbar --------->
     <header>
         <nav>
-            <img src="./contents/neutralise-logo.png" alt="logo" width='110px' class="logo">
-            <div class="menu">
-                <a href="./index.html">Home</a>
-                <a href="./shop.html">Shop</a>
-                <a href="./about-us.html">About Us</a>
-                <a href="#" style="font-weight: bold;">Contact Us</a>
+            <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" class="logo">
+            <div class="divider"></div>
+            <div class="Text-next-logo">
+                <span class="brand-name">Neutralise Naturals</span>
+                <span class="tagline">Natural Remedy Provider for Skin Problems</span>
             </div>
+            <div class="menu">
+                <a href="./index.html" >Home</a>
+                <a href="./Appointment.html">Book an Appointment</a>
+                <a href="./shop.html">Shop</a>
+        
+                <!-- About Us Dropdown Menu -->
+                <div class="about-dropdown">
+                    <a href="./about-us.html">About Us
+                        <i class="fa-solid fa-caret-down about-dropdown-icon"></i>
+
+                    </a>
+                    <div class="about-dropdown-content">
+                        <a href="./blog.html">Blog</a>
+                        <a href="./testimonials.html">Testimonials</a>
+                        <a href="./contact.html" style="font-weight: bold;">Contact Us</a>
+                    </div>
+                </div>
+        
+                <a href="./Calculator.html">Psoriasis Calculator</a>
+        
+                <!-- Login/Register Dropdown on Hover -->
+                <div class="user-dropdown">
+                    <a href="./Login-Register.html" class="user-link">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="user-dropdown-content">
+                        <a href="./login.html">Login</a>
+                        <a href="./register.html">Register</a>
+                    </div>
+                </div>
+            </div>
+        
             <div class="sidebar-btn" onclick="sideSwipe()">
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </div>
-
         </nav>
         <!-- side menu / side navbar -->
 
