@@ -28,31 +28,55 @@
             <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" width='110px' class="logo">
             <div class="menu">
                 <a href="#" style="font-weight: bold;">Home</a>
+                <a href="./Appointment.html">Book an Appointment</a>
                 <a href="./shop.html">Shop</a>
-                <a href="./about-us.html">About Us</a>
-                <a href="./contact.html">Contact Us</a>
+        
+                <!-- About Us Dropdown Menu -->
+                <div class="about-dropdown">
+                    <a href="./about-us.html">About Us
+                        <i class="fa-solid fa-caret-down about-dropdown-icon"></i>
+
+                    </a>
+                    <div class="about-dropdown-content">
+                        <a href="./blog.html">Blog</a>
+                        <a href="./testimonials.html">Testimonials</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                </div>
+        
+                <a href="./Calculator.html">Psoriasis Calculator</a>
+        
+                <!-- Login/Register Dropdown on Hover -->
+                <div class="user-dropdown">
+                    <a href="./Login-Register.html" class="user-link">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="user-dropdown-content">
+                        <a href="./login.html">Login</a>
+                        <a href="./register.html">Register</a>
+                    </div>
+                </div>
             </div>
+        
             <div class="sidebar-btn" onclick="sideSwipe()">
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </div>
-
         </nav>
+        
+        
         <!-- side menu / side navbar -->
 
         <div class="side-menu">
+            
             <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" width='170px' id="side-menu-img">
+           
             <a href="#">Home</a>
             <a href="./Appointment.html">Book an Appointment</a>
-            <a href="./shop.html">Shop</a>
-            <a href="./Calculator.html">Psoriasis Calculator</a>
-            <a href="./Login-Register.html" class="login-link">
-                <i class="fa-solid fa-user"></i>
-                Login/Register
-            </a>
-            
+           
+
             <div class="dropdown">
                 <a href="./about-us.html" class="dropdown-btn" onclick="toggleDropdown(event)">About Us   
-                    <i class="fa-solid fa-chevron-down"></i>  
+                    <i class="fa-solid fa-caret-down about-dropdown-icon"></i>  
                 </a>
                 <div class="dropdown-content">
                     <a href="./blog.html">Blog</a>
@@ -60,6 +84,12 @@
                     <a href="./contact.html">Contact Us</a>
                 </div>
             </div>
+            <a href="./shop.html">Shop</a>
+            <a href="./Calculator.html">Psoriasis Calculator</a>
+            <a href="./Login-Register.html" class="login-link">
+                <i class="fa-solid fa-user"></i>
+                Login / Sign-up
+            </a> 
         </div>
         
 
