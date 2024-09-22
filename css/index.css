@@ -41,13 +41,47 @@ nav {
   position: absolute;
 }
 .logo {
-  height: 100%;
+  width: 110px;
+  height: auto;
   margin-left: 20px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 10px;
+  padding-right: 0;
+}
+.divider {
+  height: 40px; /* Adjust based on your logo height */
+  width: 1px;
+  background-color: #333; /* Adjust color to match your design */
+  margin: 0 10px 0 0; /* Add a small right margin */
+}
+
+.Text-next-logo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif; /* Matching the font from your Google Fonts import */
+   margin-right: 300px;
+}
+
+.Text-next-logo .brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjust color to match your design */
+}
+
+.Text-next-logo .tagline {
+    font-size: 14px;
+    color: #666; /* Adjust color to match your design */
+}
+@media (width<500px) {
+  .Text-next-logo {
+    display: none;
+  }
+  .divider{
+    display: none;
+  }
 }
 .menu {
   float: right;
