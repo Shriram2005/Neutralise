@@ -25,9 +25,6 @@ html {
   height: 100%;
   background-color: var(--main-bg-color);
 }
-
- /* Navbar styles starts here ------------------------------ */
-
 header {
   height: 70px;
   background-color:  var(--header-bg-color);
@@ -55,32 +52,37 @@ nav {
   padding-right: 0;
 }
 .divider {
-  height: 40px;
+  height: 40px; /* Adjust based on your logo height */
   width: 1px;
-  background-color: #333; 
-  margin: 0 10px 0 0; 
+  background-color: #333; /* Adjust color to match your design */
+  margin: 0 10px 0 0; /* Add a small right margin */
 }
 
 .Text-next-logo {
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; /* Matching the font from your Google Fonts import */
    margin-right: 300px;
 }
 
 .Text-next-logo .brand-name {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #333; /* Adjust color to match your design */
 }
 
 .Text-next-logo .tagline {
     font-size: 14px;
-    color: #666;
+    color: #666; /* Adjust color to match your design */
 }
-
-/* menu navbar -------- */
-
+@media (width<500px) {
+  .Text-next-logo {
+    display: none;
+  }
+  .divider{
+    display: none;
+  }
+}
 .menu {
   float: right;
   justify-content: space-evenly;
@@ -107,7 +109,7 @@ nav {
   position: fixed;
   right: 0;
 }
-/* About Us dropdown*/
+/* Styling for the About Us dropdown (unique classes) */
 .about-dropdown {
   position: relative;
   display: inline-block;
@@ -140,7 +142,7 @@ nav {
   display: block;
 }
 
-/*  Login/Register dropdown on hover */
+/* Styling for the Login/Register dropdown on hover (unique classes) */
 .user-dropdown {
   position: relative;
   display: inline-block;
@@ -205,22 +207,22 @@ nav {
   font-weight: 700;
   font-size: 20px;
   border-bottom: 3px solid var(--link-color);
-  margin: 10px 0; 
+  margin: 10px 0; /* Remove inline margin for consistency */
   padding: 20px;
   margin-left: 5px;
-  width: 250px;
-  box-sizing: border-box; 
-  display: block; 
+  width: 250px; /* Fixed width for all buttons */
+  box-sizing: border-box; /* Include padding and border in width */
+  display: block; /* Make the link a block element */
   transition-duration: 0.2s;
 }
 .login-link {
-  display: flex;
-  align-items: center;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
 }
 
 .login-link i {
-  font-size: 24px;
-  margin-right: 10px;
+  font-size: 24px; /* Increase the icon size */
+  margin-right: 10px; /* Add space between the icon and text */
 }
 
 .dropdown {
@@ -261,9 +263,7 @@ nav {
   }
 }
 
- /* Navbar styles Ends here ------------------------------- */
 
-/* body section , top image section Starts here */
 
 .top-image {
   width: 100%;
