@@ -268,15 +268,42 @@ nav {
 .top-image {
   width: 100%;
   height: 450px;
-  background-image: url(../contents/top-image.JPG);
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  object-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.slider-images {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider-img.active {
+  opacity: 1;
+}
+
+.top-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
 .top-image h2 {
   font-size: 25px;
   font-family: "Jacques Francois", serif;
@@ -448,8 +475,7 @@ nav {
   text-decoration: none;
   color: var(--text-color);
   cursor: pointer;
-  font-family: "Jacques Francois", serif;
-}.products-row {
+  font-family: "Jacques Francois", serif;}.products-row {
   max-width: 90%; /* Set a maximum width */
   margin: 0 auto; /* Center the row within the container */
   display: flex;
@@ -673,84 +699,141 @@ footer .connect {
 /* General Layout for Psoriasis Section */
 .psoriasis-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 50px 80px;
-  background-color: var(--main-bg-color); /* Use CSS variables for better consistency */
+  padding: 40px 20px;
+  background-color: var(--main-bg-color);
 }
 
-.psoriasis-left {
+.psoriasis-main-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--green-bg-color);
+  font-family: "Jacques Francois", serif;
+}
+
+.psoriasis-left, .psoriasis-right {
   flex: 1;
-  margin-right: 40px;
+  min-width: 300px;
+  padding: 0 20px;
 }
 
-.psoriasis-right {
-  flex: 1;
-}
-
-.psoriasis-title,
-.psoriasis-right-title {
-  font-family: 'Georgia', serif;
-  font-size: 24px;
-  color: #7b904b; /* Unified color for both titles */
-  margin-bottom: 20px;
-  line-height: 1.4;
+.psoriasis-subtitle {
+  margin-bottom: 15px;
+  color: var(--text-color);
 }
 
 .psoriasis-video {
-  max-width: 100%;
-  border: 3px solid var(--border-color);
-  box-shadow: 1px 2px 2px #abbe47;
-  height: 350px;
-  border-radius: 6px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
 }
 
 .psoriasis-paragraph {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 1.2;
-  color: #333;
-  margin-bottom: 20px;
-  min-height: 20px;
-  
-}
-.psoriasis-paragraph strong {
-  font-weight: bold; /* Make text bold */
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 1024px) {
-  .psoriasis-container {
-    flex-direction: column;
-    padding: 30px 40px;
-  }
+/* Journey Timeline */
+.journey-container {
+  padding: 40px 20px;
+  background-color: var(--main-bg-color);
+}
 
+.journey-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--green-bg-color);
+  font-family: "Jacques Francois", serif;
+}
+
+.journey-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.journey-line {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.journey-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.journey-content {
+  position: relative;
+  width: 45%;
+  padding: 15px;
+  background-color: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.journey-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.journey-item:nth-child(odd) .journey-content {
+  left: 55%;
+}
+
+.journey-item:nth-child(even) .journey-content {
+  left: 0;
+}
+
+.journey-content h3 {
+  margin-top: 0;
+  color: var(--green-bg-color);
+}
+
+.journey-content p {
+  margin-bottom: 0;
+  display: none;
+}
+
+.journey-dot {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--green-bg-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .psoriasis-left, .psoriasis-right {
-    margin-right: 0;
+    flex: 100%;
+    margin-bottom: 30px;
   }
-
-  .psoriasis-title,
-  .psoriasis-right-title {
-    font-size: 22px;
+  
+  .journey-line {
+    left: 20px;
   }
-
-  .psoriasis-paragraph {
-    font-size: 14px;
+  
+  .journey-content {
+    width: calc(100% - 50px);
+    left: 50px !important;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .psoriasis-container {
-    padding: 20px;
-  }
-
-  .psoriasis-title,
-  .psoriasis-right-title {
-    font-size: 20px;
-  }
-
-  .psoriasis-paragraph {
-    font-size: 12px;
+  
+  .journey-dot {
+    left: 20px;
   }
 }
 
