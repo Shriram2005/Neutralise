@@ -849,7 +849,9 @@ footer {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: left;
+  text-wrap: balance;
 }
 
 .footer-column {
@@ -929,10 +931,30 @@ footer {
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
+    text-align: left;
+    text-wrap: balance;
   }
   
   .footer-column {
     width: 100%;
-    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .app-download {
+    align-items: flex-start;
+  }
+  
+  .social-icons {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 20px 0 0;
+  }
+  
+  .footer-bottom {
+    text-align: left;
+    padding-left: 20px;
   }
 }
