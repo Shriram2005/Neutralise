@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
   --main-bg-color: #fff4c4;
   --header-bg-color: #fff4c4;
@@ -12,26 +13,30 @@
   --error-color: red;
 }
 
-
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
-  font-family: “Josefin Sans”, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 body,
 html {
   height: 100%;
   background-color: var(--main-bg-color);
 }
+
+/* Header and Navigation Styles */
 header {
   height: 70px;
-  background-color:  var(--header-bg-color);
+  background-color: var(--header-bg-color);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 nav {
   width: 100%;
   color: var(--text-color);
@@ -42,6 +47,7 @@ nav {
   padding: 0 10px;
   height: 70px;
 }
+
 .logo {
   width: 110px;
   height: auto;
@@ -50,43 +56,33 @@ nav {
   padding-top: 10px;
   padding-right: 0;
 }
+
 .divider {
-  height: 40px; /* Adjust based on your logo height */
+  height: 40px;
   width: 1px;
   background-color: #333;
-  margin: 0 10px;
-  background-color: #333; /* Adjust color to match your design */
-  margin: 0 10px 0 0; /* Add a small right margin */
-
+  margin: 0 10px 0 0;
 }
 
 .Text-next-logo {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-   margin-right: 20px;
-    font-family: 'Inter', sans-serif; /* Matching the font from your Google Fonts import */
-   margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  margin-right: 300px;
 }
 
 .Text-next-logo .brand-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333; /* Adjust color to match your design */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
 
 .Text-next-logo .tagline {
-    font-size: 14px;
-    color: #666; /* Adjust color to match your design */
+  font-size: 14px;
+  color: #666;
 }
-@media (width<500px) {
-  .Text-next-logo {
-    display: none;
-  }
-  .divider{
-    display: none;
-  }
-}
+
+/* Menu Styles */
 .menu {
   float: right;
   justify-content: space-evenly;
@@ -94,6 +90,7 @@ nav {
   max-width: 800px;
   display: none;
 }
+
 .menu a {
   font-size: 17px;
   font-family: "Jacques Francois", serif;
@@ -104,6 +101,11 @@ nav {
   transition-duration: 0.2s;
 }
 
+.menu a:hover {
+  border-bottom: 4px solid #abbe47;
+}
+
+/* Sidebar Button Styles */
 .sidebar-btn {
   font-size: 25px;
   margin-right: 30px;
@@ -113,7 +115,8 @@ nav {
   position: fixed;
   right: 0;
 }
-/* Styling for the About Us dropdown (unique classes) */
+
+/* Dropdown Styles */
 .about-dropdown {
   position: relative;
   display: inline-block;
@@ -127,10 +130,12 @@ nav {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .about-dropdown-icon {
   margin-left: 5px;
   cursor: pointer;
 }
+
 .about-dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -146,7 +151,7 @@ nav {
   display: block;
 }
 
-/* Styling for the Login/Register dropdown on hover (unique classes) */
+/* User Dropdown Styles */
 .user-dropdown {
   position: relative;
   display: inline-block;
@@ -177,11 +182,7 @@ nav {
   display: block;
 }
 
-/* Sidebar button styling (keeping it the same) */
-.sidebar-btn {
-  cursor: pointer;
-}
-
+/* Side Menu Styles */
 .side-menu {
   display: flex;
   flex-direction: column;
@@ -189,49 +190,57 @@ nav {
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: fixed;
-  right: -200px;
+  right: -300px;
   background-color: var(--main-bg-color);
   height: 100vh;
   width: 300px;
   max-width: 100vw;
-  right: 0;
-  display: flex !important;
-  flex-direction: column;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
-  right: -300px;
   z-index: 4;
 }
+
 #side-menu-img {
   margin: 20px auto;
-}.side-menu a, .dropdown-btn {
+  width: 150px; /* Decreased from 170px */
+}
+
+.side-menu a, .dropdown-btn {
   font-family: "Jacques Francois", serif;
   text-decoration: none;
   color: #000;
-  font-weight: 700;
-  font-size: 20px;
-  border-bottom: 3px solid var(--link-color);
-  margin: 10px 0; /* Remove inline margin for consistency */
-  padding: 20px;
+  font-weight: 300;
+  font-size: 18px; /* Decreased from 20px */
+  border-bottom: 2px solid var(--link-color); /* Decreased from 3px */
+  margin: 8px 0; /* Decreased from 10px */
+  padding: 15px; /* Decreased from 20px */
   margin-left: 5px;
-  width: 250px; /* Fixed width for all buttons */
-  box-sizing: border-box; /* Include padding and border in width */
-  display: block; /* Make the link a block element */
+  width: 200px; /* Decreased from 250px */
+  box-sizing: border-box;
+  display: block;
   transition-duration: 0.2s;
 }
+
+.side-menu a:hover {
+  border-bottom: 2px solid #abbe47; /* Decreased from 3px */
+  padding-left: 20px; /* Decreased from 26px */
+}
+
 .login-link {
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  align-items: center;
 }
 
 .login-link i {
-  font-size: 24px; /* Increase the icon size */
-  margin-right: 10px; /* Add space between the icon and text */
+  font-size: 24px;
+  margin-right: 10px;
 }
 
+/* Dropdown Styles in Side Menu */
 .dropdown {
   position: relative;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -240,6 +249,7 @@ nav {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 5;
 }
+
 .dropdown-content a {
   width: 200px;
   margin-left: 10px;
@@ -252,23 +262,8 @@ nav {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-@media (min-width: 700px) {
-  .sidebar-btn {
-    display: none;
-  }
-  .logo {
-    font-size: 14px;
-  }
-  .menu {
-    display: flex;
-  }
-  .side-menu {
-    display: none;
-  }
-}
 
-
-
+/* Top Image Slider Styles */
 .top-image {
   width: 100%;
   height: 450px;
@@ -315,6 +310,8 @@ nav {
   text-align: center;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
+/* Top Text Area Styles */
 .top-text-area {
   width: 100%;
   display: flex;
@@ -324,6 +321,7 @@ nav {
   padding: 20px;
   background-color: var(--main-bg-color);
 }
+
 .top-text-area .t1 {
   font-size: 14px;
   padding: 20px;
@@ -333,6 +331,7 @@ nav {
   margin-top: 20px;
   text-wrap: balance;
 }
+
 .top-text-area .explore-btn-area {
   display: flex;
   justify-content: center;
@@ -340,21 +339,25 @@ nav {
   text-decoration: none;
   padding-bottom: 40px;
 }
-.explore-btn{
+
+.explore-btn {
   border-radius: 40px;
 }
+
 .top-text-area .explore-btn {
   display: flex;
   align-items: center;
   padding: 8px 15px;
   text-decoration: none;
-  border: 1px solid  var(--text-color);
+  border: 1px solid var(--text-color);
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
   transition-duration: 0.2s;
 }
+
 .top-text-area .explore-btn:hover {
   background-color: var(--hover-color);
 }
+
 .top-text-area .explore-btn p {
   font-size: 14px;
   font-family: Inter, sans-serif;
@@ -362,13 +365,14 @@ nav {
   text-align: center;
   padding-right: 10px;
 }
+
 .top-text-area .explore-btn i {
   font-size: 20px;
   color: var(--text-color);
   padding-bottom: 5px;
 }
-/* Secondary navbar */
-/* Overall structure */
+
+/* Secondary Navbar Styles */
 .secondary-navbar {
   display: flex;
   flex-direction: column;
@@ -389,13 +393,10 @@ nav {
   display: none;
 }
 
-/* First row: Green background */
 .green-row {
-  background-color: var(--green-bg-color); /* Green background color */
-  height: 50px; /* Set uniform height */
+  background-color: var(--green-bg-color);
+  height: 50px;
 }
-
-
 
 .category-buttons {
   display: flex;
@@ -411,22 +412,20 @@ nav {
   font-weight: bold;
   cursor: pointer;
   color: black;
-  height: 100%; /* Ensure buttons stretch vertically */
+  height: 100%;
   display: flex;
   align-items: center;
   transition: background-color 0.3s;
 }
 
-/* Hover effect: Body button and others */
 .category-btn:hover {
-  background-color: #f7d6db; /* Light pink background on hover */
+  background-color: #f7d6db;
 }
 
-/* Second row: White background */
 .white-row {
-  background-color: var(--white-bg-color); /* White background */
-  height: 50px; /* Same height as green row for consistency */
-  border-top: 1px solid #d3d3d3; /* Optional border for separation */
+  background-color: var(--white-bg-color);
+  height: 50px;
+  border-top: 1px solid #d3d3d3;
 }
 
 .icon-buttons {
@@ -448,15 +447,17 @@ nav {
 }
 
 .icon-btn:hover {
-  color: var(--green-bg-color); /* Change color on hover */
+  color: var(--green-bg-color);
 }
 
+/* Products Section Styles */
 .products-section-title-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
+
 .products-section-title-bar .featured-products {
   flex: 1;
   padding-left: 50px;
@@ -465,22 +466,20 @@ nav {
   font-weight: 700;
   font-size: 34px;  
 }
-.products-section-title-bar  {
-  text-align: right;
-  text-decoration: none;
-  color: var(--text-color);
-  cursor: pointer;
-  font-family: "Jacques Francois", serif;}.products-row {
-  max-width: 90%; /* Set a maximum width */
-  margin: 0 auto; /* Center the row within the container */
+
+.products-row {
+  max-width: 90%;
+  margin: 0 auto;
   display: flex;
-  overflow: scroll; /* Prevent overflow */
+  overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .products-row::-webkit-scrollbar {
   display: none;
 }
+
 .product-box {
   min-width: 200px;
   height: 300px;
@@ -491,6 +490,7 @@ nav {
   cursor: pointer;
   gap: 20px;
 }
+
 .product-img {
   width: 100%;
   height: 100%;
@@ -500,7 +500,7 @@ nav {
   object-position: center;
 }
 
-
+/* Features Section Styles */
 .features-section {
   display: flex;
   justify-content: space-around;
@@ -513,6 +513,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .feature-box {
   width: 220px;
   height: 320px;
@@ -523,19 +524,21 @@ nav {
   background-color: #ffffff4b;
   box-shadow: 1px 2px 2px #abbe47;
   transition-duration: 0.2s;
-  /* flex-basis: calc(22% - 10px); */
 }
+
 .feature-img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   margin-bottom: 10px;
 }
+
 .feature-box h3 {
   font-family: "Jacques Francois", serif;
   font-size: 18px;
   margin-bottom: 10px;
 }
+
 .feature-box p {
   font-family: Inter, sans-serif;
   font-size: 14px;
@@ -543,101 +546,8 @@ nav {
   text-wrap: balance;
   text-align: left;
 }
-.foot-div {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-  background-color: #000;
-  color: #bdbdbd;
-  padding: 40px;
-  text-align: center;
-}
-.foot-innerBox {
-  max-width: 750px;
-  text-wrap: balance;
-}
-footer .app-icon {
-  width: 40vw;
-  min-width: 300px;
-  max-width: 400px;
-  padding: 20px;
-}
-footer .playstore-icon {
-  width: 40vw;
-  min-width: 300px;
-  max-width: 400px;
-  padding: 20px;
-}
-footer .appstore-icon {
-  width: 40vw;
-  min-width: 300px;
-  max-width: 400px;
-  padding: 20px;
-}
-footer .connect {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-inline: 15%;
-  margin-top: 30px;
-}
-.social {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-inline: 15%;
-  margin-top: 30px;
-  width: 100%;
-  max-width: 400px;
-}
-.social a {
-  text-decoration: none;
-}
-.connect i {
-  height: 35px;
-  width: 35px;
-  font-size: 25px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  transition-duration: 0.2s;
-}
-.black-effect {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: none;
-  background-color: rgb(0, 0, 0, 0.5);
-  z-index: 3;
-  top: 0;
-}
-.menu a:hover {
-  border-bottom: 4px solid #abbe47;
-}
-.side-menu a:hover {
-  border-bottom: 3px solid #abbe47;
-  padding-left: 26px;
-}
-.connect i:hover {
-  color: #abbe47 !important;
-  cursor: pointer;
-}
 
-@media (width<500px) {
-  .feature-box{
-    width: 250px;
-  }
-  .category-buttons{
-    display: none;
-  }
-}
-
-
-/* Autoimmune disorder */
+/* Autoimmune Disorders Section Styles */
 .autoimmune-disorders-title-bar {
   display: flex;
   justify-content: space-between;
@@ -655,11 +565,11 @@ footer .connect {
 }
 
 .autoimmune-disorders-top-image {
-  width: 30%; /* Default width */
-  height: 645px; /* Default height */
+  width: 30%;
+  height: 645px;
   background-image: url(../contents/AD.jpg);
-  background-size: cover; /* Use cover to ensure the image covers the div */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--border-color);
   box-shadow: 1px 2px 2px #abbe47;
@@ -668,33 +578,10 @@ footer .connect {
   justify-content: center;
   align-items: center;
   margin-left: auto;
-  margin-right: auto; /* Center the div horizontally */
+  margin-right: auto;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .autoimmune-disorders-top-image {
-    width: 80%; /* Increase width for smaller screens */
-    height: 500px; /* Set height to auto to maintain aspect ratio */
-  }
-}
-
-@media (max-width: 480px) {
-  .autoimmune-disorders-top-image {
-    width: 90%; /* Further increase width for mobile */
-    height: 500px; /* Maintain aspect ratio */
-  }
-
-  .autoimmune-disorders {
-    font-size: 24px; /* Adjust font size for mobile */
-    padding-left: 20px; /* Adjust padding */
-  }
-}
-
-
-/* Youtube video and paragrphs */
-
-/* General Layout for Psoriasis Section */
+/* Psoriasis Section Styles */
 .psoriasis-container {
   display: flex;
   flex-wrap: wrap;
@@ -715,12 +602,12 @@ footer .connect {
   flex: 1;
   min-width: 300px;
   padding: 0 50px;
-  
 }
 
-.psoriasis-right{
+.psoriasis-right {
   padding-top: 50px;
 }
+
 .psoriasis-subtitle {
   margin-bottom: 15px;
   color: var(--green-bg-color);
@@ -737,10 +624,9 @@ footer .connect {
 .psoriasis-paragraph {
   margin-bottom: 10px;
   line-height: 1.6;
-  
 }
 
-/* Journey Timeline */
+/* Journey Timeline Styles */
 .journey-container {
   padding: 40px 20px;
   background-color: var(--main-bg-color);
@@ -840,64 +726,7 @@ footer .connect {
   animation-delay: calc(var(--item-index) * 0.2s + 0.5s);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes growLine {
-  from {
-    height: 0;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes popIn {
-  from {
-    transform: translateX(-50%) scale(0);
-  }
-  to {
-    transform: translateX(-50%) scale(1);
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .journey-line {
-    left: 20px;
-  }
-  
-  .journey-content {
-    width: calc(100% - 50px);
-    left: 50px !important;
-  }
-  
-  .journey-dot {
-    left: 20px;
-  }
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
   background-color: var(--footer-bg-color);
   color: #bdbdbd;
@@ -988,7 +817,224 @@ footer {
   border-top: 1px solid #333;
 }
 
+.footer-column .app-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-column .app-icon:hover {
+  transform: scale(1.05);
+}
+
+.footer-app-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-top: -20px;
+  margin-right: 80px;
+}
+
+.footer-app-logo img {
+  width: 250px;
+  height: 220px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  object-position: top;
+}
+
+.footer-app-logo:hover img {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-map-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-address-map, .footer-business-hours {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-address, .footer-office-address {
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+.footer-address-map iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.footer-business-hours {
+  text-align: left;
+  padding-top: 80px;
+  padding-left: 80px;
+}
+
+.terms-conditions-btn {
+  background-color: var(--green-bg-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.terms-conditions-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .footer-map-section {
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 768px) {
+  nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo {
+    width: 90px;
+    margin-left: 10px;
+  }
+
+  .divider {
+    height: 35px;
+  }
+
+  .Text-next-logo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .Text-next-logo .brand-name {
+    font-size: 16px;
+  }
+
+  .Text-next-logo .tagline {
+    font-size: 12px;
+  }
+
+  .sidebar-btn {
+    margin-left: auto;
+  }
+
+  .footer-map-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-address-map, .footer-business-hours {
+    width: 90%;
+    max-width: none;
+  }
+
+  .footer-business-hours {
+    text-align: left;
+    padding-left: 0px;
+    padding-bottom: 40px;
+  }
+
+  .footer-app-logo {
+    margin-top: -15px;
+  }
+
+  .footer-app-logo img {
+    width: 180px;
+    height: 170px;
+  }
+
+  .footer-column .app-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .journey-line {
+    left: 20px;
+  }
+  
+  .journey-content {
+    width: calc(100% - 50px);
+    left: 50px !important;
+  }
+  
+  .journey-dot {
+    left: 20px;
+  }
+
+  .autoimmune-disorders-top-image {
+    width: 80%;
+    height: 500px;
+  }
+
   .footer-container {
     flex-direction: column;
     text-align: left;
@@ -1019,176 +1065,6 @@ footer {
   }
 }
 
-/* Updated app-icon styles */
-.footer-column .app-icon {
-  width: 60px;  /* Decreased from previous value */
-  height: 60px; /* Decreased from previous value */
-  margin-bottom: 10px;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.footer-column .app-icon:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .footer-column .app-icon {
-    width: 50px;  /* Further decreased for mobile */
-    height: 50px; /* Further decreased for mobile */
-  }
-}
-
-/* App Logo in Footer */
-.footer-app-logo {
-  display: inline-block;
-  margin-bottom: 15px;
-  margin-top: -20px; /* Added negative margin to move upward */
-  margin-right: 80px;
-}
-
-.footer-app-logo img {
-  width: 250px;
-  height: 220px; /* Increased slightly to compensate for upward movement */
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  object-position: top; /* Aligns the image to the top */
-}
-
-.footer-app-logo:hover img {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-  .footer-app-logo {
-    margin-top: -15px; /* Slightly less negative margin for mobile */
-  }
-
-  .footer-app-logo img {
-    width: 180px;
-    height: 170px; /* Adjusted for mobile */
-  }
-}
-
-/* Add these styles to your existing CSS file */
-
-.footer-map-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px 0;
-    border-top: 1px solid #333;
-    margin-top: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.footer-address-map, .footer-business-hours {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-address, .footer-office-address {
-    margin-bottom: 20px;
-    text-wrap: balance;
-}
-
-.footer-address-map iframe {
-    width: 100%;
-    height: 200px;
-    border: 0;
-    border-radius: 5px;
-}
-
-.footer-business-hours {
-    text-align: left;
-    padding-top: 80px;
-    padding-left: 80px;
-}
-
-.terms-conditions-btn {
-    background-color: var(--green-bg-color);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    align-self: center;
-}
-
-.terms-conditions-btn:hover {
-    background-color: var(--hover-color);
-}
-
-@media (max-width: 1200px) {
-    .footer-map-section {
-        justify-content: space-around;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-map-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-address-map, .footer-business-hours {
-        width: 90%;
-        max-width: none;
-    }
-    .footer-business-hours{
-      text-align: left;
-      padding-left: 0px;
-      padding-bottom: 40px;
-    }
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  nav {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .logo {
-    width: 90px; /* Slightly reduced for mobile */
-    margin-left: 10px;
-  }
-
-  .divider {
-    height: 35px; /* Slightly reduced for mobile */
-  }
-
-  .Text-next-logo {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .Text-next-logo .brand-name {
-    font-size: 16px; /* Slightly reduced for mobile */
-  }
-
-  .Text-next-logo .tagline {
-    font-size: 12px; /* Slightly reduced for mobile */
-  }
-
-  .sidebar-btn {
-    margin-left: auto;
-  }
-}
-
-/* For very small screens */
 @media (max-width: 480px) {
   .logo {
     width: 80px;
@@ -1203,13 +1079,46 @@ footer {
   }
 
   .Text-next-logo .tagline {
-    font-size: 10px;
+    display: none;
+  }
+
+  .autoimmune-disorders-top-image {
+    width: 90%;
+    height: 500px;
+  }
+
+  .autoimmune-disorders {
+    font-size: 24px;
+    padding-left: 20px;
   }
 }
 
-/* Add these adjustments to hide the tagline on very small screens */
-@media (max-width: 480px) {
-  .Text-next-logo .tagline {
+@media (min-width: 700px) {
+  .sidebar-btn {
+    display: none;
+  }
+  .logo {
+    font-size: 14px;
+  }
+  .menu {
+    display: flex;
+  }
+  .side-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .feature-box {
+    width: 250px;
+  }
+  .category-buttons {
+    display: none;
+  }
+  .Text-next-logo {
+    display: none;
+  }
+  .divider {
     display: none;
   }
 }
