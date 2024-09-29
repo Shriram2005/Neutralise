@@ -465,7 +465,68 @@ nav {
 .products-scroll-container {
   width: 100%;
   overflow: hidden;
-  padding: 10px 0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.products-row {
+  display: flex;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.products-row-left {
+  animation-name: scrollLeft;
+}
+
+.products-row-right {
+  animation-name: scrollRight;
+}
+
+.product-card {
+  flex: 0 0 250px;
+  margin-right: 20px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* Other existing styles */
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5 - 20px * 5)); /* Adjust based on card width, margin, and number of cards */
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(calc(-250px * 5 - 20px * 5)); /* Same as above */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add this to pause animation on hover */
+.products-row:hover {
+  animation-play-state: paused;
+}
+
+/* Ensure smooth transition when animation restarts */
+.products-row::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px; /* Adjust based on card margin */
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--main-bg-color));
 }
 
 /* Responsive adjustments */
@@ -1324,4 +1385,13 @@ footer {
 /* Add this at the end of your CSS file */
 .products-grid:hover {
   animation-play-state: paused;
+}
+
+.product-card:last-child {
+  border-right: none;
+}
+
+/* Remove the ::after pseudo-element from the products-row */
+.products-row::after {
+  display: none;
 }
