@@ -221,6 +221,7 @@ nav {
   transition-duration: 0.2s;
 }
 
+
 .side-menu a:hover {
   border-bottom: 2px solid #abbe47; /* Decreased from 3px */
   padding-left: 20px; /* Decreased from 26px */
