@@ -10,9 +10,8 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="./css/index.css">
 
-<link rel="stylesheet" href="./css/appointment.css">
-
     <link rel="stylesheet" href="./css/appointment.css">
+
     <!-- tailwind css  -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -39,10 +38,10 @@
                 <span class="tagline">Natural Remedy Provider for Skin Problems</span>
             </div>
             <div class="menu">
-                <a href="./index.html" >Home</a>
+                <a href="./index.html">Home</a>
                 <a href="./Appointment.html" style="font-weight: bold;">Book an Appointment</a>
                 <a href="./shop.html">Shop</a>
-        
+
                 <!-- About Us Dropdown Menu -->
                 <div class="about-dropdown">
                     <a href="./about-us.html">About Us
@@ -55,9 +54,9 @@
                         <a href="./contact.html">Contact Us</a>
                     </div>
                 </div>
-        
-                <a href="./Calculator.html" >Psoriasis Calculator</a>
-        
+
+                <a href="./Calculator.html">Psoriasis Calculator</a>
+
                 <!-- Login/Register Dropdown on Hover -->
                 <div class="user-dropdown">
                     <a href="./Login-Register.html" class="user-link">
@@ -69,26 +68,26 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="sidebar-btn" onclick="sideSwipe()">
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </div>
         </nav>
-        
-        
+
+
         <!-- side menu / side navbar -->
 
         <div class="side-menu">
-            
+
             <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" width='170px' id="side-menu-img">
-           
-            <a href="#">Home</a>
+
+            <a href="./index.html">Home</a>
             <a href="./Appointment.html">Book an Appointment</a>
-           
+
 
             <div class="dropdown">
-                <a href="./about-us.html" class="dropdown-btn" onclick="toggleDropdown(event)">About Us   
-                    <i class="fa-solid fa-caret-down about-dropdown-icon"></i>  
+                <a href="./about-us.html" class="dropdown-btn" onclick="toggleDropdown(event)">About Us
+                    <i class="fa-solid fa-caret-down about-dropdown-icon"></i>
                 </a>
                 <div class="dropdown-content">
                     <a href="./blog.html">Blog</a>
@@ -101,9 +100,9 @@
             <a href="./Login-Register.html" class="login-link">
                 <i class="fa-solid fa-user"></i>
                 Login / Sign-up
-            </a> 
+            </a>
         </div>
-        
+
 
         <div class="black-effect" onclick="removeBlack()"></div>
     </header>
@@ -168,58 +167,59 @@
                 <input type="date" id="appointmentDate" name="appointmentDate" required>
             </div>
             <div class="form-group">
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit-btn">Submit</button>
             </div>
         </form>
         <div id="formErrors" class="error-messages"></div>
     </div>
 
     <!-- Footer --------------------------------------->
-    
 
-<footer>
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <p>Neutralise Naturals: Your trusted partner for natural remedies addressing chronic skin conditions like psoriasis.</p>
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="./shop.html">Shop</a></li>
-          <li><a href="./about-us.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Customer Service</h3>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Shipping & Returns</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Download Our App</h3>
-        <p>Get your personalized Neutralise Skin Kit and AI-based assistance.</p>
-        <div class="app-download">
-          <a href="#"><img src="./contents/app-store.webp" alt="App Store" loading="lazy"></a>
-          <a href="#"><img src="./contents/play-store.webp" alt="Play Store" loading="lazy"></a>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Neutralise Naturals: Your trusted partner for natural remedies addressing chronic skin conditions
+                    like psoriasis.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./about-us.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Download Our App</h3>
+                <p>Get your personalized Neutralise Skin Kit and AI-based assistance.</p>
+                <div class="app-download">
+                    <a href="#"><img src="./contents/app-store.webp" alt="App Store" loading="lazy"></a>
+                    <a href="#"><img src="./contents/play-store.webp" alt="Play Store" loading="lazy"></a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Neutralise Naturals. All rights reserved.</p>
-    </div>
-  </footer>
-  
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Neutralise Naturals. All rights reserved.</p>
+        </div>
+    </footer>
+
 
     <script src="./js/script.js" defer></script>
     <script src="./js/appointmentValidation.js" defer></script>

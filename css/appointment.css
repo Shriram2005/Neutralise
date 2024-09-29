@@ -110,7 +110,7 @@ select:focus {
     margin-right: 0.5rem;
 }
 
-button {
+#submit-btn {
     display: block;
     width: 200px;
     margin: 10px auto; /* Changed from margin-top to margin and added auto */
@@ -125,7 +125,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#submit-btn:hover {
     background-color: var(--green-bg-color);
 }
 
