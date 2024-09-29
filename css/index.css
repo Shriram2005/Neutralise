@@ -514,12 +514,19 @@ nav {
   animation: scroll 60s linear infinite;
 }
 
+/* Double the content for seamless looping */
+.products-grid::after {
+  content: "";
+  display: flex;
+  gap: 20px;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-250px * 10 - 20px * 10)); /* Adjust based on card width, gap, and number of cards */
   }
 }
 
