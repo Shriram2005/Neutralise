@@ -52,3 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+// for shop page
