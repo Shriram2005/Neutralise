@@ -135,13 +135,14 @@
     <div class="products-section">
 
         <div class="products-section-title-bar">
-            <div class="featured-products">FEATURED PRODUCTS</div>
+            <h2 class="featured-products">FEATURED PRODUCTS</h2>
         </div>
         <!-- Secondary navbar here -->
         <div class="secondary-navbar">
-            <!-- First row: Offers and Category buttons -->
+            <!-- Category buttons -->
             <div class="navbar-row green-row">
                 <div class="category-buttons">
+                    <button class="category-btn active">ALL</button>
                     <button class="category-btn">BODY</button>
                     <button class="category-btn">SKIN</button>
                     <button class="category-btn">FACE</button>
@@ -150,9 +151,8 @@
                 </div>
             </div>
         
-            <!-- Second row: Icons -->
+            <!-- Icons -->
             <div class="navbar-row white-row">
-                
                 <div class="icon-buttons">
                     <a href="#" class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="#" class="icon-btn"><i class="fa-regular fa-heart"></i></a>
@@ -162,37 +162,154 @@
             </div>
         </div>
         
-        <div class="products-row">
-            <div class="product-box">
-                <img src="./contents/products/product1.JPG"  loading="lazy" alt="product1" class="product-img">
-            </div>
-            <div class="product-box">
-                <img src="./contents/products/product2.JPG"  loading="lazy" alt="product2" class="product-img">
-            </div>
-            <div class="product-box">
-                <img src="./contents/products/product1.JPG"  loading="lazy" alt="product3" class="product-img">
-            </div>
-            <div class="product-box">
-                <img src="./contents/products/product3.JPG" loading="lazy" alt="product4" class="product-img">
+        <div class="products-scroll-container">
+            <div class="products-grid">
+                <!-- Original set of product cards -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Add more product cards here -->
+                
+                <!-- Duplicate the entire set of product cards -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Add more duplicated product cards here -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Natural Body Lotion</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
-
-        <div class="products-row">
-            <div class="product-box">
-                <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="product-img">
-            </div>
-            <div class="product-box">
-                <img src="./contents/products/product2.JPG" loading="lazy" alt="product2" class="product-img">
-            </div>
-            <div class="product-box">
-                <img src="./contents/products/product3.JPG" loading="lazy" alt="product3" class="product-img">
-            </div>
-            <div class="product-box">
-                <img src="./contents/products/product2.JPG" loading="lazy" alt="product4" class="product-img">
-            </div>
-        </div>
-
-
     </div>
 
 

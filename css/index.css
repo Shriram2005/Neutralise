@@ -375,65 +375,68 @@ nav {
 
 /* Secondary Navbar Styles */
 .secondary-navbar {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-bottom: 20px;
 }
 
 .navbar-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.navbar-row::-webkit-scrollbar {
-  display: none;
+  width: 100%;
 }
 
 .green-row {
   background-color: var(--green-bg-color);
   height: 50px;
+  padding: 0 20px;
 }
 
 .category-buttons {
   display: flex;
   gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.category-buttons::-webkit-scrollbar {
+  display: none;
 }
 
 .category-btn {
-  background-color: white;
-  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
   padding: 5px 15px;
-  border: none;
+  border-radius: 20px;
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  color: black;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
-.category-btn:hover {
-  background-color: #f7d6db;
+.category-btn:hover, .category-btn.active {
+  background-color: white;
+  color: var(--green-bg-color);
 }
 
 .white-row {
   background-color: var(--white-bg-color);
   height: 50px;
   border-top: 1px solid #d3d3d3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .icon-buttons {
   display: flex;
-  justify-content: flex-end;
   gap: 20px;
-  width: 100%;
 }
 
 .icon-btn {
@@ -451,54 +454,199 @@ nav {
   color: var(--green-bg-color);
 }
 
+/* Ensure the products section doesn't add extra width */
+.products-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .green-row, .white-row {
+    padding: 0 10px;
+  }
+
+  .category-buttons {
+    justify-content: flex-start;
+  }
+
+  .white-row {
+    justify-content: center;
+  }
+}
+
 /* Products Section Styles */
+.products-section {
+  padding: 20px 0;
+  background-color: var(--main-bg-color);
+  overflow-x: hidden;
+}
+
 .products-section-title-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.products-section-title-bar .featured-products {
-  flex: 1;
-  padding-left: 50px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.featured-products {
   font-family: "Jacques Francois", serif;
-  font-weight: 700;
-  font-size: 34px;  
+  font-size: 28px;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
 }
 
-.products-row {
-  max-width: 90%;
-  margin: 0 auto;
+.featured-products::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--green-bg-color);
+}
+
+/* Products Grid Styles */
+.products-grid {
   display: flex;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.products-row::-webkit-scrollbar {
-  display: none;
-}
-
-.product-box {
-  min-width: 200px;
-  height: 300px;
-  margin: 20px;
-  border: 10px solid var(--border-color);
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
-  transition-duration: 0.2s;
-  cursor: pointer;
   gap: 20px;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.product-card {
+  flex: 0 0 250px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
 }
 
 .product-img {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
   object-fit: cover;
-  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.quick-view-btn {
+  background-color: white;
+  color: var(--green-bg-color);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-view-btn:hover {
+  background-color: var(--green-bg-color);
+  color: white;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--green-bg-color);
+  margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+  background-color: var(--green-bg-color);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .featured-products {
+    font-size: 24px;
+  }
+
+  .product-card {
+    flex: 0 0 200px;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-products {
+    font-size: 20px;
+  }
+
+  .product-card {
+    flex: 0 0 180px;
+  }
+
+  .product-image {
+    height: 160px;
+  }
 }
 
 /* Features Section Styles */
@@ -1122,4 +1270,9 @@ footer {
   .divider {
     display: none;
   }
+}
+
+/* Add this at the end of your CSS file */
+.products-grid:hover {
+  animation-play-state: paused;
 }
