@@ -37,35 +37,34 @@ header {
 }
 nav {
   width: 100%;
-  color: white;
+  color: var(--text-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
+  padding: 0 10px;
+  height: 70px;
 }
 .logo {
   width: 110px;
   height: auto;
   margin-left: 20px;
   margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top: 10px;
   padding-right: 0;
 }
 .divider {
   height: 40px;
   width: 1px;
-  background-color: #333; 
-  margin: 0 10px 0 0; 
+  background-color: #333;
+  margin: 0 10px;
 }
 
 .Text-next-logo {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-   margin-right: 300px;
+   margin-right: 20px;
 }
 
 .Text-next-logo .brand-name {
@@ -336,6 +335,9 @@ nav {
   text-decoration: none;
   padding-bottom: 40px;
 }
+.explore-btn{
+  border-radius: 40px;
+}
 .top-text-area .explore-btn {
   display: flex;
   align-items: center;
@@ -388,19 +390,7 @@ nav {
   height: 50px; /* Set uniform height */
 }
 
-.offers-btn {
-  background-color: white;
-  color:  var(--error-color);
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 12px;
-  border: 1px solid var(--error-color);
-  border-radius: 5px;
-  text-decoration: none;
-  height: 100%; /* Ensure it stretches vertically */
-  display: flex;
-  align-items: center;
-}
+
 
 .category-buttons {
   display: flex;
@@ -470,7 +460,7 @@ nav {
   font-weight: 700;
   font-size: 34px;  
 }
-.products-section-title-bar .see-all {
+.products-section-title-bar  {
   text-align: right;
   text-decoration: none;
   color: var(--text-color);
@@ -513,15 +503,19 @@ nav {
   width: 100%;
   flex-wrap: wrap;
   padding: 20px;
-  background-color: var(--main-bg-color);
+  background-color: var(--header-bg-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .feature-box {
-  width: 200px;
+  width: 220px;
   height: 320px;
   margin: 20px;
   text-align: center;
   padding: 20px;
   border: 2px solid var(--border-color);
+  background-color: #ffffff4b;
   box-shadow: 1px 2px 2px #abbe47;
   transition-duration: 0.2s;
   /* flex-basis: calc(22% - 10px); */
@@ -541,6 +535,8 @@ nav {
   font-family: Inter, sans-serif;
   font-size: 14px;
   color: #000;
+  text-wrap: balance;
+  text-align: left;
 }
 .foot-div {
   width: 100%;
@@ -630,9 +626,6 @@ footer .connect {
   .feature-box{
     width: 250px;
   }
-  .see-all{
-    display: none;
-  }
   .category-buttons{
     display: none;
   }
@@ -716,12 +709,16 @@ footer .connect {
 .psoriasis-left, .psoriasis-right {
   flex: 1;
   min-width: 300px;
-  padding: 0 20px;
+  padding: 0 50px;
+  
 }
 
+.psoriasis-right{
+  padding-top: 50px;
+}
 .psoriasis-subtitle {
   margin-bottom: 15px;
-  color: var(--text-color);
+  color: var(--green-bg-color);
 }
 
 .psoriasis-video {
@@ -733,14 +730,16 @@ footer .connect {
 }
 
 .psoriasis-paragraph {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   line-height: 1.6;
+  
 }
 
 /* Journey Timeline */
 .journey-container {
   padding: 40px 20px;
   background-color: var(--main-bg-color);
+  overflow: hidden;
 }
 
 .journey-title {
@@ -748,6 +747,7 @@ footer .connect {
   margin-bottom: 40px;
   color: var(--green-bg-color);
   font-family: "Jacques Francois", serif;
+  animation: fadeInDown 1s ease-out;
 }
 
 .journey-timeline {
@@ -761,13 +761,17 @@ footer .connect {
   z-index: 1;
   left: 50%;
   width: 2px;
-  height: 100%;
+  height: 0;
   background-color: var(--border-color);
+  animation: growLine 2s ease-out forwards;
 }
 
 .journey-item {
   position: relative;
   margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: calc(var(--item-index) * 0.2s);
 }
 
 .journey-content {
@@ -783,8 +787,8 @@ footer .connect {
 }
 
 .journey-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .journey-item:nth-child(odd) .journey-content {
@@ -798,11 +802,24 @@ footer .connect {
 .journey-content h3 {
   margin-top: 0;
   color: var(--green-bg-color);
+  transition: color 0.3s ease;
+}
+
+.journey-content:hover h3 {
+  color: var(--hover-color);
 }
 
 .journey-content p {
   margin-bottom: 0;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.journey-content:hover p {
+  max-height: 100px;
+  opacity: 1;
 }
 
 .journey-dot {
@@ -813,16 +830,54 @@ footer .connect {
   height: 20px;
   background-color: var(--green-bg-color);
   border-radius: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0);
+  animation: popIn 0.5s ease-out forwards;
+  animation-delay: calc(var(--item-index) * 0.2s + 0.5s);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .psoriasis-left, .psoriasis-right {
-    flex: 100%;
-    margin-bottom: 30px;
-  }
-  
   .journey-line {
     left: 20px;
   }
@@ -956,5 +1011,200 @@ footer {
   .footer-bottom {
     text-align: left;
     padding-left: 20px;
+  }
+}
+
+/* Updated app-icon styles */
+.footer-column .app-icon {
+  width: 60px;  /* Decreased from previous value */
+  height: 60px; /* Decreased from previous value */
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-column .app-icon:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .footer-column .app-icon {
+    width: 50px;  /* Further decreased for mobile */
+    height: 50px; /* Further decreased for mobile */
+  }
+}
+
+/* App Logo in Footer */
+.footer-app-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-top: -20px; /* Added negative margin to move upward */
+  margin-right: 80px;
+}
+
+.footer-app-logo img {
+  width: 250px;
+  height: 220px; /* Increased slightly to compensate for upward movement */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  object-position: top; /* Aligns the image to the top */
+}
+
+.footer-app-logo:hover img {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .footer-app-logo {
+    margin-top: -15px; /* Slightly less negative margin for mobile */
+  }
+
+  .footer-app-logo img {
+    width: 180px;
+    height: 170px; /* Adjusted for mobile */
+  }
+}
+
+/* Add these styles to your existing CSS file */
+
+.footer-map-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-address-map, .footer-business-hours {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-address, .footer-office-address {
+    margin-bottom: 20px;
+    text-wrap: balance;
+}
+
+.footer-address-map iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.footer-business-hours {
+    text-align: left;
+    padding-top: 80px;
+    padding-left: 80px;
+}
+
+.terms-conditions-btn {
+    background-color: var(--green-bg-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.terms-conditions-btn:hover {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 1200px) {
+    .footer-map-section {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-map-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-address-map, .footer-business-hours {
+        width: 90%;
+        max-width: none;
+    }
+    .footer-business-hours{
+      text-align: left;
+      padding-left: 0px;
+      padding-bottom: 40px;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo {
+    width: 90px; /* Slightly reduced for mobile */
+    margin-left: 10px;
+  }
+
+  .divider {
+    height: 35px; /* Slightly reduced for mobile */
+  }
+
+  .Text-next-logo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .Text-next-logo .brand-name {
+    font-size: 16px; /* Slightly reduced for mobile */
+  }
+
+  .Text-next-logo .tagline {
+    font-size: 12px; /* Slightly reduced for mobile */
+  }
+
+  .sidebar-btn {
+    margin-left: auto;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .logo {
+    width: 80px;
+  }
+
+  .divider {
+    height: 30px;
+  }
+
+  .Text-next-logo .brand-name {
+    font-size: 14px;
+  }
+
+  .Text-next-logo .tagline {
+    font-size: 10px;
+  }
+}
+
+/* Add these adjustments to hide the tagline on very small screens */
+@media (max-width: 480px) {
+  .Text-next-logo .tagline {
+    display: none;
   }
 }
