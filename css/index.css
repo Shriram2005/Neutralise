@@ -190,10 +190,10 @@ nav {
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: fixed;
-  right: -300px;
+  right: -270px;
   background-color: var(--main-bg-color);
   height: 100vh;
-  width: 300px;
+  width: 270px;
   max-width: 100vw;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
