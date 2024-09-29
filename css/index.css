@@ -917,6 +917,7 @@ footer {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .footer-column ul {
@@ -1011,7 +1012,7 @@ footer {
 .footer-map-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px 0;
   border-top: 1px solid #333;
   margin-top: 20px;
@@ -1027,11 +1028,12 @@ footer {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .footer-address, .footer-office-address {
   margin-bottom: 20px;
-  text-wrap: balance;
+  text-align: left;
 }
 
 .footer-address-map iframe {
@@ -1043,8 +1045,23 @@ footer {
 
 .footer-business-hours {
   text-align: left;
-  padding-top: 80px;
-  padding-left: 80px;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.footer-business-hours h3,
+.footer-address h3,
+.footer-office-address h3 {
+  margin-bottom: 10px;
+}
+
+.footer-business-hours p,
+.footer-address p,
+.footer-office-address p {
+  margin: 5px 0;
+  margin-left: 2;
+  font-size: 14px;
+  text-align: left;
 }
 
 .terms-conditions-btn {
