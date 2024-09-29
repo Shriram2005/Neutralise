@@ -202,7 +202,7 @@ nav {
 
 #side-menu-img {
   margin: 20px auto;
-  width: 150px; /* Decreased from 170px */
+  width: 150px; 
 }
 
 .side-menu a, .dropdown-btn {
@@ -210,12 +210,12 @@ nav {
   text-decoration: none;
   color: #000;
   font-weight: 300;
-  font-size: 18px; /* Decreased from 20px */
-  border-bottom: 2px solid var(--link-color); /* Decreased from 3px */
-  margin: 8px 0; /* Decreased from 10px */
-  padding: 15px; /* Decreased from 20px */
+  font-size: 18px; 
+  border-bottom: 2px solid var(--link-color); 
+  margin: 8px 0; 
+  padding: 15px; 
   margin-left: 5px;
-  width: 200px; /* Decreased from 250px */
+  width: 200px; 
   box-sizing: border-box;
   display: block;
   transition-duration: 0.2s;
@@ -223,8 +223,8 @@ nav {
 
 
 .side-menu a:hover {
-  border-bottom: 2px solid #abbe47; /* Decreased from 3px */
-  padding-left: 20px; /* Decreased from 26px */
+  border-bottom: 2px solid #abbe47; 
+  padding-left: 20px; 
 }
 
 .login-link {
