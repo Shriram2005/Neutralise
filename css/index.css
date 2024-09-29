@@ -1,5 +1,6 @@
 /* Root Variables */
 :root {
+  /* colors  */
   --main-bg-color: #fff4c4;
   --header-bg-color: #fff4c4;
   --text-color: #000000;
@@ -12,6 +13,7 @@
   --footer-text-color: #bdbdbd;
   --error-color: red;
 
+  /* fonts  */
   --font-heading: "Jacques Francois", serif;
   --font-body: "Inter", sans-serif;
 }
