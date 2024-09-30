@@ -121,11 +121,11 @@ function fetchProductData(productId) {
         sku: 'NH001',
         shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
         fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: '/contents/1Q1A0529.JPG',
+        mainImage: './contents/1Q1A0529.JPG',
         images: [
-            '/contents/1Q1A0529.JPG',
-            '/contents/1Q1A0511.JPG',
-            '/contents/1Q1A0518.JPG'
+            './contents/1Q1A0529.JPG',
+            './contents/1Q1A0511.JPG',
+            './contents/1Q1A0518.JPG'
         ],
         ingredients: [
             'Organic Aloe Vera',
