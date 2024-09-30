@@ -463,9 +463,73 @@ nav {
 
 /* Ensure the products section doesn't add extra width */
 .products-scroll-container {
-  width: 100%;
   overflow: hidden;
-  padding: 10px 0;
+  padding: 20px 0;
+}
+
+.products-row {
+  display: flex;
+  animation: scroll 60s linear infinite;
+}
+
+.products-row-left {
+  animation-direction: normal;
+}
+
+.products-row-right {
+  animation-direction: reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.product-card {
+  flex: 0 0 250px;
+  margin-right: 20px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* Other existing styles */
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5 - 20px * 5)); /* Adjust based on card width, margin, and number of cards */
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(calc(-250px * 5 - 20px * 5)); /* Same as above */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add this to pause animation on hover */
+.products-row:hover {
+  animation-play-state: paused;
+}
+
+/* Ensure smooth transition when animation restarts */
+.products-row::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px; /* Adjust based on card margin */
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--main-bg-color));
 }
 
 /* Responsive adjustments */
@@ -542,22 +606,23 @@ nav {
 }
 
 .product-card {
-  flex: 0 0 250px;
-  background-color: white;
-  border-radius: 10px;
+  width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  margin: 10px;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
   position: relative;
-  overflow: hidden;
   height: 200px;
+  overflow: hidden;
 }
 
 .product-img {
@@ -590,52 +655,51 @@ nav {
 }
 
 .quick-view-btn {
-  background-color: white;
-  color: var(--green-bg-color);
+  background-color: #ffffff;
+  color: #000000;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .quick-view-btn:hover {
-  background-color: var(--green-bg-color);
-  color: white;
+  background-color: #f0f0f0;
 }
 
 .product-info {
   padding: 15px;
-  text-align: center;
 }
 
 .product-title {
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333333;
 }
 
 .product-price {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  color: var(--green-bg-color);
+  color: #4CAF50;
   margin-bottom: 10px;
 }
 
 .add-to-cart-btn {
-  background-color: var(--green-bg-color);
-  color: white;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #ffffff;
   border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .add-to-cart-btn:hover {
-  background-color: var(--hover-color);
+  background-color: #45a049;
 }
 
 /* Responsive Styles */
@@ -1324,4 +1388,13 @@ footer {
 /* Add this at the end of your CSS file */
 .products-grid:hover {
   animation-play-state: paused;
+}
+
+.product-card:last-child {
+  border-right: none;
+}
+
+/* Remove the ::after pseudo-element from the products-row */
+.products-row::after {
+  display: none;
 }

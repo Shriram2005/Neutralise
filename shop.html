@@ -8,6 +8,7 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="./css/shop.css">
+    <link rel="stylesheet" href="./css/index.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/85a51766c8.js" crossorigin="anonymous"></script>
     <!-- google fonts -->
@@ -48,6 +49,11 @@
                 </div>
         
                 <a href="./Calculator.html">Psoriasis Calculator</a>
+        
+                <!-- Add this line for the cart icon -->
+                <a href="./cart.html" class="cart-icon" data-count="0">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
         
                 <!-- Login/Register Dropdown on Hover -->
                 <div class="user-dropdown">
@@ -98,176 +104,261 @@
         <div class="shop-products-section">
             <div class="shop-products-grid">
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=1" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$24.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="1">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" 
+                            onclick="addToCart('1', 'Product Name', '24.99', './contents/products/product1.JPG')">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=2" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product2.JPG" loading="lazy" alt="product2" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$19.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="2">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="2" data-product-name="Product Name" data-product-price="19.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=3" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product3.JPG" loading="lazy" alt="product3" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$29.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="3">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="3" data-product-name="Product Name" data-product-price="29.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=1" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$24.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="1">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="1" data-product-name="Product Name" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=2" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product2.JPG" loading="lazy" alt="product2" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$19.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="2">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="2" data-product-name="Product Name" data-product-price="19.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=3" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product3.JPG" loading="lazy" alt="product3" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$29.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="3">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="3" data-product-name="Product Name" data-product-price="29.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=1" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$24.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="1">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="1" data-product-name="Product Name" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=2" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product2.JPG" loading="lazy" alt="product2" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$19.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="2">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="2" data-product-name="Product Name" data-product-price="19.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=3" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product3.JPG" loading="lazy" alt="product3" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$29.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="3">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="3" data-product-name="Product Name" data-product-price="29.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=1" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$24.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="1">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="1" data-product-name="Product Name" data-product-price="24.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=2" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product2.JPG" loading="lazy" alt="product2" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$19.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="2">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="2" data-product-name="Product Name" data-product-price="19.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 <div class="shop-product-card">
-                    <div class="shop-product-image">
-                        <img src="./contents/products/product1.JPG" loading="lazy" alt="product1" class="shop-product-img">
-                        <div class="shop-product-overlay">
-                            <button class="shop-quick-view-btn">Quick View</button>
+                    <a href="product-view.html?id=3" class="shop-product-link">
+                        <div class="shop-product-image">
+                            <img src="./contents/products/product3.JPG" loading="lazy" alt="product3" class="shop-product-img">
+                            <div class="shop-product-overlay">
+                                <p>View Details</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shop-product-info">
-                        <h3 class="shop-product-title">Natural Body Lotion</h3>
-                        <p class="shop-product-price">$24.99</p>
-                        <button class="shop-add-to-cart-btn">Add to Cart</button>
+                        <div class="shop-product-info">
+                            <h3 class="shop-product-title">Product Name</h3>
+                            <p class="shop-product-price">$29.99</p>
+                        </div>
+                    </a>
+                    <div class="shop-product-actions">
+                        <button class="shop-buy-now-btn" data-product-id="3">Buy Now</button>
+                        <button class="shop-add-to-cart-btn" title="Add to Cart" data-product-id="3" data-product-name="Product Name" data-product-price="29.99">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
                     </div>
                 </div>
 
                 
-                
-                <!-- Repeat the shop-product-card div for each product -->
+
+                <!-- Add more product cards as needed, incrementing the id in the href -->
             </div>
         </div>
         <div class="shop-filter-section">
@@ -317,7 +408,7 @@
 <footer>
     <div class="footer-container">
         <a href="#" class="footer-app-logo">
-            <img src="/contents/app-icon.webp" alt="App Icon">
+            <img src="./contents/app-icon.webp" alt="App Icon">
         </a>
         <div class="footer-column">
             <h3>About Us</h3>
@@ -388,7 +479,21 @@
     </div>
 </footer>
   
-    <script src="./js/script.js" defer></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const buyNowButtons = document.querySelectorAll('.shop-buy-now-btn');
+    
+    buyNowButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.getAttribute('data-product-id');
+            window.location.href = `product-view.html?id=${productId}`;
+        });
+    });
+});
+</script>
+
+<script src="./js/cart.js"></script>
+<script src="./js/script.js" defer></script>
 </body>
 
 </html>

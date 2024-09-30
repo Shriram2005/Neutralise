@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Neutralise Naturals - Luxury Skincare</title>
-
-    <!-- stylesheet -->
-     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/about-us.css">
-
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-            <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <title>Product View - Neutralise Naturals</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/product-view.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/85a51766c8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Jacques+Francois&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-
- <!-------- Navbar --------->
     <header>
         <nav>
             <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" class="logo">
@@ -31,9 +20,9 @@
                 <span class="tagline">Natural Remedy Provider for Skin Problems</span>
             </div>
             <div class="menu">
-                <a href="#" style="font-weight: bold;">Home</a>
+                <a href="./index.html" >Home</a>
                 <a href="./Appointment.html">Book an Appointment</a>
-                <a href="./shop.html">Shop</a>
+                <a href="./shop.html" style="font-weight: bold;">Shop</a>
         
                 <!-- About Us Dropdown Menu -->
                 <div class="about-dropdown">
@@ -56,8 +45,8 @@
                         <i class="fa-solid fa-user"></i>
                     </a>
                     <div class="user-dropdown-content">
-                        <a href="./Login-Register.html">Login</a>
-                        <a href="./Login-Register.html">Register</a>
+                        <a href="./login.html">Login</a>
+                        <a href="./register.html">Register</a>
                     </div>
                 </div>
             </div>
@@ -66,18 +55,14 @@
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </div>
         </nav>
-        
-        
         <!-- side menu / side navbar -->
 
         <div class="side-menu">
-            
             <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" width='170px' id="side-menu-img">
            
             <a href="#">Home</a>
             <a href="./Appointment.html">Book an Appointment</a>
            
-
             <div class="dropdown">
                 <a href="./about-us.html" class="dropdown-btn" onclick="toggleDropdown(event)">About Us   
                     <i class="fa-solid fa-caret-down about-dropdown-icon"></i>  
@@ -95,111 +80,132 @@
                 Login / Sign-up
             </a> 
         </div>
-        
 
         <div class="black-effect" onclick="removeBlack()"></div>
 
     </header>
 
-    <!-- <div class="navbar">
-        <a href="#about">About Us</a>
-    </div> -->
-
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>About Neutralise Naturals</h1>
-            <p>Revolutionizing skincare with the power of nature</p>
+    <main class="product-view-container">
+        <div class="product-breadcrumb">
+            <a href="index.html">Home</a> / <a href="shop.html">Shop</a> / <span id="product-name">Product Name</span>
         </div>
-    </section>
 
-    <!-- Our Story Section -->
-    <section class="our-story">
-        <div class="container">
-            <h2>Our Story</h2>
-            <div class="story-content">
-                <div class="story-text">
-                    <p>Neutralise Naturals, a brand of Sri Satyajyothi Agro foods, brings you India's first wheatgrass powder with roots, grown in our innovative Indoor Hydroponic soil-free process.</p>
-                    <p>Our journey began with a simple mission: to harness the power of nature and provide effective, natural solutions for chronic skin conditions like psoriasis.</p>
+        <div class="product-showcase">
+            <div class="product-gallery">
+                <div class="gallery-main">
+                    <img id="main-product-image" src="/contents/1Q1A0529.JPG" alt="Product Image">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
                 </div>
-                <div class="story-image">
-                    <img src="./contents/aboutUs/image1.png" alt="Our Story" loading="lazy">
+                <div class="gallery-thumbnails">
+                    <!-- Thumbnails will be added dynamically -->
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h1 id="product-title">Natural Healing Cream</h1>
+                <div class="product-meta">
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-value">4.5</span>
+                        <a href="#reviews" class="review-count">(128 reviews)</a>
+                    </div>
+                    <span class="product-sku">SKU: NH001</span>
+                </div>
+                <p id="product-price" class="price">$34.99</p>
+                <p id="product-short-description" class="product-short-description">
+                    A powerful, all-natural cream designed to soothe and heal various skin conditions. Made with organic ingredients and backed by scientific research.
+                </p>
+                <div class="product-options">
+                    <div class="option-group">
+                        <label for="product-size">Size:</label>
+                        <div class="size-options">
+                            <button class="size-option active">50ml</button>
+                            <button class="size-option">100ml</button>
+                            <button class="size-option">200ml</button>
+                        </div>
+                    </div>
+                    <div class="option-group">
+                        <label for="product-quantity">Quantity:</label>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                            <input type="number" id="product-quantity" value="1" min="1" max="99">
+                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="product-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-leaf"></i>
+                        <span>100% Natural</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-flask"></i>
+                        <span>Scientifically Proven</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Free Shipping</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Our Approach Section -->
-    <section class="our-approach">
-        <div class="container">
-            <h2>Our Approach</h2>
-            <div class="approach-cards">
-                <div class="approach-card">
+        <div class="product-information">
+            <h2 class="section-title">Product Description</h2>
+            <nav class="info-tabs">
+                <button class="tab-btn active" data-tab="description" title="Description">
+                    <i class="fas fa-info-circle"></i>
+                </button>
+                <button class="tab-btn" data-tab="ingredients" title="Ingredients">
                     <i class="fas fa-leaf"></i>
-                    <h3>Natural Ingredients</h3>
-                    <p>We use only the finest natural ingredients, carefully selected for their healing properties.</p>
+                </button>
+                <button class="tab-btn" data-tab="how-to-use" title="How to Use">
+                    <i class="fas fa-hand-holding-medical"></i>
+                </button>
+                <button class="tab-btn" data-tab="reviews" title="Reviews">
+                    <i class="fas fa-star"></i>
+                </button>
+            </nav>
+            <div class="tab-content">
+                <div id="description" class="tab-pane active">
+                    <p id="full-description">Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.</p>
                 </div>
-                <div class="approach-card">
-                    <i class="fas fa-flask"></i>
-                    <h3>Scientific Formulation</h3>
-                    <p>Our products are developed in collaboration with renowned Ayurvedic experts.</p>
-                </div>
-                <div class="approach-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Holistic Healing</h3>
-                    <p>We focus on improving your immune system both internally and externally.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Promise Section -->
-    <section class="our-promise">
-        <div class="container">
-            <h2>Our Promise</h2>
-            <div class="promise-content">
-                <div class="promise-image">
-                    <img src="./contents/aboutUs/image2.png" alt="Our Promise" loading="lazy">
-                </div>
-                <div class="promise-text">
-                    <p>At Neutralise Naturals, we promise:</p>
-                    <ul>
-                        <li>100% natural, chemical-free products</li>
-                        <li>Faster and better relief compared to alternative medicines</li>
-                        <li>Ongoing research and development for continuous improvement</li>
-                        <li>Exceptional customer support and guidance</li>
+                <div id="ingredients" class="tab-pane">
+                    <h3>Ingredients</h3>
+                    <ul id="ingredients-list">
+                        <!-- Ingredients will be added dynamically -->
                     </ul>
-                    <p>Once you experience our products, you'll understand why our customers keep coming back.</p>
+                </div>
+                <div id="how-to-use" class="tab-pane">
+                    <h3>How to Use</h3>
+                    <ol id="usage-instructions">
+                        <!-- Usage instructions will be added dynamically -->
+                    </ol>
+                </div>
+                <div id="reviews" class="tab-pane">
+                    <h3>Customer Reviews</h3>
+                    <div id="reviews-list">
+                        <!-- Reviews will be added dynamically -->
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Our Vision Section -->
-    <section class="our-vision">
-        <div class="container">
-            <h2>Our Vision</h2>
-            <div class="vision-content">
-                <p>"We believe that nature has all the solutions. Our dream is to make India healthy again, using the miraculous power of wheatgrass. When you think of natural skincare, we want Neutralise Naturals to be your first choice."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join Us Section -->
-    <section class="join-us">
-        <div class="container">
-            <h2>Join Our Natural Health Revolution</h2>
-            <p>Experience the power of nature with Neutralise Naturals</p>
-            <a href="./shop.html" class="cta-button">Shop Now</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <a href="#" class="footer-app-logo">
-                <img src="./contents/app-icon.webp" alt="App Icon">
+                <img src="/contents/app-icon.webp" alt="App Icon">
             </a>
             <div class="footer-column">
                 <h3>About Us</h3>
@@ -250,6 +256,7 @@
                 <p>Saturday, Sunday: 10AM - 5PM IST</p>
                 <p>Contact Number: (+91) 9000088227</p>
                 <p>WhatsApp Number: 9014447966</p>
+
             </div>
             <div class="footer-address-map">
                 <div class="footer-office-address">
@@ -272,25 +279,7 @@
             <p>&copy; 2024 Neutralise Naturals. All rights reserved.</p>
         </div>
     </footer>
-  
-    <script>
-        // Simple script to add fade-in effect
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const sections = document.querySelectorAll('section');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            }, {threshold: 0.1});
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-
+    <script src="./js/product-view.js"></script>
 </body>
-
 </html>
