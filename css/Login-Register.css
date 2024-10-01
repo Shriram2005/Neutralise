@@ -1,79 +1,90 @@
 :root {
-    --main-bg-color: #fff4c4;
-    --header-bg-color: #fff4c4;
-    --text-color: #000000;
-    --link-color: #000;
-    --hover-color: #abbe47;
-    --green-bg-color: #a2b139;
-    --white-bg-color: #f7f7f7;
-    --border-color: #abbe47;
-    --footer-bg-color: #000;
-    --footer-text-color: #bdbdbd;
-    --error-color: red;
-  }
-  
+  --main-bg-color: #fff4c4;
+  --header-bg-color: #fff4c4;
+  --text-color: #000000;
+  --link-color: #000;
+  --hover-color: #abbe47;
+  --green-bg-color: #a2b139;
+  --white-bg-color: #f7f7f7;
+  --border-color: #abbe47;
+  --footer-bg-color: #000;
+  --footer-text-color: #bdbdbd;
+  --error-color: red;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: “Josefin Sans”, sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  body,
-  html {
-    height: 100%;
-    background-color: var(--main-bg-color);
-  }
-  Nav {
-    Width: 100%;
-    Color: white;
-    Display: flex;
-    Justify-content: space-between;
-    Align-items: center;
-    position: absolute
-  }
-  .logo {
-    width: 110px;
-    height: auto;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-right: 0;
-  }
-  
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: “Josefin Sans”, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: var(--main-bg-color);
+}
+
+Nav {
+  Width: 100%;
+  Color: white;
+  Display: flex;
+  Justify-content: space-between;
+  Align-items: center;
+  position: absolute
+}
+
+.logo {
+  width: 110px;
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 0;
+}
+
 .divider {
-  height: 40px; /* Adjust based on your logo height */
+  height: 40px;
+  /* Adjust based on your logo height */
   width: 1px;
-  background-color: #333; /* Adjust color to match your design */
-  margin: 0 10px 0 0; /* Add a small right margin */
+  background-color: #333;
+  /* Adjust color to match your design */
+  margin: 0 10px 0 0;
+  /* Add a small right margin */
 }
 
 .Text-next-logo {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif; /* Matching the font from your Google Fonts import */
-   margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  /* Matching the font from your Google Fonts import */
+  margin-right: 300px;
 }
 
 .Text-next-logo .brand-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333; /* Adjust color to match your design */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  /* Adjust color to match your design */
 }
 
 .Text-next-logo .tagline {
-    font-size: 14px;
-    color: #666; /* Adjust color to match your design */
+  font-size: 14px;
+  color: #666;
+  /* Adjust color to match your design */
 }
+
 @media (width<500px) {
   .Text-next-logo {
     display: none;
   }
-  .divider{
+
+  .divider {
     display: none;
   }
 }
@@ -92,10 +103,12 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .about-dropdown-icon {
   margin-left: 5px;
   cursor: pointer;
 }
+
 .about-dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -143,22 +156,26 @@
 }
 
 
-  .form-container {
-    width: 90%; /* Responsive width */
-    max-width: 350px; /* Max width for larger screens */
-    height: auto; /* Auto height for flexibility */
-    background-color: #ffffff58;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 20px 30px;
-    margin: 20px auto; /* Centered margin for all screens */
-  }
-  
+.form-container {
+  width: 90%;
+  /* Responsive width */
+  max-width: 350px;
+  /* Max width for larger screens */
+  height: auto;
+  /* Auto height for flexibility */
+  background-color: #ffffff58;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  margin: 20px auto;
+  /* Centered margin for all screens */
+}
+
 .title {
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 10px 0 30px 0;
   font-size: 28px;
   font-weight: 800;
@@ -191,7 +208,7 @@
 .page-link-label {
   cursor: pointer;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 9px;
   font-weight: 700;
 }
@@ -203,7 +220,7 @@
 .form-btn {
   padding: 10px 15px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border-radius: 20px;
   border: 0 !important;
   outline: 0 !important;
@@ -222,7 +239,7 @@
   font-size: 10px;
   color: #747474;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .sign-up-link {
@@ -234,7 +251,7 @@
   cursor: pointer;
   font-weight: 800;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .buttons-container {
@@ -247,18 +264,18 @@
 }
 
 .apple-login-button,
-    .google-login-button {
+.google-login-button {
   border-radius: 20px;
   box-sizing: border-box;
   padding: 10px 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 11px;
   gap: 5px;
 }
@@ -274,131 +291,32 @@
 }
 
 .apple-icon,
-    .google-icon {
+.google-icon {
   font-size: 18px;
   margin-bottom: 1px;
 }
 
+/* media queries  */
+
 @media (max-width: 600px) {
-    .form-container {
-      margin: 10px; /* Adjust margin for mobile */
-      margin-left: 20px;
-      margin-bottom: 70px;
-      margin-top: 60px;
-      padding: 15px; /* Reduce padding for smaller screens */
-    }
-  
-    .title {
-      font-size: 24px; /* Smaller title size for mobile */
-    }
-  
+  .form-container {
+    margin: 10px;
+    /* Adjust margin for mobile */
+    margin-left: 20px;
+    margin-bottom: 70px;
+    margin-top: 60px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+
     .input {
-      padding: 10px; /* Adjust input padding */
+      padding: 10px;
     }
-  
+
     .form-btn {
-      padding: 8px; /* Adjust button padding */
+      padding: 8px;
     }
-  }
-  
-
-/* Footer */
-
-footer {
-  background-color: var(--footer-bg-color);
-  color: #bdbdbd;
-  padding: 40px 0;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 200px;
-  margin-bottom: 20px;
-  padding: 0 15px;
-}
-
-.footer-column h3 {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-family: "Jacques Francois", serif;
-}
-
-.footer-column p {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-.footer-column ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 8px;
-}
-
-.footer-column ul li a {
-  color: #bdbdbd;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-  color: var(--hover-color);
-}
-
-.app-download {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.app-download img {
-  max-width: 150px;
-  margin-bottom: 10px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.social-icons a {
-  color: #bdbdbd;
-  font-size: 20px;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: var(--hover-color);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  margin-top: 20px;
-  border-top: 1px solid #333;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-  }
-  
-  .footer-column {
-    width: 100%;
-    text-align: center;
   }
 }
