@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function updateProductDetails(product) {
     document.getElementById('product-name').textContent = product.name;
     document.getElementById('product-title').textContent = product.name;
-    document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
+    document.getElementById('product-price').textContent = `₹${product.price.toFixed(2)}`;
     document.getElementById('product-short-description').textContent = product.shortDescription;
     document.querySelector('.product-sku').textContent = `SKU: ${product.sku}`;
     // Update other product details as needed

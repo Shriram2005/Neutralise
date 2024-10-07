@@ -61,22 +61,22 @@ function displayCart() {
                     <img src="${item.image}" alt="${item.name}" class="cart-item-image">
                     <div class="cart-item-details">
                         <h3 class="cart-item-title">${item.name}</h3>
-                        <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                        <p class="cart-item-price">₹${item.price.toFixed(2)}</p>
                         <div class="cart-item-quantity">
                             <button onclick="updateQuantity('${item.id}', -1)">-</button>
                             <span>${item.quantity}</span>
                             <button onclick="updateQuantity('${item.id}', 1)">+</button>
                         </div>
                     </div>
-                    <p class="cart-item-total">$${itemTotal.toFixed(2)}</p>
+                    <p class="cart-item-total">₹${itemTotal.toFixed(2)}</p>
                     <button onclick="removeFromCart('${item.id}')">Remove</button>
                 </div>
             `;
         });
     }
 
-    if (subtotalElement) subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-    if (totalElement) totalElement.textContent = `$${subtotal.toFixed(2)}`;
+    if (subtotalElement) subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
+    if (totalElement) totalElement.textContent = `₹${subtotal.toFixed(2)}`;
 }
 
 function updateQuantity(productId, change) {

@@ -161,13 +161,15 @@
     border-radius: 5px;
     font-size: 16px;
     margin: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .cart-item button:hover {
     background-color: var(--hover-color);
 }
 
+
+
 .cart-item-total{
     margin: 5px;
-    /* background-color: red; */
 }
