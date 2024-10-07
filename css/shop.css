@@ -181,6 +181,18 @@ nav {
   user-select: none;
   position: fixed;
   right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-btn .cart-icon i{
+  color: black;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.sidebar-btn .cart-icon i:visited {
+  color: #000000;
 }
 
 .side-menu {

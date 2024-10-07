@@ -61,12 +61,15 @@
                         <i class="fa-solid fa-user"></i>
                     </a>
                     <div class="user-dropdown-content">
-                        <a href="./login.html">Login</a>
-                        <a href="./register.html">Register</a>
+                        <a href="./Login-Register.html">Login</a>
+                        <a href="./Login-Register.html">Register</a>
                     </div>
                 </div>
             </div>
             <div class="sidebar-btn" onclick="sideSwipe()">
+                <a href="./cart.html" class="cart-icon" data-count="0">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </div>
         </nav>
@@ -516,15 +519,15 @@
     </footer>
 
 
-        <!-- Add to Cart Modal -->
-        <div id="add-to-cart-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal()">&times;</span>
-                <p id="modal-message">Product added to cart!</p>
-                <button class="modal-ok-btn" onclick="closeModal()">Okay</button>
-                <button class="modal-go-to-cart-btn" onclick="goToCart()">Go to Cart</button>
-            </div>
+    <!-- Add to Cart Modal -->
+    <div id="add-to-cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p id="modal-message">Product added to cart!</p>
+            <button class="modal-ok-btn" onclick="closeModal()">Okay</button>
+            <button class="modal-go-to-cart-btn" onclick="goToCart()">Go to Cart</button>
         </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
