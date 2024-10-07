@@ -1,15 +1,19 @@
 :root {
-  --main-bg-color: #fff4c4;
-  --header-bg-color: #fff4c4;
-  --text-color: #000000;
-  --link-color: #000;
-  --hover-color: #abbe47;
-  --green-bg-color: #a2b139;
-  --white-bg-color: #f7f7f7;
-  --border-color: #abbe47;
-  --footer-bg-color: #000;
-  --footer-text-color: #bdbdbd;
-  --error-color: red;
+    --main-bg-color: #fff4c4;
+    --header-bg-color: #fff4c4;
+    --text-color: #000000;
+    --link-color: #000;
+    --hover-color: #abbe47;
+    --green-bg-color: #a2b139;
+    --white-bg-color: #f7f7f7;
+    --border-color: #abbe47;
+    --footer-bg-color: #000;
+    --footer-text-color: #bdbdbd;
+    --error-color: red;
+
+    /* fonts  */
+    --font-heading: "Jacques Francois", serif;
+    --font-body: "Inter", sans-serif;
 }
 
 /* Contact Section Styles */
@@ -86,7 +90,8 @@
     align-self: flex-start;
 }
 
-.info-card p, .info-card a {
+.info-card p,
+.info-card a {
     font-size: 0.9em;
     color: #666;
     margin-bottom: 5px;
@@ -179,7 +184,8 @@ button[type="submit"]:hover {
         flex-direction: column;
     }
 
-    .contact-info, .contact-form-wrapper {
+    .contact-info,
+    .contact-form-wrapper {
         flex-basis: 100%;
     }
 
@@ -189,15 +195,35 @@ button[type="submit"]:hover {
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.contact-header, .info-card, .contact-form-wrapper {
+.contact-header,
+.info-card,
+.contact-form-wrapper {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.info-card:nth-child(2) { animation-delay: 0.2s; }
-.info-card:nth-child(3) { animation-delay: 0.4s; }
-.info-card:nth-child(4) { animation-delay: 0.6s; }
-.contact-form-wrapper { animation-delay: 0.4s; }
+.info-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.info-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.info-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.contact-form-wrapper {
+    animation-delay: 0.4s;
+}

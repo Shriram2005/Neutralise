@@ -1,0 +1,430 @@
+:root {
+    --main-bg-color: #fff4c4;
+    --header-bg-color: #fff4c4;
+    --text-color: #000000;
+    --link-color: #000;
+    --hover-color: #abbe47;
+    --green-bg-color: #a2b139;
+    --white-bg-color: #f7f7f7;
+    --border-color: #abbe47;
+    --footer-bg-color: #000;
+    --footer-text-color: #bdbdbd;
+    --error-color: red;
+
+    /* fonts  */
+    --font-heading: "Jacques Francois", serif;
+    --font-body: "Inter", sans-serif;
+}
+
+body {
+    font-family:var(--font-body);
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+.heading {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--font-heading);
+}
+
+.main-section {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-number {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* step 1 */
+
+.input-container {
+    border: 1px solid #a2b139;
+    /* Border color */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the container */
+    background-color: #f7f7f7;
+    /* Light background color */
+    margin-bottom: 20px;
+    /* Space below the container */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    /* Space between fields */
+}
+
+label {
+    display: block;
+    /* Make labels block elements */
+    margin-bottom: 5px;
+    /* Space below labels */
+    font-weight: bold;
+    /* Bold labels */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="file"] {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    /* Padding inside input fields */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: border-color 0.3s;
+    /* Transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+    border-color: #a2b139;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+.next-btn {
+    background-color: #a2b139;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 10px 15px;
+    /* Padding inside button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Transition for background color */
+}
+
+.next-btn:hover {
+    background-color: #abbe47;
+    /* Change background color on hover */
+}
+
+.head-neck-container {
+    border: 1px solid #a2b139;
+    /* Border color */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the container */
+    background-color: #f7f7f7;
+    /* Light background color */
+    position: relative;
+    /* Position for overlay */
+    margin-bottom: 20px;
+    /* Space below the container */
+}
+
+.title-overlay {
+    position: absolute;
+    top: -10px;
+    /* Position above the container */
+    left: 20px;
+    /* Align with left padding */
+    background-color: #fff;
+    /* Background for title */
+    padding: 5px 10px;
+    /* Padding for title */
+    font-weight: bold;
+    /* Bold title */
+    border: 1px solid #a2b139;
+    /* Border for title */
+    border-radius: 4px;
+    /* Rounded corners for title */
+}
+
+.content {
+    display: flex;
+    /* Flexbox for image and assessment */
+}
+
+.head-neck-image {
+    width: 200px;
+    /* Increased width for better visibility */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 20px;
+    /* Space between image and fields */
+}
+
+.assessment {
+    flex: 1;
+    /* Take remaining space */
+}
+
+.radio-group {
+    display: flex;
+    /* Use flexbox for alignment */
+    flex-wrap: wrap;
+    /* Allow wrapping of buttons */
+    gap: 10px;
+    /* Space between buttons */
+    margin-bottom: 10px;
+    /* Space below radio groups */
+}
+
+.severity-assessment h4 {
+    margin: 10px 0 5px;
+    /* Space above and below headings */
+}
+
+.view-btn {
+    background-color: #a2b139;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 5px 10px;
+    /* Padding inside button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Transition for background color */
+}
+
+.view-btn:hover {
+    background-color: #abbe47;
+    /* Change background color on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+    animation: fadeIn 0.5s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.legs-container {
+    border: 1px solid #a2b139;
+    /* Border color */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the container */
+    background-color: #f7f7f7;
+    /* Light background color */
+    position: relative;
+    /* Position for overlay */
+    margin-bottom: 20px;
+    /* Space below the container */
+}
+
+.title-overlay {
+    position: absolute;
+    top: -10px;
+    /* Position above the container */
+    left: 20px;
+    /* Align with left padding */
+    background-color: #fff;
+    /* Background for title */
+    padding: 5px 10px;
+    /* Padding for title */
+    font-weight: bold;
+    /* Bold title */
+    border: 1px solid #a2b139;
+    /* Border for title */
+    border-radius: 4px;
+    /* Rounded corners for title */
+}
+
+.content {
+    display: flex;
+    /* Flexbox for image and assessment */
+}
+
+.legs-image {
+    width: 200px;
+    /* Set image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-left: 20px;
+    /* Space between image and fields */
+}
+
+.severity-assessment-container {
+    border: 1px solid #a2b139;
+    /* Border color */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the container */
+    background-color: #f7f7f7;
+    /* Light background color */
+    margin-top: 20px;
+    /* Space above the assessment */
+}
+
+.severity-assessment h4 {
+    margin: 10px 0 5px;
+    /* Space above and below headings */
+}
+
+.view-btn {
+    background-color: #a2b139;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 5px 10px;
+    /* Padding inside button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Transition for background color */
+}
+
+.view-btn:hover {
+    background-color: #abbe47;
+    /* Change background color on hover */
+}
+
+/* New styles for Calculate button and output field */
+.calculate-btn {
+    background-color: var(--button-bg-color);
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 10px 15px;
+    /* Padding inside button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Transition for background color */
+    margin-top: 10px;
+    /* Space above the button */
+}
+
+.calculate-btn:hover {
+    background-color: var(--button-hover-color);
+    /* Change background color on hover */
+}
+
+.calculation-output {
+    margin-top: 15px;
+    /* Space above the output field */
+    padding: 10px;
+    /* Padding inside the output field */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 4px;
+    /* Rounded corners */
+    background-color: #f7f7f7;
+    /* Light background color */
+    font-size: 16px;
+    /* Font size for output text */
+    color: #333;
+    /* Text color */
+}

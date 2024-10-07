@@ -484,6 +484,7 @@ nav {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -493,7 +494,7 @@ nav {
   flex: 0 0 250px;
   margin-right: 20px;
   border: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Other existing styles */
 }
 
@@ -501,15 +502,19 @@ nav {
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(calc(-250px * 5 - 20px * 5)); /* Adjust based on card width, margin, and number of cards */
+    transform: translateX(calc(-250px * 5 - 20px * 5));
+    /* Adjust based on card width, margin, and number of cards */
   }
 }
 
 @keyframes scrollRight {
   0% {
-    transform: translateX(calc(-250px * 5 - 20px * 5)); /* Same as above */
+    transform: translateX(calc(-250px * 5 - 20px * 5));
+    /* Same as above */
   }
+
   100% {
     transform: translateX(0);
   }
@@ -527,7 +532,8 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  width: 20px; /* Adjust based on card margin */
+  width: 20px;
+  /* Adjust based on card margin */
   height: 100%;
   background: linear-gradient(to right, transparent, var(--main-bg-color));
 }
@@ -1068,7 +1074,8 @@ footer {
   margin-bottom: 15px;
   margin-top: -20px;
   margin-right: 80px;
-  pointer-events: none;  /* Prevent hover on the image*/
+  pointer-events: none;
+  /* Prevent hover on the image*/
 }
 
 .footer-app-logo img {

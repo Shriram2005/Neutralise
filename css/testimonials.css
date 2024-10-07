@@ -9,9 +9,15 @@
     --border-color: #abbe47;
     --footer-bg-color: #000;
     --footer-text-color: #bdbdbd;
+    --error-color: red;
+
+    /* fonts  */
+    --font-heading: "Jacques Francois", serif;
+    --font-body: "Inter", sans-serif;
 }
 
-body, html {
+body,
+html {
     font-family: 'Inter', sans-serif;
     background-color: var(--main-bg-color);
     color: var(--text-color);
@@ -123,7 +129,8 @@ body, html {
         font-size: 2rem;
     }
 
-    .testimonial-card, .video-card {
+    .testimonial-card,
+    .video-card {
         padding: 20px;
     }
 }
@@ -133,7 +140,8 @@ body, html {
         font-size: 1.8rem;
     }
 
-    .testimonial-grid, .video-grid {
+    .testimonial-grid,
+    .video-grid {
         grid-template-columns: 1fr;
     }
 }

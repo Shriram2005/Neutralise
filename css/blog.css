@@ -1,3 +1,22 @@
+:root {
+    --main-bg-color: #fff4c4;
+    --header-bg-color: #fff4c4;
+    --text-color: #000000;
+    --link-color: #000;
+    --hover-color: #abbe47;
+    --green-bg-color: #a2b139;
+    --white-bg-color: #f7f7f7;
+    --border-color: #abbe47;
+    --footer-bg-color: #000;
+    --footer-text-color: #bdbdbd;
+    --error-color: red;
+
+    /* fonts  */
+    --font-heading: "Jacques Francois", serif;
+    --font-body: "Inter", sans-serif;
+}
+
+
 .blog-main {
     max-width: 1200px;
     margin: 0 auto;
@@ -138,22 +157,26 @@
     cursor: pointer;
 }
 
-.blog-categories, .recent-posts {
+.blog-categories,
+.recent-posts {
     list-style-type: none;
     padding: 0;
 }
 
-.blog-categories li, .recent-posts li {
+.blog-categories li,
+.recent-posts li {
     margin-bottom: 10px;
 }
 
-.blog-categories a, .recent-posts a {
+.blog-categories a,
+.recent-posts a {
     color: #666;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.blog-categories a:hover, .recent-posts a:hover {
+.blog-categories a:hover,
+.recent-posts a:hover {
     color: var(--hover-color);
 }
 
@@ -184,7 +207,8 @@
         flex-direction: column;
     }
 
-    .blog-grid, .blog-sidebar {
+    .blog-grid,
+    .blog-sidebar {
         width: 100%;
     }
 

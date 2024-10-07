@@ -11,6 +11,10 @@
   --footer-bg-color: #000;
   --footer-text-color: #bdbdbd;
   --error-color: red;
+
+  /* fonts  */
+  --font-heading: "Jacques Francois", serif;
+  --font-body: "Inter", sans-serif;
 }
 
 /* Global Styles */
@@ -185,7 +189,7 @@ nav {
   align-items: center;
 }
 
-.sidebar-btn .cart-icon i{
+.sidebar-btn .cart-icon i {
   color: black;
   font-size: 20px;
   margin-right: 20px;
@@ -219,25 +223,26 @@ nav {
   margin-left: 20px;
 }
 
-.side-menu a, .dropdown-btn {
+.side-menu a,
+.dropdown-btn {
   font-family: "Jacques Francois", serif;
   text-decoration: none;
   color: #000;
   font-weight: 300;
-  font-size: 18px; 
-  border-bottom: 2px solid var(--link-color); 
-  margin: 8px 0; 
-  padding: 15px; 
+  font-size: 18px;
+  border-bottom: 2px solid var(--link-color);
+  margin: 8px 0;
+  padding: 15px;
   margin-left: 5px;
-  width: 200px; 
+  width: 200px;
   box-sizing: border-box;
   display: block;
   transition-duration: 0.2s;
 }
 
 .side-menu a:hover {
-  border-bottom: 2px solid #abbe47; 
-  padding-left: 20px; 
+  border-bottom: 2px solid #abbe47;
+  padding-left: 20px;
 }
 
 .login-link {
@@ -259,7 +264,7 @@ nav {
   position: absolute;
   background-color: var(--main-bg-color);
   min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 5;
 }
 
@@ -436,7 +441,7 @@ nav {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .shop-filter-section h2 {
@@ -534,7 +539,7 @@ nav {
   .Text-next-logo {
     display: none;
   }
-  
+
   .divider {
     display: none;
   }
@@ -587,12 +592,15 @@ nav {
   .sidebar-btn {
     display: none;
   }
+
   .logo {
     font-size: 14px;
   }
+
   .menu {
     display: flex;
   }
+
   .side-menu {
     display: none;
   }
@@ -602,12 +610,15 @@ nav {
   .shop-filter-section {
     padding: 15px;
   }
+
   .shop-filter-section h2 {
     font-size: 16px;
   }
+
   .shop-filter-group h3 {
     font-size: 14px;
   }
+
   .shop-apply-filter-btn {
     padding: 8px 12px;
     font-size: 14px;
@@ -626,12 +637,15 @@ nav {
   .shop-product-card {
     max-width: 100%;
   }
+
   .shop-product-title {
     font-size: 14px;
   }
+
   .shop-product-price {
     font-size: 12px;
   }
+
   .shop-add-to-cart-btn {
     font-size: 12px;
     padding: 5px 10px;
@@ -655,47 +669,57 @@ nav {
 }
 
 .cart-icon {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .cart-icon[data-count]:after {
-    content: attr(data-count);
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: var(--hover-color);
-    color: white;
-    border-radius: 50%;
-    padding: 2px 5px;
-    font-size: 12px;
-    display: none;
+  content: attr(data-count);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--hover-color);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
+  display: none;
 }
 
 .cart-icon[data-count]:not([data-count="0"]):after {
-    display: block;
+  display: block;
 }
 
 /* Modal styles */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1000;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
+  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
+  /* Could be more or less, depending on screen size */
   max-width: 400px;
   text-align: center;
   border-radius: 10px;
@@ -717,7 +741,8 @@ nav {
 
 .modal-ok-btn,
 .modal-go-to-cart-btn {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
+  /* Green */
   color: white;
   padding: 10px 20px;
   border: none;

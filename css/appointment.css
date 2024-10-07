@@ -10,6 +10,10 @@
     --footer-bg-color: #000;
     --footer-text-color: #bdbdbd;
     --error-color: red;
+
+    /* fonts  */
+    --font-heading: "Jacques Francois", serif;
+    --font-body: "Inter", sans-serif;
 }
 
 

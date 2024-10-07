@@ -11,9 +11,14 @@
   --border-color: #abbe47;
   --footer-bg-color: #000;
   --footer-text-color: #bdbdbd;
+
+  /* fonts  */
+  --font-heading: "Jacques Francois", serif;
+  --font-body: "Inter", sans-serif;
 }
 
-body, html {
+body,
+html {
   font-family: 'Josefin Sans', sans-serif;
   background-color: var(--main-bg-color);
   color: var(--text-color);
@@ -203,7 +208,8 @@ h2::after {
   overflow: hidden;
 }
 
-.our-vision::before { /* Added decorative element */
+.our-vision::before {
+  /* Added decorative element */
   content: '"';
   position: absolute;
   top: -50px;
@@ -217,7 +223,8 @@ h2::after {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.8rem; /* Increased from 1.5rem */
+  font-size: 1.8rem;
+  /* Increased from 1.5rem */
   font-style: italic;
   position: relative;
 }
@@ -268,18 +275,20 @@ h2::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .story-content, .promise-content {
+
+  .story-content,
+  .promise-content {
     flex-direction: column;
   }
-  
+
   .approach-cards {
     flex-direction: column;
   }
-  
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero-content p {
     font-size: 1.2rem;
   }
@@ -289,7 +298,7 @@ h2::after {
   .hero h1 {
     font-size: 3rem;
   }
-  
+
   .approach-cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -299,27 +308,28 @@ h2::after {
   section {
     padding: 60px 0;
   }
-  
+
   h2 {
     font-size: 2.5rem;
   }
-  
-  .story-content, .promise-content {
+
+  .story-content,
+  .promise-content {
     flex-direction: column;
   }
-  
+
   .approach-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero-content p {
     font-size: 1.2rem;
   }
-  
+
   .vision-content {
     font-size: 1.5rem;
   }
@@ -329,11 +339,11 @@ h2::after {
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   .cta-button {
     padding: 12px 30px;
     font-size: 1rem;
@@ -342,8 +352,15 @@ h2::after {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {
@@ -359,10 +376,18 @@ h2::after {
 }
 
 /* Apply animations to sections */
-.our-story, .our-approach, .our-promise, .our-vision, .join-us {
+.our-story,
+.our-approach,
+.our-promise,
+.our-vision,
+.join-us {
   opacity: 0;
 }
 
-.our-story.fade-in, .our-approach.fade-in, .promise-content.fade-in, .our-vision.fade-in, .join-us.fade-in {
+.our-story.fade-in,
+.our-approach.fade-in,
+.promise-content.fade-in,
+.our-vision.fade-in,
+.join-us.fade-in {
   animation-delay: 0.2s;
 }

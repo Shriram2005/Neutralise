@@ -1,3 +1,21 @@
+:root {
+    --main-bg-color: #fff4c4;
+    --header-bg-color: #fff4c4;
+    --text-color: #000000;
+    --link-color: #000;
+    --hover-color: #abbe47;
+    --green-bg-color: #a2b139;
+    --white-bg-color: #f7f7f7;
+    --border-color: #abbe47;
+    --footer-bg-color: #000;
+    --footer-text-color: #bdbdbd;
+    --error-color: red;
+
+    /* fonts  */
+    --font-heading: "Jacques Francois", serif;
+    --font-body: "Inter", sans-serif;
+}
+
 /* css/cart.css */
 .cart-container {
     max-width: 1200px;
@@ -145,7 +163,8 @@
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #ff0000; /* Adjust color as needed */
+    background-color: #ff0000;
+    /* Adjust color as needed */
     color: white;
     border-radius: 50%;
     padding: 2px 5px;
@@ -170,6 +189,6 @@
 
 
 
-.cart-item-total{
+.cart-item-total {
     margin: 5px;
 }
