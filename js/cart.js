@@ -10,6 +10,7 @@ function addToCart(productId, name, price, image) {
     }
     updateCart();
     updateCartIcon();
+    showModal(`${name} has been added to your cart.`);
 }
 
 function updateCart() {
@@ -60,22 +61,22 @@ function displayCart() {
                     <img src="${item.image}" alt="${item.name}" class="cart-item-image">
                     <div class="cart-item-details">
                         <h3 class="cart-item-title">${item.name}</h3>
-                        <p class="cart-item-price">₹${item.price.toFixed(2)}</p>
+                        <p class="cart-item-price">$${item.price.toFixed(2)}</p>
                         <div class="cart-item-quantity">
                             <button onclick="updateQuantity('${item.id}', -1)">-</button>
                             <span>${item.quantity}</span>
                             <button onclick="updateQuantity('${item.id}', 1)">+</button>
                         </div>
                     </div>
-                    <p class="cart-item-total">₹${itemTotal.toFixed(2)}</p>
+                    <p class="cart-item-total">$${itemTotal.toFixed(2)}</p>
                     <button onclick="removeFromCart('${item.id}')">Remove</button>
                 </div>
             `;
         });
     }
 
-    if (subtotalElement) subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
-    if (totalElement) totalElement.textContent = `₹${subtotal.toFixed(2)}`;
+    if (subtotalElement) subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    if (totalElement) totalElement.textContent = `$${subtotal.toFixed(2)}`;
 }
 
 function updateQuantity(productId, change) {
@@ -91,6 +92,22 @@ function updateQuantity(productId, change) {
     }
 }
 
+function showModal(message) {
+    const modal = document.getElementById('add-to-cart-modal');
+    const modalMessage = document.getElementById('modal-message');
+    modalMessage.textContent = message;
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    const modal = document.getElementById('add-to-cart-modal');
+    modal.style.display = 'none';
+}
+
+function goToCart() {
+    window.location.href = 'cart.html';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     updateCartIcon();
     if (window.location.pathname.includes('cart.html')) {
@@ -103,3 +120,5 @@ window.addToCart = addToCart;
 window.removeFromCart = removeFromCart;
 window.updateQuantity = updateQuantity;
 window.clearCart = clearCart;
+window.closeModal = closeModal;
+window.goToCart = goToCart;

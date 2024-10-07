@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
             updateProductDetails(product);
             updateProductGallery(product);
             updateProductTabs(product);
+
+            // Add event listener to "Add to Cart" button
+            const addToCartButton = document.getElementById('add-to-cart-btn');
+            addToCartButton.addEventListener('click', function() {
+                addToCart(product.id, product.name, product.price, product.mainImage);
+            });
         });
     } else {
         console.error('Product ID not found in URL');
