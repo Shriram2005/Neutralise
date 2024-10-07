@@ -137,7 +137,7 @@
 .cart-icon {
     position: relative;
     display: inline-block;
-    margin-right: 15px; /* Adjust as needed */
+    margin-right: 15px;
 }
 
 .cart-icon[data-count]:after {
@@ -152,4 +152,22 @@
     font-size: 12px;
 }
 
-/* Add more styles as needed */
+.cart-item button {
+    /* background-color: #4CAF50; */
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.cart-item button:hover {
+    background-color: var(--hover-color);
+}
+
+.cart-item-total{
+    margin: 5px;
+    /* background-color: red; */
+}
