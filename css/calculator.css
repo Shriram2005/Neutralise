@@ -38,7 +38,7 @@ body {
 }
 
 .calculator-container {
-    max-width: 600px;
+    max-width: 650px;
     margin: auto;
     padding: 20px;
     background-color: white;
@@ -196,7 +196,7 @@ input[type="tel"]:focus {
 }
 
 .head-neck-image {
-    width: 200px;
+    width: 250px;
     /* Increased width for better visibility */
     height: auto;
     /* Maintain aspect ratio */
@@ -339,7 +339,7 @@ input[type="tel"]:focus {
 }
 
 .legs-image {
-    width: 200px;
+    width: 250px;
     /* Set image width */
     height: auto;
     /* Maintain aspect ratio */
@@ -427,4 +427,19 @@ input[type="tel"]:focus {
     /* Font size for output text */
     color: #333;
     /* Text color */
+}
+
+
+@media (width< 568px) {
+    .calculator-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
