@@ -145,16 +145,16 @@ function fetchProductData(productId) {
 const products = [
     {
         id: '1',
-        name: 'Natural Healing Cream',
-        price: 34.99,
+        name: 'Tulsi Wheat Grass Body Soap',
+        price: 700,
         sku: 'NH001',
         shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
         fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: './contents/products/product1.jpg',
+        mainImage: './contents/products/Tulsi-Wheat-Grass-Soap.jpg',
         images: [
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg'
+            './contents/Shop/Tulsi-Soap1.JPG',
+            './contents/Shop/Tulsi-Soap2.JPG',
+            './contents/Shop/Tulsi-Soap3.JPG'
         ],
         ingredients: [
             'Organic Aloe Vera',
@@ -176,16 +176,16 @@ const products = [
     },
     {
         id: '2',
-        name: 'Organic Face Serum',
-        price: 29.99,
+        name: 'Wheat Grass Hair Shampoo',
+        price: 400,
         sku: 'OF001',
         shortDescription: 'A rejuvenating serum that hydrates and revitalizes your skin.',
         fullDescription: 'Our Organic Face Serum is formulated with natural ingredients to provide deep hydration and rejuvenation. It helps to reduce fine lines and improve skin texture.',
-        mainImage: './contents/products/product2.jpg',
+        mainImage: './contents/products/Wheat-Grass-Hair-Shampoo.jpg',
         images: [
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg'
+            './contents/Shop/Wheat-Shampoo1.JPG',
+            './contents/Shop/Wheat-Shampoo2.JPG',
+            './contents/Shop/Wheat-Shampoo3.JPG'
         ],
         ingredients: [
             'Hyaluronic Acid',
@@ -207,16 +207,16 @@ const products = [
     },
     {
         id: '3',
-        name: 'Natural Healing Cream',
-        price: 34.99,
+        name: 'Avocado WheatGrass FaceWash',
+        price: 500,
         sku: 'NH002',
         shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
         fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: './contents/products/product3.jpg',
+        mainImage: './contents/products/Avocado-Wheat-Grass-Facewash.jpg',
         images: [
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg'
+            './contents/Shop/Avocado-Facewash1.JPG',
+            './contents/Shop/Avocado-Facewash2.JPG',
+            './contents/Shop/Avocado-Facewash3.JPG'
         ],
         ingredients: [
             'Organic Aloe Vera',
@@ -238,16 +238,16 @@ const products = [
     },
     {
         id: '4',
-        name: 'Organic Face Serum',
-        price: 29.99,
+        name: 'Wheat Grass Moisturiser Cream',
+        price: 500,
         sku: 'OF002',
         shortDescription: 'A rejuvenating serum that hydrates and revitalizes your skin.',
         fullDescription: 'Our Organic Face Serum is formulated with natural ingredients to provide deep hydration and rejuvenation. It helps to reduce fine lines and improve skin texture.',
-        mainImage: './contents/products/product1.jpg',
+        mainImage: './contents/products/Wheat-Grass-Moisturiser.jpg',
         images: [
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg'
+            './contents/Shop/moisturiser1.JPG',
+            './contents/Shop/moisturiser2.JPG',
+            './contents/Shop/moisturiser3.JPG'
         ],
         ingredients: [
             'Hyaluronic Acid',
@@ -269,16 +269,16 @@ const products = [
     },
     {
         id: '5',
-        name: 'Natural Healing Cream',
-        price: 34.99,
+        name: 'Papaya Body Soap',
+        price: 500,
         sku: 'NH003',
         shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
         fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: './contents/products/product2.jpg',
+        mainImage: './contents/products/Papaya-Soap.jpg',
         images: [
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg'
+            './contents/Shop/papaya-soap1.JPG',
+            './contents/Shop/papaya-soap2.JPG',
+            './contents/Shop/papaya-soap3.JPG'
         ],
         ingredients: [
             'Organic Aloe Vera',
@@ -300,16 +300,16 @@ const products = [
     },
     {
         id: '6',
-        name: 'Organic Face Serum',
-        price: 29.99,
+        name: 'Wheat Grass Powder',
+        price: 600,
         sku: 'OF003',
         shortDescription: 'A rejuvenating serum that hydrates and revitalizes your skin.',
         fullDescription: 'Our Organic Face Serum is formulated with natural ingredients to provide deep hydration and rejuvenation. It helps to reduce fine lines and improve skin texture.',
-        mainImage: './contents/products/product3.jpg',
+        mainImage: './contents/products/Wheat-Grass-Powder.jpg',
         images: [
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg'
+            './contents/Shop/wheat-powder1.JPG',
+            './contents/Shop/wheat-powder2.JPG',
+            './contents/Shop/wheat-powder3.JPG'
         ],
         ingredients: [
             'Hyaluronic Acid',
@@ -331,16 +331,16 @@ const products = [
     },
     {
         id: '7',
-        name: 'Natural Healing Cream',
-        price: 34.99,
+        name: 'Barley Grass Powder',
+        price: 600,
         sku: 'NH004',
         shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
         fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: './contents/products/product1.jpg',
+        mainImage: './contents/products/Barley-Grass-Powder.jpg',
         images: [
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg'
+            './contents/Shop/barley1.JPG',
+            './contents/Shop/barley2.JPG',
+            './contents/Shop/barley3.JPG'
         ],
         ingredients: [
             'Organic Aloe Vera',
@@ -362,16 +362,16 @@ const products = [
     },
     {
         id: '8',
-        name: 'Organic Face Serum',
-        price: 29.99,
+        name: 'Wheat Grass Soap',
+        price: 700,
         sku: 'OF004',
         shortDescription: 'A rejuvenating serum that hydrates and revitalizes your skin.',
         fullDescription: 'Our Organic Face Serum is formulated with natural ingredients to provide deep hydration and rejuvenation. It helps to reduce fine lines and improve skin texture.',
-        mainImage: './contents/products/product2.jpg',
+        mainImage: './contents/products/Wheat-Grass-Soap.jpg',
         images: [
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg'
+            './contents/Shop/wheat-soap1.JPG',
+            './contents/Shop/wheat-soap2.JPG',
+            './contents/Shop/wheat-soap3.JPG'
         ],
         ingredients: [
             'Hyaluronic Acid',
@@ -393,16 +393,16 @@ const products = [
     },
     {
         id: '9',
-        name: 'Natural Healing Cream',
-        price: 34.99,
+        name: 'Total Skin Combo',
+        price: 2200,
         sku: 'NH005',
         shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
         fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: './contents/products/product3.jpg',
+        mainImage: './contents/products/Total-Skin-Combo.jpg',
         images: [
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg'
+            './contents/Shop/Total-Skin-Combo1.JPG',
+            './contents/Shop/Total-Skin-Combo1.JPG',
+            './contents/Shop/Total-Skin-Combo1.JPG'
         ],
         ingredients: [
             'Organic Aloe Vera',
@@ -424,16 +424,16 @@ const products = [
     },
     {
         id: '10',
-        name: 'Organic Face Serum',
-        price: 29.99,
+        name: 'All In One Combo',
+        price: 2700,
         sku: 'OF005',
         shortDescription: 'A rejuvenating serum that hydrates and revitalizes your skin.',
         fullDescription: 'Our Organic Face Serum is formulated with natural ingredients to provide deep hydration and rejuvenation. It helps to reduce fine lines and improve skin texture.',
-        mainImage: './contents/products/product1.jpg',
+        mainImage: './contents/products/All-In-One-Combo.jpg',
         images: [
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg'
+            './contents/Shop/All-In-One-Combo1.JPG',
+            './contents/Shop/All-In-One-Combo1.JPG',
+            './contents/Shop/All-In-One-Combo1.JPG'
         ],
         ingredients: [
             'Hyaluronic Acid',
@@ -455,16 +455,16 @@ const products = [
     },
     {
         id: '11',
-        name: 'Natural Healing Cream',
-        price: 34.99,
+        name: 'DarkSpot / Pigmentation Combo',
+        price: 1800,
         sku: 'NH006',
         shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
         fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: './contents/products/product2.jpg',
+        mainImage: './contents/products/Darkspots-Combo.jpg',
         images: [
-            './contents/products/product2.jpg',
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg'
+            './contents/Shop/Darkspots-Combo1.JPG',
+            './contents/Shop/Darkspots-Combo1.JPG',
+            './contents/Shop/Darkspots-Combo1.JPG'
         ],
         ingredients: [
             'Organic Aloe Vera',
@@ -486,16 +486,16 @@ const products = [
     },
     {
         id: '12',
-        name: 'Organic Face Serum',
-        price: 29.99,
+        name: 'Fresh WheatGrass',
+        price: 800,
         sku: 'OF006',
         shortDescription: 'A rejuvenating serum that hydrates and revitalizes your skin.',
         fullDescription: 'Our Organic Face Serum is formulated with natural ingredients to provide deep hydration and rejuvenation. It helps to reduce fine lines and improve skin texture.',
-        mainImage: './contents/products/product3.jpg',
+        mainImage: './contents/products/Fresh-WheatGrass.JPG',
         images: [
-            './contents/products/product3.jpg',
-            './contents/products/product1.jpg',
-            './contents/products/product2.jpg'
+            './contents/Shop/wheatgrass1.JPG',
+            './contents/Shop/wheatgrass2.JPG',
+            './contents/Shop/wheatgrass3.JPG'
         ],
         ingredients: [
             'Hyaluronic Acid',
