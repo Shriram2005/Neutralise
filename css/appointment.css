@@ -35,7 +35,7 @@ html {
 /* General Styling */
 
 .appointment-form {
-    background-color: var(--main-bg-color);
+    background-color: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0px 6px rgb(131, 131, 131);
@@ -83,7 +83,7 @@ input[type="email"],
 input[type="date"],
 select {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.75rem !important;
     border: 1px solid #bdc3c7;
     border-radius: 4px;
     font-size: 1rem;
@@ -167,5 +167,6 @@ select:focus {
 @media (width<850px) {
     .appointment-form {
         box-shadow: none;
+        background-color: var(--main-bg-color);
     }
 }
