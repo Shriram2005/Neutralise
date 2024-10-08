@@ -33,10 +33,10 @@
                 <span class="tagline">Natural Remedy Provider for Skin Problems</span>
             </div>
             <div class="menu">
-                <a href="./index.html">Home</a>
+                <a href="./index.html" >Home</a>
                 <a href="./Appointment.html">Book an Appointment</a>
                 <a href="./shop.html">Shop</a>
-
+        
                 <!-- About Us Dropdown Menu -->
                 <div class="about-dropdown">
                     <a href="./about-us.html">About Us
@@ -49,36 +49,40 @@
                         <a href="./contact.html">Contact Us</a>
                     </div>
                 </div>
-
+        
                 <a href="./Calculator.html" style="font-weight: bold;">Psoriasis Calculator</a>
-
+        
                 <!-- Login/Register Dropdown on Hover -->
                 <div class="user-dropdown">
                     <a href="./Login-Register.html" class="user-link">
                         <i class="fa-solid fa-user"></i>
                     </a>
+                    <div class="user-dropdown-content">
+                        <a href="./Login-Register.html">Login</a>
+                        <a href="./Login-Register.html">Register</a>
+                    </div>
                 </div>
             </div>
-
+        
             <div class="sidebar-btn" onclick="sideSwipe()">
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </div>
         </nav>
-
-
+        
+        
         <!-- side menu / side navbar -->
 
         <div class="side-menu">
-
+            
             <img src="./contents/neutralise-logo.png" loading="lazy" alt="logo" width='170px' id="side-menu-img">
-
+           
             <a href="./index.html">Home</a>
             <a href="./Appointment.html">Book an Appointment</a>
-
+           
 
             <div class="dropdown">
-                <a href="./about-us.html" class="dropdown-btn" onclick="toggleDropdown(event)">About Us
-                    <i class="fa-solid fa-caret-down about-dropdown-icon"></i>
+                <a href="./about-us.html" class="dropdown-btn" onclick="toggleDropdown(event)">About Us   
+                    <i class="fa-solid fa-caret-down about-dropdown-icon"></i>  
                 </a>
                 <div class="dropdown-content">
                     <a href="./blog.html">Blog</a>
@@ -91,429 +95,407 @@
             <a href="./Login-Register.html" class="login-link">
                 <i class="fa-solid fa-user"></i>
                 Login / Sign-up
-            </a>
+            </a> 
         </div>
-
+        
 
         <div class="black-effect" onclick="removeBlack()"></div>
     </header>
 
-    <div class="heading">
-        <h1>Psoriasis Severity Calculator</h1>
-    </div>
-
-    <main class="main-section">
-        <div class="calculator-container">
-            <div class="page-number" id="page-number">Page 1 of 3</div>
-            <form id="multi-step-form">
-                <div class="form-section" id="step-1">
-                    <h2>Step 1: Personal Information</h2>
-                    <div class="input-container">
-                        <div class="form-group">
-                            <label for="first-name">First Name*</label>
-                            <input type="text" id="first-name" placeholder="Enter your first name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="last-name">Last Name*</label>
-                            <input type="text" id="last-name" placeholder="Enter your last name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="mobile">Mobile Number*</label>
-                            <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="file-upload">Upload Image of Affected Skin Area*</label>
-                            <input type="file" id="file-upload" required>
-                        </div>
+    <section class="psoriasis-calculator">
+        <div class="page-number" id="page-number">Page 1 of 3</div>
+        <form id="multi-step-form">
+            <div class="form-section" id="step-1">
+                <h2>Step 1: Personal Information</h2>
+                <div class="input-container">
+                    <div class="form-group">
+                        <label for="first-name">First Name*</label>
+                        <input type="text" id="first-name" placeholder="Enter your first name" required>
                     </div>
-
-                    <!-- Head and Neck Section -->
-                    <div class="head-neck-container">
-                        <div class="title-overlay">Head and Neck</div>
-                        <div class="content">
-                            <img src="contents/calculator/Head_neck.png" alt="Head and Neck" class="head-neck-image calculator-image">
-                            <div class="assessment">
-                                <h3>Skin Area Involved</h3>
+                    <div class="form-group">
+                        <label for="last-name">Last Name*</label>
+                        <input type="text" id="last-name" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number*</label>
+                        <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="file-upload">Upload Image of Affected Skin Area*</label>
+                        <input type="file" id="file-upload" required>
+                    </div>
+                </div>
+                
+                <!-- Head and Neck Section -->
+                <div class="head-neck-container">
+                    <div class="title-overlay">Head and Neck</div>
+                    <div class="content">
+                        <img src="./contents/calculator/Head_neck.png" alt="Head and Neck" class="head-neck-image">
+                        <div class="assessment">
+                            <h3>Skin Area Involved</h3>
+                            <div class="radio-group">
+                                <label><input type="radio" name="skin-area" value="0"> 0%</label>
+                                <label><input type="radio" name="skin-area" value="10"> 10%</label>
+                                <label><input type="radio" name="skin-area" value="25"> 25%</label>
+                                <label><input type="radio" name="skin-area" value="40"> 40%</label>
+                                <label><input type="radio" name="skin-area" value="60"> 60%</label>
+                                <label><input type="radio" name="skin-area" value="75"> 75%</label>
+                                <label><input type="radio" name="skin-area" value="90"> 90%</label>
+                            </div>
+                
+                            <div class="severity-assessment">
+                                <h4>Redness</h4>
                                 <div class="radio-group">
-                                    <label><input type="radio" name="skin-area" value="0"> 0%</label>
-                                    <label><input type="radio" name="skin-area" value="10"> 10%</label>
-                                    <label><input type="radio" name="skin-area" value="25"> 25%</label>
-                                    <label><input type="radio" name="skin-area" value="40"> 40%</label>
-                                    <label><input type="radio" name="skin-area" value="60"> 60%</label>
-                                    <label><input type="radio" name="skin-area" value="75"> 75%</label>
-                                    <label><input type="radio" name="skin-area" value="90"> 90%</label>
+                                    <label><input type="radio" name="redness" value="0"> 0</label>
+                                    <label><input type="radio" name="redness" value="1"> 1</label>
+                                    <label><input type="radio" name="redness" value="2"> 2</label>
+                                    <label><input type="radio" name="redness" value="3"> 3</label>
+                                    <label><input type="radio" name="redness" value="4"> 4</label>
+                                    <button type="button" class="view-btn" onclick="showModal('Redness')">View</button>
                                 </div>
-
-                                <div class="severity-assessment">
-                                    <h4>Redness</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="redness" value="0"> 0</label>
-                                        <label><input type="radio" name="redness" value="1"> 1</label>
-                                        <label><input type="radio" name="redness" value="2"> 2</label>
-                                        <label><input type="radio" name="redness" value="3"> 3</label>
-                                        <label><input type="radio" name="redness" value="4"> 4</label>
-                                        <button type="button" class="view-btn"
-                                            onclick="showModal('Redness')">View</button>
-                                    </div>
-
-                                    <h4>Thickness</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="thickness" value="0"> 0</label>
-                                        <label><input type="radio" name="thickness" value="1"> 1</label>
-                                        <label><input type="radio" name="thickness" value="2"> 2</label>
-                                        <label><input type="radio" name="thickness" value="3"> 3</label>
-                                        <label><input type="radio" name="thickness" value="4"> 4</label>
-                                        <button type="button" class="view-btn"
-                                            onclick="showModal('Thickness')">View</button>
-                                    </div>
-
-                                    <h4>Scale</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="scale" value="0"> 0</label>
-                                        <label><input type="radio" name="scale" value="1"> 1</label>
-                                        <label><input type="radio" name="scale" value="2"> 2</label>
-                                        <label><input type="radio" name="scale" value="3"> 3</label>
-                                        <label><input type="radio" name="scale" value="4"> 4</label>
-                                    </div>
-
-                                    <h4>Itching</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="itching" value="0"> 0</label>
-                                        <label><input type="radio" name="itching" value="1"> 1</label>
-                                        <label><input type="radio" name="itching" value="2"> 2</label>
-                                        <label><input type="radio" name="itching" value="3"> 3</label>
-                                        <label><input type="radio" name="itching" value="4"> 4</label>
-                                    </div>
+                
+                                <h4>Thickness</h4>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="thickness" value="0"> 0</label>
+                                    <label><input type="radio" name="thickness" value="1"> 1</label>
+                                    <label><input type="radio" name="thickness" value="2"> 2</label>
+                                    <label><input type="radio" name="thickness" value="3"> 3</label>
+                                    <label><input type="radio" name="thickness" value="4"> 4</label>
+                                    <button type="button" class="view-btn" onclick="showModal('Thickness')">View</button>
+                                </div>
+                
+                                <h4>Scale</h4>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="scale" value="0"> 0</label>
+                                    <label><input type="radio" name="scale" value="1"> 1</label>
+                                    <label><input type="radio" name="scale" value="2"> 2</label>
+                                    <label><input type="radio" name="scale" value="3"> 3</label>
+                                    <label><input type="radio" name="scale" value="4"> 4</label>
+                                </div>
+                
+                                <h4>Itching</h4>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="itching" value="0"> 0</label>
+                                    <label><input type="radio" name="itching" value="1"> 1</label>
+                                    <label><input type="radio" name="itching" value="2"> 2</label>
+                                    <label><input type="radio" name="itching" value="3"> 3</label>
+                                    <label><input type="radio" name="itching" value="4"> 4</label>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Hands Section -->
-                    <div class="head-neck-container">
-                        <div class="title-overlay">Hands</div>
-                        <div class="content">
-                            <img src="contents/calculator/hands.png" alt="Hands" class="head-neck-image calculator-image">
-                            <div class="assessment">
-                                <h3>Skin Area Involved</h3>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="hands-skin-area" value="0"> 0%</label>
-                                    <label><input type="radio" name="hands-skin-area" value="10"> 10%</label>
-                                    <label><input type="radio" name="hands-skin-area" value="25"> 25%</label>
-                                    <label><input type="radio" name="hands-skin-area" value="40"> 40%</label>
-                                    <label><input type="radio" name="hands-skin-area" value="60"> 60%</label>
-                                    <label><input type="radio" name="hands-skin-area" value="75"> 75%</label>
-                                    <label><input type="radio" name="hands-skin-area" value="90"> 90%</label>
-                                </div>
-
-                                <div class="severity-assessment">
-                                    <h4>Redness</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="redness-hands" value="0"> 0</label>
-                                        <label><input type="radio" name="redness-hands" value="1"> 1</label>
-                                        <label><input type="radio" name="redness-hands" value="2"> 2</label>
-                                        <label><input type="radio" name="redness-hands" value="3"> 3</label>
-                                        <label><input type="radio" name="redness-hands" value="4"> 4</label>
-                                        <button type="button" class="view-btn"
-                                            onclick="showModal('Redness Hands')">View</button>
-                                    </div>
-
-                                    <h4>Thickness</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="thickness-hands" value="0"> 0</label>
-                                        <label><input type="radio" name="thickness-hands" value="1"> 1</label>
-                                        <label><input type="radio" name="thickness-hands" value="2"> 2</label>
-                                        <label><input type="radio" name="thickness-hands" value="3"> 3</label>
-                                        <label><input type="radio" name="thickness-hands" value="4"> 4</label>
-                                        <button type="button" class="view-btn"
-                                            onclick="showModal('Thickness Hands')">View</button>
-                                    </div>
-
-                                    <h4>Scale</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="scale-hands" value="0"> 0</label>
-                                        <label><input type="radio" name="scale-hands" value="1"> 1</label>
-                                        <label><input type="radio" name="scale-hands" value="2"> 2</label>
-                                        <label><input type="radio" name="scale-hands" value="3"> 3</label>
-                                        <label><input type="radio" name="scale-hands" value="4"> 4</label>
-                                    </div>
-
-                                    <h4>Itching</h4>
-                                    <div class="radio-group">
-                                        <label><input type="radio" name="itching-hands" value="0"> 0</label>
-                                        <label><input type="radio" name="itching-hands" value="1"> 1</label>
-                                        <label><input type="radio" name="itching-hands" value="2"> 2</label>
-                                        <label><input type="radio" name="itching-hands" value="3"> 3</label>
-                                        <label><input type="radio" name="itching-hands" value="4"> 4</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="button" class="next-btn" onclick="goToNextStep(2)">Next</button>
-
-                    <!-- Modal for Images -->
-                    <div id="modal" class="modal hidden">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal()">&times;</span>
-                            <h2 id="modal-title"></h2>
-                            <div id="modal-images"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Step 2 -->
-                <div class="form-section hidden" id="step-2">
-                    <h2>Step 2: Skin Area Assessment</h2>
-
-                    <!-- Legs Section -->
-                    <div class="legs-container">
-                        <div class="title-overlay">Trunk</div>
-                        <div class="content">
-                            <div class="assessment">
-                                <h3>Skin Area Involved</h3>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="legs-skin-area" value="0"> 0%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="10"> 10%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="25"> 25%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="40"> 40%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="60"> 60%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="75"> 75%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="90"> 90%</label>
-                                </div>
+                <!-- Hands Section -->
+                <div class="head-neck-container">
+                    <div class="title-overlay">Hands</div>
+                    <div class="content">
+                        <img src="./contents/calculator/hands.png" alt="Hands" class="head-neck-image">
+                        <div class="assessment">
+                            <h3>Skin Area Involved</h3>
+                            <div class="radio-group">
+                                <label><input type="radio" name="hands-skin-area" value="0"> 0%</label>
+                                <label><input type="radio" name="hands-skin-area" value="10"> 10%</label>
+                                <label><input type="radio" name="hands-skin-area" value="25"> 25%</label>
+                                <label><input type="radio" name="hands-skin-area" value="40"> 40%</label>
+                                <label><input type="radio" name="hands-skin-area" value="60"> 60%</label>
+                                <label><input type="radio" name="hands-skin-area" value="75"> 75%</label>
+                                <label><input type="radio" name="hands-skin-area" value="90"> 90%</label>
                             </div>
-                            <img src="contents/calculator/Trunk.png" alt="Legs" class="legs-image calculator-image">
-                            <!-- Replace with actual image path -->
-                        </div>
-                        <!-- Severity Assessment Section -->
-                        <div class="severity-assessment-container">
-                            <h3>Severity Assessment</h3>
+                
                             <div class="severity-assessment">
                                 <h4>Redness</h4>
                                 <div class="radio-group">
-                                    <label><input type="radio" name="redness-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="redness-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="redness-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="redness-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="redness-legs" value="4"> 4</label>
-                                    <button type="button" class="view-btn"
-                                        onclick="showModal('Redness Legs')">View</button>
+                                    <label><input type="radio" name="redness-hands" value="0"> 0</label>
+                                    <label><input type="radio" name="redness-hands" value="1"> 1</label>
+                                    <label><input type="radio" name="redness-hands" value="2"> 2</label>
+                                    <label><input type="radio" name="redness-hands" value="3"> 3</label>
+                                    <label><input type="radio" name="redness-hands" value="4"> 4</label>
+                                    <button type="button" class="view-btn" onclick="showModal('Redness Hands')">View</button>
                                 </div>
-
+                
                                 <h4>Thickness</h4>
                                 <div class="radio-group">
-                                    <label><input type="radio" name="thickness-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="thickness-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="thickness-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="thickness-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="thickness-legs" value="4"> 4</label>
-                                    <button type="button" class="view-btn"
-                                        onclick="showModal('Thickness Legs')">View</button>
+                                    <label><input type="radio" name="thickness-hands" value="0"> 0</label>
+                                    <label><input type="radio" name="thickness-hands" value="1"> 1</label>
+                                    <label><input type="radio" name="thickness-hands" value="2"> 2</label>
+                                    <label><input type="radio" name="thickness-hands" value="3"> 3</label>
+                                    <label><input type="radio" name="thickness-hands" value="4"> 4</label>
+                                    <button type="button" class="view-btn" onclick="showModal('Thickness Hands')">View</button>
                                 </div>
-
+                
                                 <h4>Scale</h4>
                                 <div class="radio-group">
-                                    <label><input type="radio" name="scale-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="scale-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="scale-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="scale-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="scale-legs" value="4"> 4</label>
+                                    <label><input type="radio" name="scale-hands" value="0"> 0</label>
+                                    <label><input type="radio" name="scale-hands" value="1"> 1</label>
+                                    <label><input type="radio" name="scale-hands" value="2"> 2</label>
+                                    <label><input type="radio" name="scale-hands" value="3"> 3</label>
+                                    <label><input type="radio" name="scale-hands" value="4"> 4</label>
                                 </div>
-
+                
                                 <h4>Itching</h4>
                                 <div class="radio-group">
-                                    <label><input type="radio" name="itching-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="itching-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="itching-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="itching-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="itching-legs" value="4"> 4</label>
+                                    <label><input type="radio" name="itching-hands" value="0"> 0</label>
+                                    <label><input type="radio" name="itching-hands" value="1"> 1</label>
+                                    <label><input type="radio" name="itching-hands" value="2"> 2</label>
+                                    <label><input type="radio" name="itching-hands" value="3"> 3</label>
+                                    <label><input type="radio" name="itching-hands" value="4"> 4</label>
                                 </div>
-                            </div>
-                        </div>
-
-
-                        <!--  -->
-
-                    </div>
-                    <div class="legs-container">
-                        <div class="title-overlay">Groin and Buttocks</div>
-                        <div class="content">
-                            <div class="assessment">
-                                <h3>Skin Area Involved</h3>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="legs-skin-area" value="0"> 0%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="10"> 10%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="25"> 25%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="40"> 40%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="60"> 60%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="75"> 75%</label>
-                                    <label><input type="radio" name="legs-skin-area" value="90"> 90%</label>
-                                </div>
-                            </div>
-                            <img src="contents/calculator/Trunk.png" alt="Legs" class="legs-image calculator-image">
-                            <!-- Replace with actual image path -->
-                        </div>
-                        <!-- Severity Assessment Section -->
-                        <div class="severity-assessment-container">
-                            <h3>Severity Assessment</h3>
-                            <div class="severity-assessment">
-                                <h4>Redness</h4>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="redness-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="redness-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="redness-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="redness-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="redness-legs" value="4"> 4</label>
-                                    <button type="button" class="view-btn"
-                                        onclick="showModal('Redness Legs')">View</button>
-                                </div>
-
-                                <h4>Thickness</h4>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="thickness-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="thickness-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="thickness-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="thickness-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="thickness-legs" value="4"> 4</label>
-                                    <button type="button" class="view-btn"
-                                        onclick="showModal('Thickness Legs')">View</button>
-                                </div>
-
-                                <h4>Scale</h4>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="scale-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="scale-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="scale-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="scale-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="scale-legs" value="4"> 4</label>
-                                </div>
-
-                                <h4>Itching</h4>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="itching-legs" value="0"> 0</label>
-                                    <label><input type="radio" name="itching-legs" value="1"> 1</label>
-                                    <label><input type="radio" name="itching-legs" value="2"> 2</label>
-                                    <label><input type="radio" name="itching-legs" value="3"> 3</label>
-                                    <label><input type="radio" name="itching-legs" value="4"> 4</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="button" class="prev-btn" onclick="goToPreviousStep(1)">Previous</button>
-                        <button type="button" class="next-btn" onclick="goToNextStep(3)">Next</button>
-
-                        <!-- Modal for Images -->
-                        <div id="modal" class="modal hidden">
-                            <div class="modal-content">
-                                <span class="close" onclick="closeModal()">&times;</span>
-                                <h2 id="modal-title"></h2>
-                                <div id="modal-images"></div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="form-section hidden" id="step-3">
-                        <h2>Step 3: Review and Submit</h2>
-                        <button type="button" class="prev-btn" onclick="goToPreviousStep(2)">Previous</button>
-                        <button type="button" class="calculate-btn" onclick="calculate()">Calculate</button>
-                        <button type="submit" class="submit-btn">Submit</button>
-                        <div id="calculation-output" class="calculation-output"></div>
-                        <!-- Output field for calculation result -->
+                <button type="button" class="next-btn" onclick="goToNextStep(2)">Next</button>
+                
+                <!-- Modal for Images -->
+                <div id="modal" class="modal hidden">
+                    <div class="modal-content" style="width: 80%; height: auto;">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2 id="modal-title"></h2>
+                        <div id="modal-images" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <!-- Images will be injected here -->
+                        </div>
                     </div>
-            </form>
-        </div>
-    </main>
+                </div>
+            </div>
 
+            <!-- Step 2 -->
+            <div class="form-section hidden" id="step-2">
+                <h2>Step 2: Skin Area Assessment</h2>
+                
+                <!-- Legs Section -->
+                <div class="legs-container">
+                    <div class="title-overlay">Trunk</div>
+                    <div class="content">
+                        <div class="assessment">
+                            <h3>Skin Area Involved</h3>
+                            <div class="radio-group">
+                                <label><input type="radio" name="legs-skin-area" value="0"> 0%</label>
+                                <label><input type="radio" name="legs-skin-area" value="10"> 10%</label>
+                                <label><input type="radio" name="legs-skin-area" value="25"> 25%</label>
+                                <label><input type="radio" name="legs-skin-area" value="40"> 40%</label>
+                                <label><input type="radio" name="legs-skin-area" value="60"> 60%</label>
+                                <label><input type="radio" name="legs-skin-area" value="75"> 75%</label>
+                                <label><input type="radio" name="legs-skin-area" value="90"> 90%</label>
+                            </div>
+                        </div>
+                        <img src="./contents/calculator/Trunk.png" alt="Legs" class="legs-image"> <!-- Replace with actual image path -->
+                    </div>
+                    <!-- Severity Assessment Section -->
+                <div class="severity-assessment-container">
+                    <h3>Severity Assessment</h3>
+                    <div class="severity-assessment">
+                        <h4>Redness</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="redness-legs" value="0"> 0</label>
+                            <label><input type="radio" name="redness-legs" value="1"> 1</label>
+                            <label><input type="radio" name="redness-legs" value="2"> 2</label>
+                            <label><input type="radio" name="redness-legs" value="3"> 3</label>
+                            <label><input type="radio" name="redness-legs" value="4"> 4</label>
+                            <button type="button" class="view-btn" onclick="showModal('Redness Legs')">View</button>
+                        </div>
+            
+                        <h4>Thickness</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="thickness-legs" value="0"> 0</label>
+                            <label><input type="radio" name="thickness-legs" value="1"> 1</label>
+                            <label><input type="radio" name="thickness-legs" value="2"> 2</label>
+                            <label><input type="radio" name="thickness-legs" value="3"> 3</label>
+                            <label><input type="radio" name="thickness-legs" value="4"> 4</label>
+                            <button type="button" class="view-btn" onclick="showModal('Thickness Legs')">View</button>
+                        </div>
+            
+                        <h4>Scale</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="scale-legs" value="0"> 0</label>
+                            <label><input type="radio" name="scale-legs" value="1"> 1</label>
+                            <label><input type="radio" name="scale-legs" value="2"> 2</label>
+                            <label><input type="radio" name="scale-legs" value="3"> 3</label>
+                            <label><input type="radio" name="scale-legs" value="4"> 4</label>
+                        </div>
+            
+                        <h4>Itching</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="itching-legs" value="0"> 0</label>
+                            <label><input type="radio" name="itching-legs" value="1"> 1</label>
+                            <label><input type="radio" name="itching-legs" value="2"> 2</label>
+                            <label><input type="radio" name="itching-legs" value="3"> 3</label>
+                            <label><input type="radio" name="itching-legs" value="4"> 4</label>
+                        </div>
+                    </div>
+                </div>
+            
 
-
+                <!--  -->
+                
+                </div>
+                <div class="legs-container">
+                    <div class="title-overlay">Groin and Buttocks</div>
+                    <div class="content">
+                        <div class="assessment">
+                            <h3>Skin Area Involved</h3>
+                            <div class="radio-group">
+                                <label><input type="radio" name="legs-skin-area" value="0"> 0%</label>
+                                <label><input type="radio" name="legs-skin-area" value="10"> 10%</label>
+                                <label><input type="radio" name="legs-skin-area" value="25"> 25%</label>
+                                <label><input type="radio" name="legs-skin-area" value="40"> 40%</label>
+                                <label><input type="radio" name="legs-skin-area" value="60"> 60%</label>
+                                <label><input type="radio" name="legs-skin-area" value="75"> 75%</label>
+                                <label><input type="radio" name="legs-skin-area" value="90"> 90%</label>
+                            </div>
+                        </div>
+                        <img src="./contents/calculator/Trunk.png" alt="Legs" class="legs-image"> <!-- Replace with actual image path -->
+                    </div>
+                    <!-- Severity Assessment Section -->
+                <div class="severity-assessment-container">
+                    <h3>Severity Assessment</h3>
+                    <div class="severity-assessment">
+                        <h4>Redness</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="redness-legs" value="0"> 0</label>
+                            <label><input type="radio" name="redness-legs" value="1"> 1</label>
+                            <label><input type="radio" name="redness-legs" value="2"> 2</label>
+                            <label><input type="radio" name="redness-legs" value="3"> 3</label>
+                            <label><input type="radio" name="redness-legs" value="4"> 4</label>
+                            <button type="button" class="view-btn" onclick="showModal('Redness Legs')">View</button>
+                        </div>
+            
+                        <h4>Thickness</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="thickness-legs" value="0"> 0</label>
+                            <label><input type="radio" name="thickness-legs" value="1"> 1</label>
+                            <label><input type="radio" name="thickness-legs" value="2"> 2</label>
+                            <label><input type="radio" name="thickness-legs" value="3"> 3</label>
+                            <label><input type="radio" name="thickness-legs" value="4"> 4</label>
+                            <button type="button" class="view-btn" onclick="showModal('Thickness Legs')">View</button>
+                        </div>
+            
+                        <h4>Scale</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="scale-legs" value="0"> 0</label>
+                            <label><input type="radio" name="scale-legs" value="1"> 1</label>
+                            <label><input type="radio" name="scale-legs" value="2"> 2</label>
+                            <label><input type="radio" name="scale-legs" value="3"> 3</label>
+                            <label><input type="radio" name="scale-legs" value="4"> 4</label>
+                        </div>
+            
+                        <h4>Itching</h4>
+                        <div class="radio-group">
+                            <label><input type="radio" name="itching-legs" value="0"> 0</label>
+                            <label><input type="radio" name="itching-legs" value="1"> 1</label>
+                            <label><input type="radio" name="itching-legs" value="2"> 2</label>
+                            <label><input type="radio" name="itching-legs" value="3"> 3</label>
+                            <label><input type="radio" name="itching-legs" value="4"> 4</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="calculate-btn" onclick="calculate()">Calculate</button>
+                <button type="submit" class="submit-btn">Submit</button>
+                
+                <!-- Text area for displaying the random percentage -->
+                <div id="percentage-output" style="margin-top: 15px;">
+                    <textarea id="random-percentage" rows="2" cols="20" readonly style="resize: none;"></textarea>
+                </div>
+            
+            
+                <!-- Modal for Images -->
+                <div id="modal" class="modal hidden">
+                    <div class="modal-content" style="width: 80%; height: auto;">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2 id="modal-title"></h2>
+                        <div id="modal-images" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <!-- Images will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
     <!-- Footer --------------------------------------->
-    <footer>
-        <div class="footer-container">
-            <a href="#" class="footer-app-logo">
-                <img src="/contents/app-icon.webp" alt="App Icon">
-            </a>
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <p>Neutralise Naturals: Your trusted partner for natural remedies addressing chronic skin conditions
-                    like psoriasis.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./shop.html">Shop</a></li>
-                    <li><a href="./about-us.html">About Us</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Customer Service</h3>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Download Our App</h3>
-                <p>Get your personalized Neutralise Skin Kit and AI-based assistance.</p>
-                <div class="app-download">
-                    <a href="#"><img src="./contents/app-store.webp" alt="App Store" loading="lazy"></a>
-                    <a href="#"><img src="./contents/play-store.webp" alt="Play Store" loading="lazy"></a>
-                </div>
-            </div>
+    
+
+<footer>
+  <div class="footer-container">
+    <a href="#" class="footer-app-logo">
+        <img src="/contents/app-icon.webp" alt="App Icon">
+    </a>
+    <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Neutralise Naturals: Your trusted partner for natural remedies addressing chronic skin conditions like psoriasis.</p>
+    </div>
+    <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./shop.html">Shop</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Customer Service</h3>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Download Our App</h3>
+        <p>Get your personalized Neutralise Skin Kit and AI-based assistance.</p>
+        <div class="app-download">
+            <a href="#"><img src="./contents/app-store.webp" alt="App Store" loading="lazy"></a>
+            <a href="#"><img src="./contents/play-store.webp" alt="Play Store" loading="lazy"></a>
         </div>
+    </div>
+</div>
 
-        <!-- New section based on the image -->
-        <div class="footer-map-section">
-            <div class="footer-address-map">
-                <div class="footer-address">
-                    <h3>Factory Address</h3>
-                    <p>SY No: 12/1/A, Gopal Nagar Road, Near Thota</p>
-                    <p>Penta Reddy Gardens, Alwal, Macha Bolaram,</p>
-                    <p>Hyderabad - 500010</p>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.3605666199396!2d78.43359731744384!3d17.493910500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f45f8bfa1f%3A0x7b3f24d83a2bfb89!2sNeutralise%20Natural%20Wheatgrass!5e0!3m2!1sen!2sin!4v1647928572348!5m2!1sen!2sin"
-                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="footer-business-hours">
-                <h3>OUR BUSINESS HOURS</h3>
-                <p>Monday - Friday: 10AM - 7PM IST</p>
-                <p>Saturday, Sunday: 10AM - 5PM IST</p>
-                <p>Contact Number: (+91) 9000088227</p>
-                <p>WhatsApp Number: 9014447966</p>
-
-            </div>
-            <div class="footer-address-map">
-                <div class="footer-office-address">
-                    <h3>Office Address</h3>
-                    <p>Flat 302, Tarakarama estates, Nagarjuna</p>
-                    <p>Nagar Rd No 5, Yellareddyguda,</p>
-                    <p>Ameerpet, Hyderabad,</p>
-                    <p>Telangana 500073</p>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7307421848365!2d78.44520131744384!3d17.43301880000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c8b7b1e1d9%3A0x3c3b5d1f0a7eda4b!2sVasavi%20Solitaire%20Heights!5e0!3m2!1sen!2sin!4v1647928572348!5m2!1sen!2sin"
-                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+<!-- New section based on the image -->
+<div class="footer-map-section">
+    <div class="footer-address-map">
+        <div class="footer-address">
+            <h3>Factory Address</h3>
+            <p>SY No: 12/1/A, Gopal Nagar Road, Near Thota</p>
+            <p>Penta Reddy Gardens, Alwal, Macha Bolaram,</p>
+            <p>Hyderabad - 500010</p>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.3605666199396!2d78.43359731744384!3d17.493910500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f45f8bfa1f%3A0x7b3f24d83a2bfb89!2sNeutralise%20Natural%20Wheatgrass!5e0!3m2!1sen!2sin!4v1647928572348!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="footer-business-hours">
+        <h3>OUR BUSINESS HOURS</h3>
+        <p>Monday - Friday: 10AM - 7PM IST</p>
+        <p>Saturday, Sunday: 10AM - 5PM IST</p>
+        <p>Contact Number: (+91) 9000088227</p>
+        <p>WhatsApp Number: 9014447966</p>
 
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-address-map">
+        <div class="footer-office-address">
+            <h3>Office Address</h3>
+            <p>Flat 302, Tarakarama estates, Nagarjuna</p>
+            <p>Nagar Rd No 5, Yellareddyguda,</p>
+            <p>Ameerpet, Hyderabad,</p>
+            <p>Telangana 500073</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Neutralise Naturals. All rights reserved.</p>
-        </div>
-    </footer>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7307421848365!2d78.44520131744384!3d17.43301880000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c8b7b1e1d9%3A0x3c3b5d1f0a7eda4b!2sVasavi%20Solitaire%20Heights!5e0!3m2!1sen!2sin!4v1647928572348!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
 
+<div class="social-icons">
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2024 Neutralise Naturals. All rights reserved.</p>
+</div>    
+</footer>
 
-    <script src="./js/calculator.js" defer></script>
     <script src="./js/script.js" defer></script>
+    <script src="./js/calculator.js"></script>
 </body>
 
 </html>
