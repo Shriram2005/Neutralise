@@ -348,6 +348,7 @@ nav {
 .top-text-area h1 {
   font-size: 25px;
   text-align: center;
+  font-family: var(--font-heading);
 }
 
 .top-text-area .t1 {
@@ -1452,6 +1453,7 @@ footer {
   .feature-box {
     /* width: 250px; */
     height: 310px;
+    margin-inline: 10px;
   }
 
   .category-buttons {
