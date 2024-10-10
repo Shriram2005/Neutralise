@@ -329,39 +329,9 @@ const products = [
             { author: 'Michael B.', content: 'Excellent product, highly recommend.', rating: 4 }
         ]
     },
+    
     {
         id: '7',
-        name: 'Barley Grass Powder',
-        price: 600,
-        sku: 'NH004',
-        shortDescription: 'A powerful, all-natural cream designed to soothe and heal various skin conditions.',
-        fullDescription: 'Our Natural Healing Cream is crafted with care using only the finest organic ingredients. It deeply moisturizes your skin, providing relief from various skin conditions and promoting overall skin health.',
-        mainImage: './contents/products/Barley-Grass-Powder.jpg',
-        images: [
-            './contents/Shop/barley1.JPG',
-            './contents/Shop/barley2.JPG',
-            './contents/Shop/barley3.JPG'
-        ],
-        ingredients: [
-            'Organic Aloe Vera',
-            'Shea Butter',
-            'Coconut Oil',
-            'Vitamin E',
-            'Lavender Essential Oil'
-        ],
-        howToUse: [
-            'Cleanse the affected area thoroughly',
-            'Apply a small amount of cream to the skin',
-            'Gently massage until fully absorbed',
-            'Use twice daily or as recommended by your healthcare professional'
-        ],
-        reviews: [
-            { author: 'John D.', content: 'Great product! My skin feels amazing.', rating: 5 },
-            { author: 'Sarah M.', content: 'I love the natural ingredients. Will buy again.', rating: 4 }
-        ]
-    },
-    {
-        id: '8',
         name: 'Wheat Grass Soap',
         price: 700,
         sku: 'OF004',
@@ -392,7 +362,7 @@ const products = [
         ]
     },
     {
-        id: '9',
+        id: '8',
         name: 'Total Skin Combo',
         price: 2200,
         sku: 'NH005',
@@ -423,7 +393,7 @@ const products = [
         ]
     },
     {
-        id: '10',
+        id: '9',
         name: 'All In One Combo',
         price: 2700,
         sku: 'OF005',
@@ -454,7 +424,7 @@ const products = [
         ]
     },
     {
-        id: '11',
+        id: '10',
         name: 'DarkSpot / Pigmentation Combo',
         price: 1800,
         sku: 'NH006',
@@ -483,36 +453,6 @@ const products = [
             { author: 'John D.', content: 'Great product! My skin feels amazing.', rating: 5 },
             { author: 'Sarah M.', content: 'I love the natural ingredients. Will buy again.', rating: 4 }
         ]
-    },
-    {
-        id: '12',
-        name: 'Fresh WheatGrass',
-        price: 800,
-        sku: 'OF006',
-        shortDescription: 'A rejuvenating serum that hydrates and revitalizes your skin.',
-        fullDescription: 'Our Organic Face Serum is formulated with natural ingredients to provide deep hydration and rejuvenation. It helps to reduce fine lines and improve skin texture.',
-        mainImage: './contents/products/Fresh-WheatGrass.JPG',
-        images: [
-            './contents/Shop/wheatgrass1.JPG',
-            './contents/Shop/wheatgrass2.JPG',
-            './contents/Shop/wheatgrass3.JPG'
-        ],
-        ingredients: [
-            'Hyaluronic Acid',
-            'Vitamin C',
-            'Green Tea Extract',
-            'Jojoba Oil',
-            'Rosehip Oil'
-        ],
-        howToUse: [
-            'Cleanse your face thoroughly',
-            'Apply a few drops of serum to your face and neck',
-            'Gently massage until fully absorbed',
-            'Use daily for best results'
-        ],
-        reviews: [
-            { author: 'Emily R.', content: 'My skin feels so hydrated and smooth!', rating: 5 },
-            { author: 'Michael B.', content: 'Excellent product, highly recommend.', rating: 4 }
-        ]
     }
+    
 ];

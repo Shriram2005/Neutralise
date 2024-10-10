@@ -282,24 +282,30 @@ nav {
 
 /* Top Image Slider Styles */
 .top-image {
-  width: 100%;
-  height: 450px;
+  /* width: 100%;
+  height: 600px; */
+  width: 100vw;
+  height: 50vw;
   position: relative;
   overflow: hidden;
 }
 
 .slider-images {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  width: 100vw;
+  height: 50vw;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .slider-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* width: 100%;
+  height: 100%; */
+  width: 100vw;
+  height: 50vw;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -337,6 +343,11 @@ nav {
   flex-direction: column;
   padding: 20px;
   background-color: var(--main-bg-color);
+}
+
+.top-text-area h1 {
+  font-size: 25px;
+  text-align: center;
 }
 
 .top-text-area .t1 {
@@ -731,6 +742,7 @@ nav {
   .product-image {
     height: 180px;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -748,7 +760,7 @@ nav {
 }
 
 /* Features Section Styles */
-.features-section {
+/* .features-section {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -759,7 +771,7 @@ nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} 
 
 .feature-box {
   width: 220px;
@@ -771,6 +783,54 @@ nav {
   background-color: #ffffff4b;
   box-shadow: 1px 2px 2px #abbe47;
   transition-duration: 0.2s;
+} */
+
+/* Features Section Styles */
+.features-section {
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  flex-wrap: wrap; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  width: 100%;
+  padding: 20px;
+  background-color: var(--header-bg-color);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000;
+  font-family: var(--font-heading);
+  ;
+}
+
+.feature-box {
+  /* width: 220px; */
+  height: 280px;
+  margin: 20px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  background-color: #ffffff4b;
+  box-shadow: 1px 2px 2px #abbe47;
+  transition-duration: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-img {
@@ -791,7 +851,7 @@ nav {
   font-size: 14px;
   color: #000;
   text-wrap: balance;
-  text-align: left;
+  text-align: center;
 }
 
 /* Autoimmune Disorders Section Styles */
@@ -1019,6 +1079,7 @@ footer {
 
 .footer-column ul li {
   margin-bottom: 8px;
+  font-size: 14px;
 }
 
 .footer-column ul li a {
@@ -1368,6 +1429,8 @@ footer {
 }
 
 @media (min-width: 700px) {
+
+  /* navbar  */
   .sidebar-btn {
     display: none;
   }
@@ -1387,7 +1450,8 @@ footer {
 
 @media (max-width: 500px) {
   .feature-box {
-    width: 250px;
+    /* width: 250px; */
+    height: 310px;
   }
 
   .category-buttons {
@@ -1401,6 +1465,25 @@ footer {
   .divider {
     display: none;
   }
+}
+
+ /* .top-image responsive  */
+@media (width>800px) {
+    /* top image  */
+    .top-image {
+      /* width: 100vw; */
+      height: 97%;
+    }
+    
+    .slider-images {
+      /* width: 100vw; */
+      height: 97%;
+    }
+    
+    .slider-img {
+      /* width: 100vw; */
+      height: 97%;
+    }
 }
 
 /* Add this at the end of your CSS file */
