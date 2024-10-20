@@ -813,7 +813,13 @@ nav {
   margin-bottom: 20px;
   color: #000000;
   font-family: var(--font-heading);
-  ;
+}
+
+.features-title-p{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 40px;  
 }
 
 .feature-box {
@@ -888,6 +894,146 @@ nav {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Testimonials Section Styles */
+
+.testimonials-section {
+  padding: 50px 0;
+  background-color: var(--main-bg-color);
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--green-bg-color);
+  position: relative;
+}
+
+.testimonials-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--green-bg-color);
+}
+
+.testimonials-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  margin-right: 20px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid var(--green-bg-color);
+}
+
+.testimonial-info {
+  flex-grow: 1;
+}
+
+.testimonial-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--green-bg-color);
+}
+
+.testimonial-card .testimonial-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.testimonial-rating {
+  color: #ffd700;
+  font-size: 18px;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 280px;
+    padding: 25px;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    flex: 0 0 260px;
+    padding: 20px;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 22px;
+  }
+}
+
+/* Ensure smooth scrolling for the testimonials container */
+.testimonials-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonials-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb {
+  background: var(--green-bg-color);
+  border-radius: 4px;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-color);
+}
+/* End of Testimonials Section */
+
 
 /* Psoriasis Section Styles */
 .psoriasis-container {

@@ -49,9 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.querySelector('p').style.display === 'none' ? 'block' : 'none';
         });
     });
+
+
+    
+    // Auto-sliding testimonials
+    const testimonialsContainer = document.querySelector('.testimonials-container');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+    // Clone testimonial cards and append to the container
+    testimonialCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        testimonialsContainer.appendChild(clone);
+    });
+
+    // Update animation duration based on the number of cards
+    const totalCards = testimonialsContainer.children.length;
+    const cardWidth = 320; // card width + margin
+    const animationDuration = totalCards * 5; // 5 seconds per card
+
+    testimonialsContainer.style.animation = `slide ${animationDuration}s linear infinite`;
 });
-
-
-
-
-// for shop page
