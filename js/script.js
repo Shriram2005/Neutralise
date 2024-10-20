@@ -84,16 +84,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Set the animation
             const direction = index % 2 === 0 ? 'Left' : 'Right';
-            row.style.animation = `scroll${direction} ${products.length * 5}s linear infinite`;
+            const animationDuration = products.length * 5;
+            row.style.animation = `scroll${direction} ${animationDuration}s linear infinite`;
 
-            // Pause animation on hover
-            row.addEventListener('mouseenter', () => {
+            let isScrolling = false;
+            let scrollTimeout;
+
+            function pauseAnimation() {
                 row.style.animationPlayState = 'paused';
+            }
+
+            function resumeAnimation() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    row.style.animationPlayState = 'running';
+                }, /*3000*/ 0); // Resume animation after 3 seconds
+            }
+
+            // Event listener for manual scrolling
+            row.addEventListener('scroll', () => {
+                if (!isScrolling) {
+                    isScrolling = true;
+                    pauseAnimation();
+                }
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    isScrolling = false;
+                    resumeAnimation();
+                }, 150);
             });
 
-            row.addEventListener('mouseleave', () => {
-                row.style.animationPlayState = 'running';
-            });
+            // Pause animation on mouse enter
+            row.addEventListener('mouseenter', pauseAnimation);
+
+            // Resume animation on mouse leave
+            row.addEventListener('mouseleave', resumeAnimation);
         });
     }
 
