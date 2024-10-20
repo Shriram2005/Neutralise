@@ -42,16 +42,16 @@ function toggleDropdown(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const journeyItems = document.querySelectorAll('.journey-content');
-    
+
     journeyItems.forEach(item => {
         item.addEventListener('click', function() {
-            this.querySelector('p').style.display = 
+            this.querySelector('p').style.display =
                 this.querySelector('p').style.display === 'none' ? 'block' : 'none';
         });
     });
 
 
-    
+
     // Auto-sliding testimonials
     const testimonialsContainer = document.querySelector('.testimonials-container');
     const testimonialCards = document.querySelectorAll('.testimonial-card');
@@ -68,4 +68,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const animationDuration = totalCards * 5; // 5 seconds per card
 
     testimonialsContainer.style.animation = `slide ${animationDuration}s linear infinite`;
+
+    // Add this function to your existing script.js file
+
+    function setupInfiniteScroll() {
+        const productRows = document.querySelectorAll('.products-row');
+
+        productRows.forEach((row, index) => {
+            // Clone the products
+            const products = row.querySelectorAll('.product-card');
+            products.forEach(product => {
+                const clone = product.cloneNode(true);
+                row.appendChild(clone);
+            });
+
+            // Set the animation
+            const direction = index % 2 === 0 ? 'Left' : 'Right';
+            row.style.animation = `scroll${direction} ${products.length * 5}s linear infinite`;
+
+            // Pause animation on hover
+            row.addEventListener('mouseenter', () => {
+                row.style.animationPlayState = 'paused';
+            });
+
+            row.addEventListener('mouseleave', () => {
+                row.style.animationPlayState = 'running';
+            });
+        });
+    }
+
+    // Call this function when the DOM is loaded
+    setupInfiniteScroll();
 });
