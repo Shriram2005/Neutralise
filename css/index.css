@@ -900,8 +900,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: 4rem 1.7rem;
+  min-height: auto;
 }
 .TestiHeadline {
   text-align: center;
@@ -1548,3 +1548,6 @@ footer {
 .products-row::after {
   display: none;
 }
+
+
+/* Bento Grid */
