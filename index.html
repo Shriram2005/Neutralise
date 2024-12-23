@@ -9,11 +9,61 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="./css/index.css" />
+
+    <style type="text/tailwindcss">
+      @layer base {
+        :root {
+          --background: 0 0% 100%;
+          --foreground: 240 10% 3.9%;
+          --card: 0 0% 100%;
+          --card-foreground: 240 10% 3.9%;
+          --popover: 0 0% 100%;
+          --popover-foreground: 240 10% 3.9%;
+          --primary: 240 5.9% 10%;
+          --primary-foreground: 0 0% 98%;
+          --secondary: 240 4.8% 95.9%;
+          --secondary-foreground: 240 5.9% 10%;
+          --muted: 240 4.8% 95.9%;
+          --muted-foreground: 240 3.8% 46.1%;
+          --accent: 240 4.8% 95.9%;
+          --accent-foreground: 240 5.9% 10%;
+          --destructive: 0 84.2% 60.2%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 5.9% 90%;
+          --input: 240 5.9% 90%;
+          --ring: 240 5.9% 10%;
+          --radius: 0.5rem;
+        }
+        .dark {
+          --background: 240 10% 3.9%;
+          --foreground: 0 0% 98%;
+          --card: 240 10% 3.9%;
+          --card-foreground: 0 0% 98%;
+          --popover: 240 10% 3.9%;
+          --popover-foreground: 0 0% 98%;
+          --primary: 0 0% 98%;
+          --primary-foreground: 240 5.9% 10%;
+          --secondary: 240 3.7% 15.9%;
+          --secondary-foreground: 0 0% 98%;
+          --muted: 240 3.7% 15.9%;
+          --muted-foreground: 240 5% 64.9%;
+          --accent: 240 3.7% 15.9%;
+          --accent-foreground: 0 0% 98%;
+          --destructive: 0 62.8% 30.6%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 3.7% 15.9%;
+          --input: 240 3.7% 15.9%;
+          --ring: 240 4.9% 83.9%;
+        }
+      }
+    </style>
     <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/85a51766c8.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Add this line to include the light icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g0g5c5e5c5e5c5e5c5e5c5e5c5e5c5e5c5" crossorigin="anonymous">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -200,247 +250,271 @@
       <!-- Space for bento grid -->
       <section class="Bento-Grid">
         <div
-        class="container"
-        style="
-          display: flex;
-          height: 100%;
-          width: 100%;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <div
-          class="grid"
+          class="container"
           style="
-            display: grid;
-            height: 0%;
-            width: 80%;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            gap: 16px;
-            padding: 8px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
-              0 1px 2px rgba(0, 0, 0, 0.1);
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
           "
         >
           <div
+            class="grid"
             style="
-              font-family: 'M PLUS 2 Variable', sans-serif;
-              grid-column: span 2;
-              grid-row: span 4;
-              background-color: rgb(255, 255, 255);
+              display: grid;
+              height: 0%;
+              width: 80%;
+              grid-template-columns: repeat(4, 1fr);
+              grid-template-rows: repeat(4, 1fr);
+              gap: 16px;
+              padding: 8px;
               border-radius: 8px;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
                 0 1px 2px rgba(0, 0, 0, 0.1);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
             "
           >
-            <img
-              src="./contents/Pd_Imgs/1Q1A0435.JPG"
-              alt="product 1"
-              style="height: 100%; width: 80%"
-            />
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-              width: calc(100% - 20px);
-              background: linear-gradient(to bottom, #ffffff, #a2b139);
-              color: white;
-              padding: 5px;
-              border-radius: 5px;
-              overflow: hidden;
-            ">
-              <h4 style="margin: 0; color: #a2b139; font-weight: bold;">Product Title</h4>
-              <p style="margin: 0; font-weight: bold;">$Price</p>
+            <div
+              style="
+                font-family: 'M PLUS 2 Variable', sans-serif;
+                grid-column: span 2;
+                grid-row: span 4;
+                background-color: rgb(255, 255, 255);
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
+                  0 1px 2px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+              "
+            >
+              <img
+                src="./contents/Pd_Imgs/1Q1A0435.JPG"
+                alt="product 1"
+                style="height: 100%; width: 80%"
+              />
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                  width: calc(100% - 20px);
+                  background: linear-gradient(to bottom, #ffffff, #a2b139);
+                  color: white;
+                  padding: 5px;
+                  border-radius: 5px;
+                  overflow: hidden;
+                "
+              >
+                <h4 style="margin: 0; color: #a2b139; font-weight: bold">
+                  Product Title
+                </h4>
+                <p style="margin: 0; font-weight: bold">$Price</p>
+              </div>
             </div>
-          </div>
 
-          <div
-            style="
-              font-family: 'M PLUS 2 Variable', sans-serif;
-              grid-column: span 1;
-              grid-row: span 4;
-              background-color: lightGray;
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
-                0 1px 2px rgba(0, 0, 0, 0.1);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-            "
-          >
-            <img
-              src="./contents/Pd_Imgs/1Q1A0477.JPG"
-              alt="product 2"
-              style="height: 100%; width: 100%"
-            />
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-              width: calc(100% - 20px);
-              background: linear-gradient(to bottom, #ffffff, #a2b139);
-              color: white;
-              padding: 5px;
-              border-radius: 5px;
-              overflow: hidden;
-            ">
-              <h4 style="margin: 0; color: #a2b139; font-weight: bold;">Product Title</h4>
-              <p style="margin: 0; font-weight: bold;">$Price</p>
+            <div
+              style="
+                font-family: 'M PLUS 2 Variable', sans-serif;
+                grid-column: span 1;
+                grid-row: span 4;
+                background-color: lightGray;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
+                  0 1px 2px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+              "
+            >
+              <img
+                src="./contents/Pd_Imgs/1Q1A0477.JPG"
+                alt="product 2"
+                style="height: 100%; width: 100%"
+              />
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                  width: calc(100% - 20px);
+                  background: linear-gradient(to bottom, #ffffff, #a2b139);
+                  color: white;
+                  padding: 5px;
+                  border-radius: 5px;
+                  overflow: hidden;
+                "
+              >
+                <h4 style="margin: 0; color: #a2b139; font-weight: bold">
+                  Product Title
+                </h4>
+                <p style="margin: 0; font-weight: bold">$Price</p>
+              </div>
             </div>
-          </div>
 
-          <div
-            style="
-              font-family: 'M PLUS 2 Variable', sans-serif;
-              grid-column: span 1;
-              grid-row: span 4;
-              background-color: lightGray;
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
-                0 1px 2px rgba(0, 0, 0, 0.1);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-            "
-          >
-            <img
-              src="./contents/Pd_Imgs/1Q1A0435.JPG"
-              alt="product 1"
-              style="height: 100%; width: 100%"
-            />
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-              width: calc(100% - 20px);
-              background: linear-gradient(to bottom, #ffffff, #a2b139);
-              color: white;
-              padding: 5px;
-              border-radius: 5px;
-              overflow: hidden;
-            ">
-              <h4 style="margin: 0; color: #a2b139; font-weight: bold;">Product Title</h4>
-              <p style="margin: 0; font-weight: bold;">$Price</p>
+            <div
+              style="
+                font-family: 'M PLUS 2 Variable', sans-serif;
+                grid-column: span 1;
+                grid-row: span 4;
+                background-color: lightGray;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
+                  0 1px 2px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+              "
+            >
+              <img
+                src="./contents/Pd_Imgs/1Q1A0435.JPG"
+                alt="product 1"
+                style="height: 100%; width: 100%"
+              />
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                  width: calc(100% - 20px);
+                  background: linear-gradient(to bottom, #ffffff, #a2b139);
+                  color: white;
+                  padding: 5px;
+                  border-radius: 5px;
+                  overflow: hidden;
+                "
+              >
+                <h4 style="margin: 0; color: #a2b139; font-weight: bold">
+                  Product Title
+                </h4>
+                <p style="margin: 0; font-weight: bold">$Price</p>
+              </div>
             </div>
-          </div>
 
-          <div
-            style="
-              font-family: 'M PLUS 2 Variable', sans-serif;
-              grid-column: span 1;
-              grid-row: span 4;
-              background-color: lightGray;
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
-                0 1px 2px rgba(0, 0, 0, 0.1);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-            "
-          >
-            <img
-              src="./contents/Pd_Imgs/1Q1A0435.JPG"
-              alt="product 1"
-              style="height: 100%; width: 100%"
-            />
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-              width: calc(100% - 20px);
-              background: linear-gradient(to bottom, #ffffff, #a2b139);
-              color: white;
-              padding: 5px;
-              border-radius: 5px;
-              overflow: hidden;
-            ">
-              <h4 style="margin: 0; color: #a2b139; font-weight: bold;">Product Title</h4>
-              <p style="margin: 0; font-weight: bold;">$Price</p>
+            <div
+              style="
+                font-family: 'M PLUS 2 Variable', sans-serif;
+                grid-column: span 1;
+                grid-row: span 4;
+                background-color: lightGray;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
+                  0 1px 2px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+              "
+            >
+              <img
+                src="./contents/Pd_Imgs/1Q1A0435.JPG"
+                alt="product 1"
+                style="height: 100%; width: 100%"
+              />
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                  width: calc(100% - 20px);
+                  background: linear-gradient(to bottom, #ffffff, #a2b139);
+                  color: white;
+                  padding: 5px;
+                  border-radius: 5px;
+                  overflow: hidden;
+                "
+              >
+                <h4 style="margin: 0; color: #a2b139; font-weight: bold">
+                  Product Title
+                </h4>
+                <p style="margin: 0; font-weight: bold">$Price</p>
+              </div>
             </div>
-          </div>
 
-          <div
-            style="
-              font-family: 'M PLUS 2 Variable', sans-serif;
-              grid-column: span 1;
-              grid-row: span 4;
-              background-color: lightGray;
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
-                0 1px 2px rgba(0, 0, 0, 0.1);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-            "
-          >
-            <img
-              src="./contents/Pd_Imgs/1Q1A0435.JPG"
-              alt="product 1"
-              style="height: 100%; width: 100%"
-            />
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-              width: calc(100% - 20px);
-              background: linear-gradient(to bottom, #ffffff, #a2b139);
-              color: white;
-              padding: 5px;
-              border-radius: 5px;
-              overflow: hidden;
-            ">
-              <h4 style="margin: 0; color: #a2b139; font-weight: bold;">Product Title</h4>
-              <p style="margin: 0; font-weight: bold;">$Price</p>
+            <div
+              style="
+                font-family: 'M PLUS 2 Variable', sans-serif;
+                grid-column: span 1;
+                grid-row: span 4;
+                background-color: lightGray;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
+                  0 1px 2px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+              "
+            >
+              <img
+                src="./contents/Pd_Imgs/1Q1A0435.JPG"
+                alt="product 1"
+                style="height: 100%; width: 100%"
+              />
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                  width: calc(100% - 20px);
+                  background: linear-gradient(to bottom, #ffffff, #a2b139);
+                  color: white;
+                  padding: 5px;
+                  border-radius: 5px;
+                  overflow: hidden;
+                "
+              >
+                <h4 style="margin: 0; color: #a2b139; font-weight: bold">
+                  Product Title
+                </h4>
+                <p style="margin: 0; font-weight: bold">$Price</p>
+              </div>
             </div>
-          </div>
 
-          <div
-            style="
-              font-family: 'M PLUS 2 Variable', sans-serif;
-              grid-column: span 2;
-              grid-row: span 4;
-              background-color: rgb(255, 255, 255);
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
-                0 1px 2px rgba(0, 0, 0, 0.1);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-            "
-          >
-            <img
-              src="./contents/Pd_Imgs/1Q1A0435.JPG"
-              alt="product 1"
-              style="height: 100%; width: 80%"
-            />
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-              width: calc(100% - 20px);
-              background: linear-gradient(to bottom, #ffffff, #a2b139);
-              color: white;
-              padding: 5px;
-              border-radius: 5px;
-              overflow: hidden;
-            ">
-              <h4 style="margin: 0; color: #a2b139; font-weight: bold;">Product Title</h4>
-              <p style="margin: 0; font-weight: bold;">$Price</p>
+            <div
+              style="
+                font-family: 'M PLUS 2 Variable', sans-serif;
+                grid-column: span 2;
+                grid-row: span 4;
+                background-color: rgb(255, 255, 255);
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25),
+                  0 1px 2px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+              "
+            >
+              <img
+                src="./contents/Pd_Imgs/1Q1A0435.JPG"
+                alt="product 1"
+                style="height: 100%; width: 80%"
+              />
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                  width: calc(100% - 20px);
+                  background: linear-gradient(to bottom, #ffffff, #a2b139);
+                  color: white;
+                  padding: 5px;
+                  border-radius: 5px;
+                  overflow: hidden;
+                "
+              >
+                <h4 style="margin: 0; color: #a2b139; font-weight: bold">
+                  Product Title
+                </h4>
+                <p style="margin: 0; font-weight: bold">$Price</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
       <!-- End of bento grid -->
     </div>
@@ -505,7 +579,7 @@
     </div> -->
 
     <!-- Testimonials Section -->
-    
+
     <h2 class="TestiHeadline">What Our Customers Say</h2>
     <section class="testimonials-section">
       <div class="container">
@@ -513,7 +587,10 @@
           <div class="heading">
             <div class="img-wrapper">
               <div class="border"></div>
-              <img src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-daniel.jpg" alt="Daniel Clifford">
+              <img
+                src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-daniel.jpg"
+                alt="Daniel Clifford"
+              />
             </div>
             <div class="text">
               <h1>Priya Sharma</h1>
@@ -521,17 +598,15 @@
             </div>
           </div>
           <div class="main">
-            <h3>
-              ★★★★★  
-            </h3>
+            <h3>★★★★★</h3>
           </div>
           <div class="desc">
             <p>
               "Namaste! I've been struggling with psoriasis for years, and
               Neutralise Naturals has been a true blessing. Their wheatgrass
-              powder and Ayurvedic skincare products have made such a difference.
-              My skin feels so much better now, and I'm finally confident again.
-              Thank you, Neutralise Naturals!" 
+              powder and Ayurvedic skincare products have made such a
+              difference. My skin feels so much better now, and I'm finally
+              confident again. Thank you, Neutralise Naturals!"
             </p>
           </div>
         </div>
@@ -539,7 +614,10 @@
           <div class="heading">
             <div class="img-wrapper">
               <div class="border"></div>
-              <img src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-jonathan.jpg" alt="Jonathan Walters">
+              <img
+                src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-jonathan.jpg"
+                alt="Jonathan Walters"
+              />
             </div>
             <div class="text">
               <h1>Rajesh Patel</h1>
@@ -547,23 +625,24 @@
             </div>
           </div>
           <div class="main">
-            <h3>
-              ★★★★★    
-          </h3>
+            <h3>★★★★★</h3>
           </div>
           <div class="desc">
             <p>
               "Being someone with very sensitive skin, I was scared to try new
               products. But Neutralise Naturals' gentle and natural approach has
               done wonders for me. My skin is much clearer now!"
-             </p>
+            </p>
           </div>
         </div>
         <div class="card card-3">
           <div class="heading">
             <div class="img-wrapper">
               <div class="border"></div>
-              <img src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-jeanette.jpg" alt="Jeanette Harmon">
+              <img
+                src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-jeanette.jpg"
+                alt="Jeanette Harmon"
+              />
             </div>
             <div class="text">
               <h1>Anita Desai</h1>
@@ -571,9 +650,7 @@
             </div>
           </div>
           <div class="main">
-            <h3>
-              ★★★★★    
-          </h3>
+            <h3>★★★★★</h3>
           </div>
           <div class="desc">
             <p>
@@ -581,8 +658,8 @@
               transformed my skin health. Their diet tips, wellness advice, and
               amazing products have given me the perfect tools to manage my
               psoriasis effectively. I'm so grateful for this Ayurvedic miracle!
-              It's like having a personal skin guru. Highly recommended for anyone
-              struggling with skin issues."
+              It's like having a personal skin guru. Highly recommended for
+              anyone struggling with skin issues."
             </p>
           </div>
         </div>
@@ -590,7 +667,10 @@
           <div class="heading">
             <div class="img-wrapper">
               <div class="border"></div>
-              <img src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-patrick.jpg" alt="Patrick Abrams">
+              <img
+                src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-patrick.jpg"
+                alt="Patrick Abrams"
+              />
             </div>
             <div class="text">
               <h1>Vikram Singh</h1>
@@ -598,16 +678,14 @@
             </div>
           </div>
           <div class="main">
-            <h3>
-              ★★★★★  
-            </h3>
+            <h3>★★★★★</h3>
           </div>
           <div class="desc">
             <p>
               I was very doubtful at first, but after using Neutralise Naturals
-          for 3 months, I'm a true believer now. My psoriasis patches have
-          reduced so much, and my skin feels so much more comfortable.
-          Dhanyavaad, Neutralise Naturals!  
+              for 3 months, I'm a true believer now. My psoriasis patches have
+              reduced so much, and my skin feels so much more comfortable.
+              Dhanyavaad, Neutralise Naturals!
             </p>
           </div>
         </div>
@@ -615,7 +693,10 @@
           <div class="heading">
             <div class="img-wrapper">
               <div class="border"></div>
-              <img src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-kira.jpg" alt="Kira Whittle">
+              <img
+                src="https://raw.githubusercontent.com/khatri2002/testimonials-grid-section/refs/heads/main/images/image-kira.jpg"
+                alt="Kira Whittle"
+              />
             </div>
             <div class="text">
               <h1>Meera Reddy</h1>
@@ -623,20 +704,18 @@
             </div>
           </div>
           <div class="main">
-            <h3>
-              ★★★★★
-            </h3>
+            <h3>★★★★★</h3>
           </div>
           <div class="desc">
             <p>
               "The Ayurvedic-inspired products from Neutralise Naturals match
-          perfectly with my belief in natural healing. Not only has my skin
-          improved, but I'm feeling more balanced overall. It's like a spa day
-          for my skin every day!"    
-          </p>
+              perfectly with my belief in natural healing. Not only has my skin
+              improved, but I'm feeling more balanced overall. It's like a spa
+              day for my skin every day!"
+            </p>
           </div>
         </div>
-      </div>  
+      </div>
     </section>
     <!-- End of Testimonials Section -->
     <!-- Part 2 testicels -->
@@ -700,6 +779,55 @@
         </p>
       </div>
     </div>
+
+    <!-- Unique why choose us -->
+     <!-- UniqueWhyChooseUsSection -->
+<section id="section-why-choose-us" class="full-width-flex-container">
+  <div id="why-choose-us-container" class="content-max-width center-content">
+    <div class="header-flex-container">
+      <h1 id="why-choose-us-title" class="section-title text-purple">WHY CHOOSE US</h1>
+      <div class="image-container">
+        <img
+          id="arrow-icon"
+          src="./contents/aboutUs/image1.JPG"
+          alt="Decorative Arrow"
+          class="decorative-arrow-image"
+        />
+      </div>
+    </div>
+    
+
+    <div id="stats-container" class="two-column-grid">
+      <div class="stat-item text-center">
+        <span class="stat-percentage text-purple-bold">100%</span>
+        <p class="stat-description text-gray-light">NATURAL PRODUCTS.</p>
+      </div>
+      <div class="stat-item text-center">
+        <!-- Changed icon to solid version -->
+        <span class="stat-percentage text-purple-bold"><i class="fa-solid fa-headphones-simple"></i>
+        </span>
+        <p class="stat-description text-gray-light">Customer Support.</p>
+      </div>
+    </div>
+
+    <div id="info-card-container" class="responsive-grid">
+      <div class="info-card purple-card">
+        <h2 class="card-title">CURATED PRODUCTS</h2>
+        <p class="card-description">Handpicked natural ingredients like Wheat Grass, Coconut oil, specific herbs in making of wheatgrass products.</p>
+      </div>
+      <div class="info-card blue-card">
+        <h2 class="card-title">HANDMADE PRODUCTS</h2>
+        <p class="card-description">Crafted with passion in use of organic ingredients that supports for all skin types for natural results.</p>
+      </div>
+      <div class="info-card gray-card">
+        <h2 class="card-title">SHIPPING</h2>
+        <p class="card-description">To reach our customers at there door step. By serving at Pan India level.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Youtube video and paragrphs over here -->
     <!-- Psoriasis Reversal Section -->
@@ -863,5 +991,6 @@
 
     <script src="./js/script.js" defer></script>
     <script src="./js/product-view.js" defer></script>
+    
   </body>
 </html>

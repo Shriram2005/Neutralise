@@ -1551,3 +1551,157 @@ footer {
 
 
 /* Bento Grid */
+/* Generic Styles */
+.full-width-flex-container {
+  display: flex;
+  width: 100%;
+}
+
+.center-content {
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Section Container */
+#section-why-choose-us {
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.content-max-width {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header Flex Container */
+.header-flex-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Title Styling */
+#why-choose-us-title {
+  /* margin: 0; */
+  flex: 1;
+  margin-left: 60px;
+  color: var(--green-bg-color);
+  font-size: 34px;
+  margin-bottom: 200px;
+}
+
+/* Image Container */
+.image-container {
+  margin-right: -600px; /* Adjust this value to pull the image further right */
+  display: flex;
+  align-items: flex-end;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.decorative-arrow-image {
+  width: 600px; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 100px 0 0 100px;
+}
+
+/* Description Styling */
+#why-choose-us-description {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 20px;
+  margin-left: 500px;
+}
+
+.text-gray {
+  color: #4a5568;
+}
+
+/* Stats Styling */
+#stats-container {
+  position: absolute;
+  top: 250px;
+  margin-left: 60px;
+  left: 0;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  background-color: #ffffff00;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-percentage {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.text-purple-bold {
+  color: #6b46c1;
+}
+
+.stat-description {
+  color: #718096;
+}
+
+/* Info Cards */
+#info-card-container {
+  display: flex;
+  gap: 15px;
+  margin-left: 60px;
+  width: 1000px;
+  top: 500px;
+
+}
+
+.info-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-wrap: balance;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.purple-card {
+  background-color: #6b46c1;
+  color: #ffffff;
+}
+
+.blue-card {
+  background-color: #4299e1;
+  color: #ffffff;
+}
+
+.gray-card {
+  background-color: #e2e8f0;
+  color: #1a202c;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-description {
+  margin-top: 10px;
+  font-size: 1rem;
+}
